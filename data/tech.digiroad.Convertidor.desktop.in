@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Convertidor
+Exec=convertidor
+Icon=tech.digiroad.Convertidor
+Terminal=false
+Type=Application
+Categories=Utility;Education;Science
+Keywords=units;converter
+StartupNotify=false
+DBusActivatable=true

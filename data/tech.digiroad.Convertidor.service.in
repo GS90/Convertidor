@@ -1,0 +1,3 @@
+[D-BUS Service]
+Name=tech.digiroad.Convertidor
+Exec=@bindir@/convertidor --gapplication-service

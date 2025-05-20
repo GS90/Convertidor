@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist gettext-domain="convertidor">
+	<schema id="tech.digiroad.Convertidor" path="/tech/digiroad/Convertidor/">
+		<key name="theme" type="i">
+			<default>0</default>
+			<summary>Theme</summary>
+			<description>Theme variant</description>
+		</key>
+		<key name="width" type="i">
+			<default>1200</default>
+			<summary>Width</summary>
+			<description>Window width</description>
+		</key>
+		<key name="height" type="i">
+			<default>750</default>
+			<summary>Height</summary>
+			<description>Window height</description>
+		</key>
+		<key name="precision" type="i">
+			<default>10</default>
+			<summary>Precision</summary>
+			<description>Number of decimals</description>
+		</key>
+		<key name="scientific" type="i">
+			<default>10</default>
+			<summary>Scientific notation</summary>
+			<description>Character limit for switching</description>
+		</key>
+		<key name="quantity" type="i">
+			<default>1</default>
+			<summary>Quantity</summary>
+			<description>Last choice of quantity</description>
+		</key>
+		<key name="imperial" type="b">
+			<default>true</default>
+			<summary>Imperial</summary>
+			<description>Show imperial units</description>
+		</key>
+		<key name="legacy" type="b">
+			<default>true</default>
+			<summary>Legacy</summary>
+			<description>Show legacy units</description>
+		</key>
+	</schema>
+</schemalist>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+
+  <id>tech.digiroad.Convertidor</id>
+  <name>Convertidor</name>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+  <summary>Converting units of measurement</summary>
+  <developer id="tech.digiroad">
+    <name>Golodnikov Sergey</name>
+  </developer>
+
+  <description>
+    <p>Convertidor is a handy and high precision application for converting units of measurement.</p>
+    <p>Features:</p>
+    <ul>
+      <li>Conversion of 300+ units of measurement.</li>
+      <li>Instant and accurate (simultaneous!) unit conversion.</li>
+      <li>Intuitive and user-friendly interface.</li>
+    </ul>
+  </description>
+
+  <url type="homepage">https://github.com/GS90/Convertidor</url>
+  <url type="vcs-browser">https://github.com/GS90/Convertidor</url>
+  <url type="bugtracker">https://github.com/GS90/Convertidor/issues</url>
+
+  <translation type="gettext">convertidor</translation>
+  <launchable type="desktop-id">tech.digiroad.Convertidor.desktop</launchable>
+  <content_rating type="oars-1.1" />
+
+  <branding>
+    <color type="primary" scheme_preference="light">#fafafb</color>
+    <color type="primary" scheme_preference="dark">#222226</color>
+  </branding>
+
+  <screenshots>
+    <screenshot type="default">
+      <image>https://raw.githubusercontent.com/GS90/Convertidor/refs/heads/main/data/screenshots/light.png</image>
+      <caption>Convertidor in light mode</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/GS90/Convertidor/refs/heads/main/data/screenshots/dark.png</image>
+      <caption>Convertidor in dark mode</caption>
+    </screenshot>
+  </screenshots>
+
+  <releases>
+    <release version="1.0.0" date="2025-10-04">
+      <description translate="no">
+        <ul>
+          <li>Initial release</li>
+        </ul>
+      </description>
+    </release>
+  </releases>
+
+</component>
