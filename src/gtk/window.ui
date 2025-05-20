@@ -1,0 +1,260 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Created with Cambalache 0.96.1 -->
+<interface>
+  <!-- interface-name window.ui -->
+  <requires lib="gio" version="2.0"/>
+  <requires lib="gtk" version="4.0"/>
+  <requires lib="libadwaita" version="1.7"/>
+  <template class="Convertidor" parent="AdwApplicationWindow">
+    <property name="content">
+      <object class="AdwNavigationSplitView">
+        <property name="content">
+          <object class="AdwNavigationPage">
+            <property name="child">
+              <object class="AdwToolbarView">
+                <child type="top">
+                  <object class="AdwHeaderBar">
+                    <property name="show-title">False</property>
+                    <child type="start">
+                      <object class="GtkBox">
+                        <property name="margin-start">10</property>
+                        <child>
+                          <object class="GtkCheckButton" id="show-imperial">
+                            <property name="label">Imperial</property>
+                            <property name="tooltip-text">Displaying Imperial and US measurements</property>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkCheckButton" id="show-legacy">
+                            <property name="label">Obsolete</property>
+                            <property name="tooltip-text">Display of obsolete measurement units</property>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                    <child type="end">
+                      <object class="GtkMenuButton">
+                        <property name="icon-name">open-menu-symbolic</property>
+                        <property name="menu-model">primary_menu</property>
+                        <property name="primary">True</property>
+                        <property name="tooltip-text" translatable="yes">Application menu</property>
+                        <style/>
+                      </object>
+                    </child>
+                    <child type="end">
+                      <object class="GtkButton" id="button-reset">
+                        <property name="label" translatable="yes">Reset</property>
+                        <property name="tooltip-text" translatable="yes">Reset all units of measurement</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="AdwToastOverlay" id="overlay">
+                    <property name="child">
+                      <object class="GtkScrolledWindow">
+                        <property name="child">
+                          <object class="GtkBox">
+                            <property name="margin-bottom">20</property>
+                            <property name="margin-end">20</property>
+                            <property name="margin-start">20</property>
+                            <property name="orientation">vertical</property>
+                            <child>
+                              <object class="GtkLabel" id="label-cero">
+                                <property name="css-classes">title-4</property>
+                                <property name="halign">start</property>
+                                <property name="label">Cero</property>
+                                <property name="margin-bottom">10</property>
+                                <property name="margin-top">10</property>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkFlowBox" id="units-cero">
+                                <property name="column-spacing">40</property>
+                                <property name="max-children-per-line">6</property>
+                                <property name="min-children-per-line">1</property>
+                                <property name="overflow">hidden</property>
+                                <property name="row-spacing">10</property>
+                                <property name="selection-mode">none</property>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkLabel" id="label-uno">
+                                <property name="css-classes">title-4</property>
+                                <property name="halign">start</property>
+                                <property name="label">Uno</property>
+                                <property name="margin-bottom">10</property>
+                                <property name="margin-top">20</property>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkFlowBox" id="units-uno">
+                                <property name="column-spacing">40</property>
+                                <property name="max-children-per-line">6</property>
+                                <property name="min-children-per-line">1</property>
+                                <property name="overflow">hidden</property>
+                                <property name="row-spacing">10</property>
+                                <property name="selection-mode">none</property>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkLabel" id="label-dos">
+                                <property name="css-classes">title-4</property>
+                                <property name="halign">start</property>
+                                <property name="label">Dos</property>
+                                <property name="margin-bottom">10</property>
+                                <property name="margin-top">20</property>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkFlowBox" id="units-dos">
+                                <property name="column-spacing">40</property>
+                                <property name="max-children-per-line">6</property>
+                                <property name="min-children-per-line">1</property>
+                                <property name="overflow">hidden</property>
+                                <property name="row-spacing">10</property>
+                                <property name="selection-mode">none</property>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkLabel" id="label-tres">
+                                <property name="css-classes">title-4</property>
+                                <property name="halign">start</property>
+                                <property name="label">Tres</property>
+                                <property name="margin-bottom">10</property>
+                                <property name="margin-top">20</property>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkFlowBox" id="units-tres">
+                                <property name="column-spacing">40</property>
+                                <property name="max-children-per-line">6</property>
+                                <property name="min-children-per-line">1</property>
+                                <property name="overflow">hidden</property>
+                                <property name="row-spacing">10</property>
+                                <property name="selection-mode">none</property>
+                              </object>
+                            </child>
+                          </object>
+                        </property>
+                      </object>
+                    </property>
+                  </object>
+                </child>
+              </object>
+            </property>
+            <property name="title">Units</property>
+          </object>
+        </property>
+        <property name="max-sidebar-width">200.0</property>
+        <property name="min-sidebar-width">200.0</property>
+        <property name="sidebar">
+          <object class="AdwNavigationPage">
+            <property name="child">
+              <object class="AdwToolbarView">
+                <child type="top">
+                  <object class="AdwHeaderBar"/>
+                </child>
+                <child>
+                  <object class="GtkScrolledWindow">
+                    <property name="child">
+                      <object class="GtkListBox" id="quantities-list">
+                        <property name="css-name">boxed-list</property>
+                      </object>
+                    </property>
+                  </object>
+                </child>
+              </object>
+            </property>
+            <property name="title">Convertidor</property>
+          </object>
+        </property>
+        <property name="sidebar-width-unit">px</property>
+      </object>
+    </property>
+    <property name="default-height">600</property>
+    <property name="default-width">800</property>
+    <property name="title" translatable="yes">Convertidor</property>
+  </template>
+  <menu id="primary_menu">
+    <section>
+      <item>
+        <attribute name="action">app.preferences</attribute>
+        <attribute name="label" translatable="yes">_Preferences</attribute>
+      </item>
+      <item>
+        <attribute name="action">win.show-help-overlay</attribute>
+        <attribute name="label" translatable="yes">_Keyboard Shortcuts</attribute>
+      </item>
+      <item>
+        <attribute name="action">app.about</attribute>
+        <attribute name="label" translatable="yes">_About Convertidor</attribute>
+      </item>
+    </section>
+  </menu>
+  <object class="AdwPreferencesDialog" id="pref-dialog">
+    <property name="child">
+      <object class="AdwToolbarView">
+        <property name="content">
+          <object class="AdwPreferencesGroup">
+            <property name="margin-bottom">20</property>
+            <property name="margin-end">20</property>
+            <property name="margin-start">20</property>
+            <property name="margin-top">20</property>
+            <property name="title" translatable="yes">General</property>
+            <child>
+              <object class="AdwComboRow" id="pref-theme">
+                <property name="model">
+                  <object class="GtkStringList">
+                    <property name="strings" translatable="yes">Light
+Dark</property>
+                  </object>
+                </property>
+                <property name="subtitle" translatable="yes">Theme variant</property>
+                <property name="title" translatable="yes">Theme</property>
+              </object>
+            </child>
+            <child>
+              <object class="AdwSpinRow" id="pref-precision">
+                <property name="adjustment">
+                  <object class="GtkAdjustment">
+                    <property name="lower">1.0</property>
+                    <property name="page-increment">1.0</property>
+                    <property name="page-size">1.0</property>
+                    <property name="step-increment">1.0</property>
+                    <property name="upper">101.0</property>
+                    <property name="value">9.0</property>
+                  </object>
+                </property>
+                <property name="numeric">True</property>
+                <property name="subtitle" translatable="yes">Number of significant digits</property>
+                <property name="title" translatable="yes">Precision</property>
+              </object>
+            </child>
+            <child>
+              <object class="AdwSpinRow" id="pref-scientific">
+                <property name="adjustment">
+                  <object class="GtkAdjustment">
+                    <property name="lower">4.0</property>
+                    <property name="page-increment">1.0</property>
+                    <property name="page-size">1.0</property>
+                    <property name="step-increment">1.0</property>
+                    <property name="upper">17.0</property>
+                    <property name="value">10.0</property>
+                  </object>
+                </property>
+                <property name="subtitle" translatable="yes">Character limit for switching</property>
+                <property name="title" translatable="yes">Scientific notation</property>
+              </object>
+            </child>
+          </object>
+        </property>
+        <property name="extend-content-to-bottom-edge">True</property>
+        <child type="top">
+          <object class="AdwHeaderBar"/>
+        </child>
+      </object>
+    </property>
+    <property name="content-width">400</property>
+  </object>
+</interface>
