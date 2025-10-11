@@ -17,8 +17,7 @@
 
 ## License
 
-Convertidor is a [free software](https://www.gnu.org/philosophy/free-sw.html) and will always be free.
-It is released under the terms of the [GNU General Public License](./COPYING).
+Convertidor is a [free software](https://www.gnu.org/philosophy/free-sw.html) and will always be free. It is released under the terms of the [GNU General Public License](./COPYING).
 
 ## Copyright
 

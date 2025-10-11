@@ -185,6 +185,7 @@ class ConvertidorApplication(Adw.Application):
                             int(entry_index),
                             value[0],
                             self.pref.get_int('precision'),
+                            self.pref.get_int('quantize'),
                             self.pref.get_int('scientific'))
 
         sc = entry.get_style_context()
@@ -289,7 +290,7 @@ class ConvertidorApplication(Adw.Application):
             application_name='Convertidor',
             application_icon='tech.digiroad.Convertidor',
             developer_name='Golodnikov Sergey',
-            version='1.0.0',
+            version='1.1.0',
             comments=(
                 'Convertidor is a handy application for '
                 'converting units of measurement.'),
@@ -308,6 +309,7 @@ class ConvertidorApplication(Adw.Application):
     def preferences_action(self, widget, _):
         self.w.pref_theme.set_selected(self.pref.get_int('theme'))
         self.w.pref_precision.set_value(self.pref.get_int('precision'))
+        self.w.pref_quantize.set_value(self.pref.get_int('quantize'))
         self.w.pref_scientific.set_value(self.pref.get_int('scientific'))
         self.w.pref_dialog.connect('closed', self.preferences_save)
         self.w.pref_dialog.present(self.props.active_window)
@@ -317,6 +319,8 @@ class ConvertidorApplication(Adw.Application):
                           self.w.pref_theme.get_selected())
         self.pref.set_int('precision',
                           int(self.w.pref_precision.get_value()))
+        self.pref.set_int('quantize',
+                          int(self.w.pref_quantize.get_value()))
         self.pref.set_int('scientific',
                           int(self.w.pref_scientific.get_value()))
         self.update_theme()

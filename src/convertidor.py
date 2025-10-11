@@ -23,6 +23,24 @@ from gettext import gettext as _
 import math
 
 
+# angle
+# area
+# digital
+# energy
+# force
+# fuel
+# length
+# mass
+# numbers
+# power
+# pressure
+# speed
+# temperature
+# force
+# time
+# volume
+
+
 quantities = {
 
     # concept: smallest unit first!
@@ -525,7 +543,10 @@ def conversion(quantity: str,
                index: int,
                value: Decimal | str,
                precision: int,
+               quantize: int,
                scientific: int) -> list | None:
+
+    _quantize = f'{0:.{quantize}f}'
 
     getcontext().prec = precision
     units = quantities[quantity]['units']
@@ -537,7 +558,12 @@ def conversion(quantity: str,
             if type(value) is Decimal:
                 temperature = find_temperature(units[index][1], value)
                 for t in temperature:
-                    result.append(str(t.normalize()))
+                    try:
+                        v = t.quantize(Decimal(_quantize))
+                    except BaseException:
+                        pass
+                    v = v.normalize()
+                    result.append(str(v))
 
         case 'numbers':
             return convert_numbers(units[index][1], value)
@@ -551,6 +577,10 @@ def conversion(quantity: str,
             # unit conversion
             for u in units:
                 v = base_value / u[1]
+                try:
+                    v = v.quantize(Decimal(_quantize))
+                except BaseException:
+                    pass
                 v = v.normalize()
 
                 exponent = v.as_tuple().exponent

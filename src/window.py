@@ -47,6 +47,7 @@ class ConvertidorWindow(Adw.ApplicationWindow):
     pref_dialog = Gtk.Template.Child('pref-dialog')
     pref_theme = Gtk.Template.Child('pref-theme')
     pref_precision = Gtk.Template.Child('pref-precision')
+    pref_quantize = Gtk.Template.Child('pref-quantize')
     pref_scientific = Gtk.Template.Child('pref-scientific')
 
     # other
@@ -57,6 +58,7 @@ class ConvertidorWindow(Adw.ApplicationWindow):
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
+
         # quantities
         for q in quantities:
             ar = Adw.ActionRow(name=q, title=quantities[q]['title'])

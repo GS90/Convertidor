@@ -222,13 +222,29 @@ Dark</property>
                     <property name="page-increment">1.0</property>
                     <property name="page-size">1.0</property>
                     <property name="step-increment">1.0</property>
-                    <property name="upper">101.0</property>
-                    <property name="value">9.0</property>
+                    <property name="upper">97.0</property>
+                    <property name="value">28.0</property>
                   </object>
                 </property>
                 <property name="numeric">True</property>
-                <property name="subtitle" translatable="yes">Number of significant digits</property>
+                <property name="subtitle" translatable="yes">Desired accuracy of calculations</property>
                 <property name="title" translatable="yes">Precision</property>
+              </object>
+            </child>
+            <child>
+              <object class="AdwSpinRow" id="pref-quantize">
+                <property name="adjustment">
+                  <object class="GtkAdjustment">
+                    <property name="lower">0.0</property>
+                    <property name="page-increment">1.0</property>
+                    <property name="page-size">1.0</property>
+                    <property name="step-increment">1.0</property>
+                    <property name="upper">101.0</property>
+                    <property name="value">6.0</property>
+                  </object>
+                </property>
+                <property name="subtitle" translatable="yes">Rounding to a fixed value</property>
+                <property name="title" translatable="yes">Quantize</property>
               </object>
             </child>
             <child>
@@ -239,7 +255,7 @@ Dark</property>
                     <property name="page-increment">1.0</property>
                     <property name="page-size">1.0</property>
                     <property name="step-increment">1.0</property>
-                    <property name="upper">17.0</property>
+                    <property name="upper">97.0</property>
                     <property name="value">10.0</property>
                   </object>
                 </property>

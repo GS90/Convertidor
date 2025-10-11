@@ -17,9 +17,14 @@
 			<description>Window height</description>
 		</key>
 		<key name="precision" type="i">
-			<default>10</default>
+			<default>28</default>
 			<summary>Precision</summary>
-			<description>Number of decimals</description>
+			<description>Desired accuracy of calculations</description>
+		</key>
+		<key name="quantize" type="i">
+			<default>6</default>
+			<summary>Quantize</summary>
+			<description>Rounding to a fixed value</description>
 		</key>
 		<key name="scientific" type="i">
 			<default>10</default>
@@ -37,7 +42,7 @@
 			<description>Show imperial units</description>
 		</key>
 		<key name="legacy" type="b">
-			<default>true</default>
+			<default>false</default>
 			<summary>Legacy</summary>
 			<description>Show legacy units</description>
 		</key>
