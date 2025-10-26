@@ -28,16 +28,10 @@
             "buildsystem" : "meson",
             "sources" : [
                 {
-                    "type" : "git",
-                    "url" : "."
+                    "type" : "dir",
+                    "path" : "."
                 }
-            ],
-            "config-opts" : [
-                "--libdir=lib"
             ]
         }
-    ],
-    "build-options" : {
-        "env" : {}
-    }
+    ]
 }

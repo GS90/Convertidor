@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-12 01:38+0300\n"
+"POT-Creation-Date: 2025-12-13 16:33+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -121,7 +121,7 @@ msgid "Conversion of 300+ units of measurement."
 msgstr ""
 
 #: data/tech.digiroad.Convertidor.metainfo.xml.in:18
-msgid "Instant and accurate (simultaneous!) unit conversion."
+msgid "Instant and accurate (simultaneous) unit conversion."
 msgstr ""
 
 #: data/tech.digiroad.Convertidor.metainfo.xml.in:19

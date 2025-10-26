@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-12 01:38+0300\n"
+"POT-Creation-Date: 2025-10-26 23:13+0300\n"
 "PO-Revision-Date: 2025-05-18 21:15+0300\n"
 "Last-Translator: Golodnikov Sergey <nn19051990@gmail.com>\n"
 "Language-Team: Russian\n"
@@ -129,7 +129,7 @@ msgid "Conversion of 300+ units of measurement."
 msgstr ""
 
 #: data/tech.digiroad.Convertidor.metainfo.xml.in:18
-msgid "Instant and accurate (simultaneous!) unit conversion."
+msgid "Instant and accurate (simultaneous) unit conversion."
 msgstr ""
 
 #: data/tech.digiroad.Convertidor.metainfo.xml.in:19
