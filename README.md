@@ -12,7 +12,7 @@
 ## Features
 
 - Conversion of 300+ units of measurement.
-- Instant and accurate (simultaneous!) unit conversion.
+- Instant and accurate (simultaneous) unit conversion.
 - Intuitive and user-friendly interface.
 
 ## License

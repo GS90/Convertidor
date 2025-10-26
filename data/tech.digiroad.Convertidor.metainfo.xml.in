@@ -15,7 +15,7 @@
     <p>Features:</p>
     <ul>
       <li>Conversion of 300+ units of measurement.</li>
-      <li>Instant and accurate (simultaneous!) unit conversion.</li>
+      <li>Instant and accurate (simultaneous) unit conversion.</li>
       <li>Intuitive and user-friendly interface.</li>
     </ul>
   </description>
@@ -45,7 +45,7 @@
   </screenshots>
 
   <releases>
-    <release version="1.1.0" date="2025-10-04">
+    <release version="1.2.0" date="2025-10-26">
       <description translate="no">
         <ul>
           <li>Initial release</li>

@@ -117,7 +117,7 @@ class ConvertidorApplication(Adw.Application):
                 hexpand=True,
                 input_purpose='digits',
                 name=str(index),
-                text='0',
+                # text='0',
             )
             entry.set_size_request(140, -1)
 
@@ -148,7 +148,7 @@ class ConvertidorApplication(Adw.Application):
         self.freeze = True
         for i in self.entries:
             if i.get_name() != skip_name:
-                i.set_text('0')
+                i.set_text('')
         self.freeze = False
 
     def entries_reset_wrapper(self, _):
@@ -159,7 +159,10 @@ class ConvertidorApplication(Adw.Application):
 
     def entry_get(self, entry) -> tuple[Decimal | str, int | None] | None:
         try:
-            decimal = Decimal(entry.get_text().replace(',', '.').strip())
+            text = entry.get_text().replace(',', '.').strip()
+            if text == '':
+                text = '0'
+            decimal = Decimal(text)
             exponent = decimal.as_tuple().exponent
             if type(exponent) is not int:
                 return None  # todo: think about it
@@ -290,7 +293,7 @@ class ConvertidorApplication(Adw.Application):
             application_name='Convertidor',
             application_icon='tech.digiroad.Convertidor',
             developer_name='Golodnikov Sergey',
-            version='1.1.0',
+            version='1.2.0',
             comments=(
                 'Convertidor is a handy application for '
                 'converting units of measurement.'),
