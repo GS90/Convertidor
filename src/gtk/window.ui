@@ -20,14 +20,14 @@
                         <property name="margin-start">10</property>
                         <child>
                           <object class="GtkCheckButton" id="show-imperial">
-                            <property name="label">Imperial</property>
-                            <property name="tooltip-text">Displaying Imperial and US measurements</property>
+                            <property name="label" translatable="yes">Imperial</property>
+                            <property name="tooltip-text" translatable="yes">Displaying Imperial and US measurements</property>
                           </object>
                         </child>
                         <child>
                           <object class="GtkCheckButton" id="show-legacy">
-                            <property name="label">Obsolete</property>
-                            <property name="tooltip-text">Display of obsolete measurement units</property>
+                            <property name="label" translatable="yes">Obsolete</property>
+                            <property name="tooltip-text" translatable="yes">Display of obsolete measurement units</property>
                           </object>
                         </child>
                       </object>

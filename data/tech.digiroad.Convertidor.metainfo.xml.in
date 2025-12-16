@@ -45,21 +45,34 @@
   </screenshots>
 
   <releases>
+
+    <release version="1.2.2" date="2025-12-16">
+      <description translate="no">
+        <ul>
+          <li>Minor fixes.</li>
+          <li>Translation update (Russian).</li>
+        </ul>
+      </description>
+    </release>
+
     <release version="1.2.0" date="2025-10-26">
       <description translate="no">
         <p>Minor improvements.</p>
       </description>
     </release>
+
     <release version="1.1.0" date="2025-10-12">
       <description translate="no">
         <p>In the new version, a rounding (quantize) feature has been added, and the default settings have been improved.</p>
       </description>
     </release>
+
     <release version="1.0.0" date="2025-10-05">
       <description translate="no">
         <p>Initial release.</p>
       </description>
     </release>
+
   </releases>
 
 </component>

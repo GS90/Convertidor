@@ -1,15 +1,12 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Copyright 2025 Golodnikov Sergey
 # Golodnikov Sergey <nn19051990@gmail.com>, 2025.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: 1.1.0\n"
+"Project-Id-Version: 1.2.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-26 23:13+0300\n"
-"PO-Revision-Date: 2025-05-18 21:15+0300\n"
+"POT-Creation-Date: 2025-12-17 00:10+0300\n"
+"PO-Revision-Date: 2025-12-17 00:16+0300\n"
 "Last-Translator: Golodnikov Sergey <nn19051990@gmail.com>\n"
 "Language-Team: Russian\n"
 "Language: ru\n"
@@ -18,7 +15,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Gtranslator 48.0\n"
+"X-Generator: Gtranslator 49.0\n"
 "X-DL-Lang: ru\n"
 "X-DL-Module: \n"
 "X-DL-Branch: \n"
@@ -27,7 +24,7 @@ msgstr ""
 #: data/tech.digiroad.Convertidor.desktop.in:2
 #: data/tech.digiroad.Convertidor.metainfo.xml.in:5 src/gtk/window.ui:177
 msgid "Convertidor"
-msgstr "Конвертидор"
+msgstr "Convertidor"
 
 #: data/tech.digiroad.Convertidor.desktop.in:8
 msgid "units;converter"
@@ -43,19 +40,19 @@ msgstr "Вариант темы"
 
 #: data/tech.digiroad.Convertidor.gschema.xml:11
 msgid "Width"
-msgstr ""
+msgstr "Ширина"
 
 #: data/tech.digiroad.Convertidor.gschema.xml:12
 msgid "Window width"
-msgstr ""
+msgstr "Ширина окна"
 
 #: data/tech.digiroad.Convertidor.gschema.xml:16
 msgid "Height"
-msgstr ""
+msgstr "Высота"
 
 #: data/tech.digiroad.Convertidor.gschema.xml:17
 msgid "Window height"
-msgstr ""
+msgstr "Высота окна"
 
 #: data/tech.digiroad.Convertidor.gschema.xml:21 src/gtk/window.ui:231
 msgid "Precision"
@@ -63,24 +60,23 @@ msgstr "Точность"
 
 #: data/tech.digiroad.Convertidor.gschema.xml:22 src/gtk/window.ui:230
 msgid "Desired accuracy of calculations"
-msgstr ""
+msgstr "Желаемая точность расчетов"
 
 #: data/tech.digiroad.Convertidor.gschema.xml:26 src/gtk/window.ui:247
-#, fuzzy
 msgid "Quantize"
-msgstr "Величина"
+msgstr "Квантовать"
 
 #: data/tech.digiroad.Convertidor.gschema.xml:27 src/gtk/window.ui:246
 msgid "Rounding to a fixed value"
-msgstr ""
+msgstr "Округление до фиксированного значения"
 
 #: data/tech.digiroad.Convertidor.gschema.xml:31 src/gtk/window.ui:263
 msgid "Scientific notation"
-msgstr ""
+msgstr "Научная нотация"
 
 #: data/tech.digiroad.Convertidor.gschema.xml:32 src/gtk/window.ui:262
 msgid "Character limit for switching"
-msgstr ""
+msgstr "Ограничение символов для переключения"
 
 #: data/tech.digiroad.Convertidor.gschema.xml:36
 msgid "Quantity"
@@ -88,96 +84,95 @@ msgstr "Величина"
 
 #: data/tech.digiroad.Convertidor.gschema.xml:37
 msgid "Last choice of quantity"
-msgstr ""
+msgstr "Последняя выбранная величина"
 
-#: data/tech.digiroad.Convertidor.gschema.xml:41
+#: data/tech.digiroad.Convertidor.gschema.xml:41 src/gtk/window.ui:23
 msgid "Imperial"
-msgstr ""
+msgstr "Имперские"
 
 #: data/tech.digiroad.Convertidor.gschema.xml:42
 msgid "Show imperial units"
-msgstr ""
+msgstr "Показать имперские единицы измерения"
 
 #: data/tech.digiroad.Convertidor.gschema.xml:46
 msgid "Legacy"
-msgstr ""
+msgstr "Устаревшие"
 
 #: data/tech.digiroad.Convertidor.gschema.xml:47
 msgid "Show legacy units"
-msgstr ""
+msgstr "Показать устаревшие единицы измерения"
 
 #: data/tech.digiroad.Convertidor.metainfo.xml.in:8
 msgid "Converting units of measurement"
-msgstr ""
+msgstr "Преобразование единиц измерения"
 
 #: data/tech.digiroad.Convertidor.metainfo.xml.in:10
 msgid "Golodnikov Sergey"
-msgstr ""
+msgstr "Голодников Сергей"
 
 #: data/tech.digiroad.Convertidor.metainfo.xml.in:14
 msgid ""
 "Convertidor is a handy and high precision application for converting units "
 "of measurement."
 msgstr ""
+"Convertidor - это удобное и высокоточное приложение для преобразования "
+"единиц измерения."
 
 #: data/tech.digiroad.Convertidor.metainfo.xml.in:15
 msgid "Features:"
-msgstr ""
+msgstr "Особенности:"
 
 #: data/tech.digiroad.Convertidor.metainfo.xml.in:17
 msgid "Conversion of 300+ units of measurement."
-msgstr ""
+msgstr "Преобразование свыше 300 единиц измерения."
 
 #: data/tech.digiroad.Convertidor.metainfo.xml.in:18
 msgid "Instant and accurate (simultaneous) unit conversion."
-msgstr ""
+msgstr "Мгновенное (одновременное) и точное преобразование."
 
 #: data/tech.digiroad.Convertidor.metainfo.xml.in:19
 msgid "Intuitive and user-friendly interface."
-msgstr ""
+msgstr "Интуитивно понятный и удобный интерфейс."
 
 #: data/tech.digiroad.Convertidor.metainfo.xml.in:39
-#, fuzzy
 msgid "Convertidor in light mode"
-msgstr "Конвертидор"
+msgstr "Convertidor, светлая тема"
 
 #: data/tech.digiroad.Convertidor.metainfo.xml.in:43
-#, fuzzy
 msgid "Convertidor in dark mode"
-msgstr "Конвертидор"
+msgstr "Convertidor, тёмная тема"
 
 #: src/convertidor.py:49
 msgid "Angle"
-msgstr ""
+msgstr "Угол"
 
 #: src/convertidor.py:51
-msgid "Unit of measurement"
-msgstr ""
+msgid "Units of measurement"
+msgstr "Единицы измерения"
 
 #: src/convertidor.py:54
 msgid "Second, \""
-msgstr ""
+msgstr "Секунда, \""
 
 #: src/convertidor.py:55
 msgid "Minute, '"
-msgstr ""
+msgstr "Минута, '"
 
 #: src/convertidor.py:56
 msgid "Grad, ^g"
-msgstr ""
+msgstr "Град, ^g"
 
 #: src/convertidor.py:57
 msgid "Degree, °"
-msgstr ""
+msgstr "Градус, °"
 
 #: src/convertidor.py:58
 msgid "Radian, rad"
-msgstr ""
+msgstr "Радиан, rad"
 
 #: src/convertidor.py:59
-#, fuzzy
 msgid "Milliradian, mrad"
-msgstr "Квадратный нанометр"
+msgstr "Тысячная, mrad"
 
 #: src/convertidor.py:65
 msgid "Area"
@@ -186,92 +181,78 @@ msgstr "Площадь"
 #: src/convertidor.py:67 src/convertidor.py:218 src/convertidor.py:235
 #: src/convertidor.py:270 src/convertidor.py:412 src/convertidor.py:500
 msgid "Metric system"
-msgstr ""
+msgstr "Метрическая система"
 
 #: src/convertidor.py:68 src/convertidor.py:137 src/convertidor.py:179
 #: src/convertidor.py:219 src/convertidor.py:236 src/convertidor.py:271
 #: src/convertidor.py:323 src/convertidor.py:370 src/convertidor.py:413
 #: src/convertidor.py:456 src/convertidor.py:501
 msgid "Imperial and US customary systems"
-msgstr ""
+msgstr "Имперская и американская системы"
 
 #: src/convertidor.py:72
-#, fuzzy
-msgid "Square nanometer, nm"
-msgstr "Квадратный нанометр"
+msgid "Square nanometer, nm^2"
+msgstr "Квадратный нанометр, nm^2"
 
 #: src/convertidor.py:73
-#, fuzzy
 msgid "Square micrometer μm^2"
-msgstr "Квадратный нанометр"
+msgstr "Квадратный микрометр, μm^2"
 
 #: src/convertidor.py:74
-#, fuzzy
 msgid "Square millimeter, mm^2"
-msgstr "Квадратный нанометр"
+msgstr "Квадратный миллиметр, mm^2"
 
 #: src/convertidor.py:75
-#, fuzzy
 msgid "Square centimeter, cm^2"
-msgstr "Квадратный нанометр"
+msgstr "Квадратный сантиметр, cm^2"
 
 #: src/convertidor.py:76
-#, fuzzy
 msgid "Square decimeter, dm^2"
-msgstr "Квадратный нанометр"
+msgstr "Квадратный дециметр, dm^2"
 
 #: src/convertidor.py:77
-#, fuzzy
 msgid "Square meter, m^2"
-msgstr "Квадратный нанометр"
+msgstr "Квадратный метр, m^2"
 
 #: src/convertidor.py:78
-#, fuzzy
 msgid "Square dekameter, dam^2"
-msgstr "Квадратный нанометр"
+msgstr "Квадратный декаметр, dam^2"
 
 #: src/convertidor.py:79
 msgid "Are, a"
-msgstr ""
+msgstr "Ар, a"
 
 #: src/convertidor.py:80
-#, fuzzy
 msgid "Square hectometer, hm^2"
-msgstr "Квадратный нанометр"
+msgstr "Квадратный гектометр, hm^2"
 
 #: src/convertidor.py:81
 msgid "Hectare, ha"
-msgstr ""
+msgstr "Гектар, ha"
 
 #: src/convertidor.py:82
-#, fuzzy
 msgid "Square kilometer, km^2"
-msgstr "Квадратный нанометр"
+msgstr "Квадратный километр, km^2"
 
 #: src/convertidor.py:83
-#, fuzzy
 msgid "Square astronomical unit, au^2"
-msgstr "Квадратный нанометр"
+msgstr ""
 
 #: src/convertidor.py:86
-#, fuzzy
 msgid "Square inch, in^2"
-msgstr "Квадратный нанометр"
+msgstr ""
 
 #: src/convertidor.py:87
-#, fuzzy
 msgid "Square foot, ft^2"
-msgstr "Квадратный нанометр"
+msgstr ""
 
 #: src/convertidor.py:88
-#, fuzzy
 msgid "Square foot (US), ft^2"
-msgstr "Квадратный нанометр"
+msgstr ""
 
 #: src/convertidor.py:89
-#, fuzzy
 msgid "Square yard, yd^2"
-msgstr "Квадратный нанометр"
+msgstr ""
 
 #: src/convertidor.py:90
 msgid "Acre, ac"
@@ -282,30 +263,28 @@ msgid "Acre (US), ac"
 msgstr ""
 
 #: src/convertidor.py:92
-#, fuzzy
 msgid "Square mile, mi^2"
-msgstr "Квадратный нанометр"
+msgstr ""
 
 #: src/convertidor.py:93
-#, fuzzy
 msgid "Square mile (US), mi^2"
-msgstr "Квадратный нанометр"
+msgstr ""
 
 #: src/convertidor.py:98
 msgid "Digital data"
-msgstr ""
+msgstr "Цифровые данные"
 
 #: src/convertidor.py:100
 msgid "Data transfer rates"
-msgstr ""
+msgstr "Скорости передачи данных"
 
 #: src/convertidor.py:101
 msgid "Size of files and data"
-msgstr ""
+msgstr "Размеры файлов и данных"
 
 #: src/convertidor.py:102
 msgid "Binary contexts"
-msgstr ""
+msgstr "Двоичные контексты"
 
 #: src/convertidor.py:106
 msgid "Bit, b"
@@ -389,7 +368,7 @@ msgstr ""
 
 #: src/convertidor.py:132
 msgid "Energy"
-msgstr ""
+msgstr "Энергия"
 
 #: src/convertidor.py:134
 msgid "Joule units"
@@ -432,19 +411,16 @@ msgid "Attojoule, aJ"
 msgstr ""
 
 #: src/convertidor.py:149
-#, fuzzy
 msgid "Nanojoule, nJ"
-msgstr "Квадратный нанометр"
+msgstr ""
 
 #: src/convertidor.py:150
-#, fuzzy
 msgid "Microjoule, μJ"
-msgstr "Квадратный нанометр"
+msgstr ""
 
 #: src/convertidor.py:151
-#, fuzzy
 msgid "Millijoule, mJ"
-msgstr "Квадратный нанометр"
+msgstr ""
 
 #: src/convertidor.py:152
 msgid "Joule, J"
@@ -508,20 +484,20 @@ msgstr ""
 
 #: src/convertidor.py:175
 msgid "Force"
-msgstr ""
+msgstr "Сила"
 
 #: src/convertidor.py:177
 msgid "Newton units"
-msgstr ""
+msgstr "Единицы измерения в ньютонах"
 
 #: src/convertidor.py:178
 msgid "Other force units"
-msgstr ""
+msgstr "Другие единицы силы"
 
 #: src/convertidor.py:180 src/convertidor.py:273 src/convertidor.py:324
 #: src/convertidor.py:457
 msgid "Legacy units"
-msgstr ""
+msgstr "Устаревшие единицы"
 
 #: src/convertidor.py:184
 msgid "Attonewton, aN"
@@ -536,19 +512,16 @@ msgid "Piconewton, pN"
 msgstr ""
 
 #: src/convertidor.py:187
-#, fuzzy
 msgid "Nanonewton, nN"
-msgstr "Квадратный нанометр"
+msgstr ""
 
 #: src/convertidor.py:188
-#, fuzzy
 msgid "Micronewton, μN"
-msgstr "Квадратный нанометр"
+msgstr ""
 
 #: src/convertidor.py:189
-#, fuzzy
 msgid "Millinewton, mN"
-msgstr "Квадратный нанометр"
+msgstr ""
 
 #: src/convertidor.py:190
 msgid "Centinewton, cN"
@@ -628,16 +601,15 @@ msgstr ""
 
 #: src/convertidor.py:216
 msgid "Fuel consumption"
-msgstr ""
+msgstr "Расход топлива"
 
 #: src/convertidor.py:223
 msgid "Meter per liter, m/L"
 msgstr ""
 
 #: src/convertidor.py:224
-#, fuzzy
 msgid "Kilometer per liter, km/L"
-msgstr "Квадратный нанометр"
+msgstr ""
 
 #: src/convertidor.py:225
 msgid "Liters per 100 kilometers, L/100 km"
@@ -653,7 +625,7 @@ msgstr ""
 
 #: src/convertidor.py:233
 msgid "Length"
-msgstr ""
+msgstr "Длина"
 
 #: src/convertidor.py:237
 msgid "Nautical units of length"
@@ -668,19 +640,16 @@ msgid "Picometer, pm"
 msgstr ""
 
 #: src/convertidor.py:243
-#, fuzzy
 msgid "Nanometer, nm"
-msgstr "Квадратный нанометр"
+msgstr ""
 
 #: src/convertidor.py:244
-#, fuzzy
 msgid "Micrometer, μm"
-msgstr "Квадратный нанометр"
+msgstr ""
 
 #: src/convertidor.py:245
-#, fuzzy
 msgid "Millimeter, mm"
-msgstr "Квадратный нанометр"
+msgstr ""
 
 #: src/convertidor.py:246
 msgid "Centimeter, cm"
@@ -723,9 +692,8 @@ msgid "Mile, mi"
 msgstr ""
 
 #: src/convertidor.py:257
-#, fuzzy
 msgid "Statute mile (US), mi"
-msgstr "Квадратный нанометр"
+msgstr ""
 
 #: src/convertidor.py:259
 msgid "Nautical mile, nmi"
@@ -745,21 +713,19 @@ msgstr ""
 
 #: src/convertidor.py:268
 msgid "Weight and Mass"
-msgstr ""
+msgstr "Вес и масса"
 
 #: src/convertidor.py:272
 msgid "Masses of celestial bodies"
 msgstr ""
 
 #: src/convertidor.py:277
-#, fuzzy
 msgid "Microgram, μg"
-msgstr "Квадратный нанометр"
+msgstr ""
 
 #: src/convertidor.py:278
-#, fuzzy
 msgid "Milligram, mg"
-msgstr "Квадратный нанометр"
+msgstr ""
 
 #: src/convertidor.py:279
 msgid "Gram, g"
@@ -843,7 +809,7 @@ msgstr ""
 
 #: src/convertidor.py:306
 msgid "Numbers"
-msgstr ""
+msgstr "Числа"
 
 #: src/convertidor.py:308
 msgid "Numeral systems"
@@ -867,7 +833,7 @@ msgstr ""
 
 #: src/convertidor.py:319
 msgid "Power"
-msgstr ""
+msgstr "Мощность"
 
 #: src/convertidor.py:321
 msgid "Watt-based units"
@@ -890,18 +856,16 @@ msgid "Picowatt, pW"
 msgstr ""
 
 #: src/convertidor.py:331
-#, fuzzy
 msgid "Nanowatt, nW"
-msgstr "Квадратный нанометр"
+msgstr ""
 
 #: src/convertidor.py:332
 msgid "Microwatt, µW"
 msgstr ""
 
 #: src/convertidor.py:333
-#, fuzzy
 msgid "Milliwatt, mW"
-msgstr "Квадратный нанометр"
+msgstr ""
 
 #: src/convertidor.py:334
 msgid "Centiwatt, nW"
@@ -952,14 +916,12 @@ msgid "Erg per second, erg/s"
 msgstr ""
 
 #: src/convertidor.py:347
-#, fuzzy
 msgid "Calorie (it) per hour, cal/h"
-msgstr "Квадратный нанометр"
+msgstr ""
 
 #: src/convertidor.py:349
-#, fuzzy
 msgid "Calorie (it) per second, cal/s"
-msgstr "Квадратный нанометр"
+msgstr ""
 
 #: src/convertidor.py:351
 msgid "Ton of refrigeration, TR"
@@ -995,7 +957,7 @@ msgstr ""
 
 #: src/convertidor.py:366
 msgid "Pressure"
-msgstr ""
+msgstr "Давление"
 
 #: src/convertidor.py:368
 msgid "Pascal units"
@@ -1078,14 +1040,12 @@ msgid "Exapascal, PPa"
 msgstr ""
 
 #: src/convertidor.py:393
-#, fuzzy
 msgid "Millibar, mbar"
-msgstr "Квадратный нанометр"
+msgstr ""
 
 #: src/convertidor.py:394
-#, fuzzy
 msgid "Millimetre of mercury, mmHg"
-msgstr "Квадратный нанометр"
+msgstr ""
 
 #: src/convertidor.py:395
 msgid "Torr"
@@ -1112,9 +1072,8 @@ msgid "Inch of mercury (32°F), inHg"
 msgstr ""
 
 #: src/convertidor.py:402
-#, fuzzy
 msgid "Pound per square inch, psi"
-msgstr "Квадратный нанометр"
+msgstr ""
 
 #: src/convertidor.py:404
 msgid "Kilopound per square inch, ksi"
@@ -1122,86 +1081,71 @@ msgstr ""
 
 #: src/convertidor.py:410
 msgid "Speed"
-msgstr ""
+msgstr "Скорость"
 
 #: src/convertidor.py:414
 msgid "Other speed units"
 msgstr ""
 
 #: src/convertidor.py:418
-#, fuzzy
 msgid "Millimeter per Hour, mm/h"
-msgstr "Квадратный нанометр"
+msgstr ""
 
 #: src/convertidor.py:419
-#, fuzzy
 msgid "Millimeter per Minute, mm/min"
-msgstr "Квадратный нанометр"
+msgstr ""
 
 #: src/convertidor.py:420
-#, fuzzy
 msgid "Millimeter per Second, mm/s"
-msgstr "Квадратный нанометр"
+msgstr ""
 
 #: src/convertidor.py:421
-#, fuzzy
 msgid "Centimeter per Hour, cm/h"
-msgstr "Квадратный нанометр"
+msgstr ""
 
 #: src/convertidor.py:422
-#, fuzzy
 msgid "Centimeter per Minute, cm/min"
-msgstr "Квадратный нанометр"
+msgstr ""
 
 #: src/convertidor.py:423
-#, fuzzy
 msgid "Centimeter per Second, cm/s"
-msgstr "Квадратный нанометр"
+msgstr ""
 
 #: src/convertidor.py:424
-#, fuzzy
 msgid "Meter per Hour, m/h"
-msgstr "Квадратный нанометр"
+msgstr ""
 
 #: src/convertidor.py:425
-#, fuzzy
 msgid "Meter per Minute, m/min"
-msgstr "Квадратный нанометр"
+msgstr ""
 
 #: src/convertidor.py:426
-#, fuzzy
 msgid "Meter per Second, m/s"
-msgstr "Квадратный нанометр"
+msgstr ""
 
 #: src/convertidor.py:427
-#, fuzzy
 msgid "Kilometer per Hour, km/h"
-msgstr "Квадратный нанометр"
+msgstr ""
 
 #: src/convertidor.py:428
-#, fuzzy
 msgid "Kilometer per Minute, km/min"
-msgstr "Квадратный нанометр"
+msgstr ""
 
 #: src/convertidor.py:429
-#, fuzzy
 msgid "Kilometer per Second, km/s"
-msgstr "Квадратный нанометр"
+msgstr ""
 
 #: src/convertidor.py:431
-#, fuzzy
 msgid "Feet per Hour, ft/h"
-msgstr "Квадратный нанометр"
+msgstr ""
 
 #: src/convertidor.py:432
-#, fuzzy
 msgid "Feet per Minute, ft/min"
-msgstr "Квадратный нанометр"
+msgstr ""
 
 #: src/convertidor.py:433
-#, fuzzy
 msgid "Feet per Second, ft/s"
-msgstr "Квадратный нанометр"
+msgstr ""
 
 #: src/convertidor.py:434
 msgid "Yard per Hour, yd/h"
@@ -1216,19 +1160,16 @@ msgid "Yard per Second, yd/s"
 msgstr ""
 
 #: src/convertidor.py:437
-#, fuzzy
 msgid "Mile per Hour, mi/h"
-msgstr "Квадратный нанометр"
+msgstr ""
 
 #: src/convertidor.py:438
-#, fuzzy
 msgid "Mile per Minute, mi/min"
-msgstr "Квадратный нанометр"
+msgstr ""
 
 #: src/convertidor.py:439
-#, fuzzy
 msgid "Mile per Second, mi/s"
-msgstr "Квадратный нанометр"
+msgstr ""
 
 #: src/convertidor.py:441
 msgid "Knot, kn"
@@ -1264,7 +1205,7 @@ msgstr ""
 
 #: src/convertidor.py:453
 msgid "Temperature"
-msgstr ""
+msgstr "Температура"
 
 #: src/convertidor.py:455
 msgid "SI system"
@@ -1292,195 +1233,183 @@ msgstr ""
 
 #: src/convertidor.py:473
 msgid "Time"
-msgstr ""
+msgstr "Время"
 
 #: src/convertidor.py:475
 msgid "Units of time"
-msgstr ""
+msgstr "Единицы времени"
 
 #: src/convertidor.py:478
 msgid "Attosecond, as"
-msgstr ""
+msgstr "Аттосекунда, as"
 
 #: src/convertidor.py:479
 msgid "Femtosecond, fs"
-msgstr ""
+msgstr "Фемтосекунда, fs"
 
 #: src/convertidor.py:480
 msgid "Picosecond, fs"
-msgstr ""
+msgstr "Пикосекунда, fs"
 
 #: src/convertidor.py:481
 msgid "Nanosecond, ns"
-msgstr ""
+msgstr "Наносекунда, ns"
 
 #: src/convertidor.py:482
 msgid "Microsecond, μs"
-msgstr ""
+msgstr "Микросекунда, μs"
 
 #: src/convertidor.py:483
 msgid "Millisecond, ms"
-msgstr ""
+msgstr "Миллисекунда, ms"
 
 #: src/convertidor.py:484
 msgid "Second, s"
-msgstr ""
+msgstr "Секунда, s"
 
 #: src/convertidor.py:485
 msgid "Minute, min"
-msgstr ""
+msgstr "Минута, min"
 
 #: src/convertidor.py:486
 msgid "Hour, h"
-msgstr ""
+msgstr "Час, h"
 
 #: src/convertidor.py:487
 msgid "Day, d"
-msgstr ""
+msgstr "День, d"
 
 #: src/convertidor.py:488
 msgid "Week"
-msgstr ""
+msgstr "Неделя"
 
 #: src/convertidor.py:489
 msgid "Month"
-msgstr ""
+msgstr "Месяц"
 
 #: src/convertidor.py:490
 msgid "Year (365 days), y"
-msgstr ""
+msgstr "Год (365 дней), y"
 
 #: src/convertidor.py:491
 msgid "Decade"
-msgstr ""
+msgstr "Десятилетие"
 
 #: src/convertidor.py:492
 msgid "Century"
-msgstr ""
+msgstr "Век"
 
 #: src/convertidor.py:493
 msgid "Millennium"
-msgstr ""
+msgstr "Тысячелетие"
 
 #: src/convertidor.py:498
 msgid "Volume"
-msgstr ""
+msgstr "Объем"
 
 #: src/convertidor.py:505
-#, fuzzy
 msgid "Cubic millimeter, mm^3"
-msgstr "Квадратный нанометр"
+msgstr "Кубический миллиметр, mm^3"
 
 #: src/convertidor.py:506
-#, fuzzy
 msgid "Cubic centimeter, cm^3"
-msgstr "Квадратный нанометр"
+msgstr "Кубический сантиметр, cm^3"
 
 #: src/convertidor.py:507
-#, fuzzy
 msgid "Cubic decimeter, dm^3"
-msgstr "Квадратный нанометр"
+msgstr "Кубический дециметр, dm^3"
 
 #: src/convertidor.py:508
-#, fuzzy
 msgid "Cubic meter, m^3"
-msgstr "Квадратный нанометр"
+msgstr "Кубический метр, m^3"
 
 #: src/convertidor.py:509
-#, fuzzy
 msgid "Cubic kilometer, km^3"
-msgstr "Квадратный нанометр"
+msgstr "Кубический километр, km^3"
 
 #: src/convertidor.py:510
-#, fuzzy
 msgid "Milliliter, mL"
-msgstr "Квадратный нанометр"
+msgstr "Миллилитр, mL"
 
 #: src/convertidor.py:511
 msgid "Liter, L"
-msgstr ""
+msgstr "Литр, L"
 
 #: src/convertidor.py:513
-#, fuzzy
 msgid "Cubic inch, in^3"
-msgstr "Квадратный нанометр"
+msgstr "Кубический дюйм, in^3"
 
 #: src/convertidor.py:514
-#, fuzzy
 msgid "Cubic foot, ft^3"
-msgstr "Квадратный нанометр"
+msgstr "Кубический фут, ft^3"
 
 #: src/convertidor.py:515
-#, fuzzy
 msgid "Cubic yard, yd^3"
-msgstr "Квадратный нанометр"
+msgstr "Кубический ярд, yd^3"
 
 #: src/convertidor.py:516
-#, fuzzy
 msgid "Cubic mile, mi^3"
-msgstr "Квадратный нанометр"
+msgstr "Кубическая миля, mi^3"
 
 #: src/convertidor.py:517
 msgid "Acre - inch, ac⋅in"
-msgstr ""
+msgstr "Акр - дюйм, ac⋅in"
 
 #: src/convertidor.py:518
 msgid "Acre - foot, ac⋅ft"
-msgstr ""
+msgstr "Акр - фут, ac⋅ft"
 
 #: src/convertidor.py:519
-#, fuzzy
 msgid "Acre - foot (US), ac⋅ft"
-msgstr "Квадратный нанометр"
+msgstr "Акр - фут (США), ac⋅ft"
 
 #: src/convertidor.py:521
 msgid "Ounce (US), oz"
-msgstr ""
+msgstr "Унция (США), oz"
 
 #: src/convertidor.py:522
 msgid "Gill, gi"
-msgstr ""
+msgstr "Джилл, gi"
 
 #: src/convertidor.py:523
 msgid "Gill (US), gi"
-msgstr ""
+msgstr "Джилл (США), gi"
 
 #: src/convertidor.py:524
 msgid "Pint, pt"
-msgstr ""
+msgstr "Пинта, pt"
 
 #: src/convertidor.py:525
 msgid "Pint (US), pt"
-msgstr ""
+msgstr "Пинта (США), pt"
 
 #: src/convertidor.py:526
 msgid "Quart, qt"
-msgstr ""
+msgstr "Кварт, qt"
 
 #: src/convertidor.py:527
-#, fuzzy
 msgid "Quart (US), qt"
-msgstr "Квадратный нанометр"
+msgstr "Кварт (США), qt"
 
 #: src/convertidor.py:528
 msgid "Gallon, gal"
-msgstr ""
+msgstr "Галлон, gal"
 
 #: src/convertidor.py:529
 msgid "Gallon (US), gal"
-msgstr ""
+msgstr "Галлон (США), gal"
 
 #: src/convertidor.py:530
 msgid "Barrel, bbl"
-msgstr ""
+msgstr "Баррель, bbl"
 
 #: src/convertidor.py:531
 msgid "Barrel (US), bbl"
-msgstr ""
+msgstr "Баррель (US), bbl"
 
 #: src/convertidor.py:532
 msgid "Barrel (oil), bbl"
-msgstr ""
+msgstr "Баррель (нефть), bbl"
 
 #: src/gtk/help-overlay.ui:11
 msgctxt "shortcut window"
@@ -1490,7 +1419,7 @@ msgstr "Основные"
 #: src/gtk/help-overlay.ui:14
 msgctxt "shortcut window"
 msgid "Show Shortcuts"
-msgstr "Показать ярлыки"
+msgstr "Показать сочетания клавиш"
 
 #: src/gtk/help-overlay.ui:20
 msgctxt "shortcut window"
@@ -1502,17 +1431,29 @@ msgctxt "shortcut window"
 msgid "Preferences"
 msgstr "Настройки"
 
+#: src/gtk/window.ui:24
+msgid "Displaying Imperial and US measurements"
+msgstr "Отображение имперских и американских единиц измерения"
+
+#: src/gtk/window.ui:29
+msgid "Obsolete"
+msgstr "Устаревшие"
+
+#: src/gtk/window.ui:30
+msgid "Display of obsolete measurement units"
+msgstr "Отображение устаревших единиц измерения"
+
 #: src/gtk/window.ui:40
 msgid "Application menu"
-msgstr ""
+msgstr "Меню приложения"
 
 #: src/gtk/window.ui:46
 msgid "Reset"
-msgstr ""
+msgstr "Сбросить"
 
 #: src/gtk/window.ui:47
 msgid "Reset all units of measurement"
-msgstr ""
+msgstr "Сбросить все единицы измерения"
 
 #: src/gtk/window.ui:183
 msgid "_Preferences"
@@ -1520,14 +1461,13 @@ msgstr "_Настройки"
 
 #: src/gtk/window.ui:187
 msgid "_Keyboard Shortcuts"
-msgstr "_Клавиатурные штуки"
+msgstr "_Сочетания клавиш"
 
 #: src/gtk/window.ui:191
 msgid "_About Convertidor"
 msgstr "_О программе"
 
 #: src/gtk/window.ui:204
-#, fuzzy
 msgid "General"
 msgstr "Основные"
 

@@ -293,7 +293,7 @@ class ConvertidorApplication(Adw.Application):
             application_name='Convertidor',
             application_icon='tech.digiroad.Convertidor',
             developer_name='Golodnikov Sergey',
-            version='1.2.0',
+            version='1.2.2',
             comments=(
                 'Convertidor is a handy application for '
                 'converting units of measurement.'),

@@ -48,7 +48,7 @@ quantities = {
     'angle': {
         'title': _('Angle'),
         'pattern': (
-            (_('Unit of measurement'), ''),
+            (_('Units of measurement'), ''),
         ),
         'units': (
             (_('Second, "'), Decimal('1'), 0),
@@ -69,7 +69,7 @@ quantities = {
         ),
         'units': (
             # Metric system
-            (_('Square nanometer, nm'), Decimal('1'), 0),
+            (_('Square nanometer, nm^2'), Decimal('1'), 0),
             (_('Square micrometer μm^2'), Decimal('1E+6'), 0),
             (_('Square millimeter, mm^2'), Decimal('1E+12'), 0),
             (_('Square centimeter, cm^2'), Decimal('1E+14'), 0),

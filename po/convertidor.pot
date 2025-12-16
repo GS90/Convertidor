@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-13 16:33+0300\n"
+"POT-Creation-Date: 2025-12-17 00:10+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -82,7 +82,7 @@ msgstr ""
 msgid "Last choice of quantity"
 msgstr ""
 
-#: data/tech.digiroad.Convertidor.gschema.xml:41
+#: data/tech.digiroad.Convertidor.gschema.xml:41 src/gtk/window.ui:23
 msgid "Imperial"
 msgstr ""
 
@@ -141,7 +141,7 @@ msgid "Angle"
 msgstr ""
 
 #: src/convertidor.py:51
-msgid "Unit of measurement"
+msgid "Units of measurement"
 msgstr ""
 
 #: src/convertidor.py:54
@@ -185,7 +185,7 @@ msgid "Imperial and US customary systems"
 msgstr ""
 
 #: src/convertidor.py:72
-msgid "Square nanometer, nm"
+msgid "Square nanometer, nm^2"
 msgstr ""
 
 #: src/convertidor.py:73
@@ -1423,6 +1423,18 @@ msgstr ""
 #: src/gtk/help-overlay.ui:26
 msgctxt "shortcut window"
 msgid "Preferences"
+msgstr ""
+
+#: src/gtk/window.ui:24
+msgid "Displaying Imperial and US measurements"
+msgstr ""
+
+#: src/gtk/window.ui:29
+msgid "Obsolete"
+msgstr ""
+
+#: src/gtk/window.ui:30
+msgid "Display of obsolete measurement units"
 msgstr ""
 
 #: src/gtk/window.ui:40
