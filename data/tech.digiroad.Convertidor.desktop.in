@@ -5,6 +5,6 @@ Icon=tech.digiroad.Convertidor
 Terminal=false
 Type=Application
 Categories=Utility;Education;Science
-Keywords=units;converter
+Keywords=units;converter;measurement
 StartupNotify=false
 DBusActivatable=true

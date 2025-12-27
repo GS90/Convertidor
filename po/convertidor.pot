@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-17 00:10+0300\n"
+"POT-Creation-Date: 2025-12-27 12:07+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,7 +23,7 @@ msgid "Convertidor"
 msgstr ""
 
 #: data/tech.digiroad.Convertidor.desktop.in:8
-msgid "units;converter"
+msgid "units;converter;measurement"
 msgstr ""
 
 #: data/tech.digiroad.Convertidor.gschema.xml:6 src/gtk/window.ui:214
@@ -106,7 +106,7 @@ msgstr ""
 msgid "Golodnikov Sergey"
 msgstr ""
 
-#: data/tech.digiroad.Convertidor.metainfo.xml.in:14
+#: data/tech.digiroad.Convertidor.metainfo.xml.in:14 src/window.py:62
 msgid ""
 "Convertidor is a handy and high precision application for converting units "
 "of measurement."
@@ -121,18 +121,22 @@ msgid "Conversion of 300+ units of measurement."
 msgstr ""
 
 #: data/tech.digiroad.Convertidor.metainfo.xml.in:18
-msgid "Instant and accurate (simultaneous) unit conversion."
+msgid "Instant and accurate (synchronous) unit conversion."
 msgstr ""
 
 #: data/tech.digiroad.Convertidor.metainfo.xml.in:19
+msgid "Control of calculation accuracy."
+msgstr ""
+
+#: data/tech.digiroad.Convertidor.metainfo.xml.in:20
 msgid "Intuitive and user-friendly interface."
 msgstr ""
 
-#: data/tech.digiroad.Convertidor.metainfo.xml.in:39
+#: data/tech.digiroad.Convertidor.metainfo.xml.in:40
 msgid "Convertidor in light mode"
 msgstr ""
 
-#: data/tech.digiroad.Convertidor.metainfo.xml.in:43
+#: data/tech.digiroad.Convertidor.metainfo.xml.in:44
 msgid "Convertidor in dark mode"
 msgstr ""
 
@@ -1469,4 +1473,16 @@ msgstr ""
 msgid ""
 "Light\n"
 "Dark"
+msgstr ""
+
+#: src/window.py:60
+msgid "Values ​​have been reset"
+msgstr ""
+
+#: src/window.py:61
+msgid "Value copied"
+msgstr ""
+
+#: src/window.py:64
+msgid "Source"
 msgstr ""

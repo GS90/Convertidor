@@ -13,7 +13,8 @@
 ## Features
 
 - Conversion of 300+ units of measurement.
-- Instant and accurate (simultaneous) unit conversion.
+- Instant and accurate (synchronous) unit conversion.
+- Control of calculation accuracy.
 - Intuitive and user-friendly interface.
 
 

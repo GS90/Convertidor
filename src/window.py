@@ -17,7 +17,7 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-
+from gettext import gettext as _
 import gi
 gi.require_version('Gtk', '4.0')
 gi.require_version('Adw', '1')
@@ -55,6 +55,13 @@ class ConvertidorWindow(Adw.ApplicationWindow):
     show_imperial = Gtk.Template.Child('show-imperial')
     show_legacy = Gtk.Template.Child('show-legacy')
     button_reset = Gtk.Template.Child('button-reset')
+
+    # variables for translation
+    str_reset = _('Values ​​have been reset')
+    str_copy = _('Value copied')
+    str_comment = _('Convertidor is a handy and high precision application '
+                    'for converting units of measurement.')
+    str_src = _('Source')
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)

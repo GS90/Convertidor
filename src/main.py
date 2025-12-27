@@ -18,7 +18,6 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 
-from gettext import gettext as gt
 from decimal import Decimal
 import sys
 import gi
@@ -153,9 +152,7 @@ class ConvertidorApplication(Adw.Application):
 
     def entries_reset_wrapper(self, _):
         self.entries_reset()
-        self.w.overlay.add_toast(
-            Adw.Toast(title=gt('Values ​​have been reset'))
-        )
+        self.w.overlay.add_toast(Adw.Toast(title=self.w.str_reset, timeout=2))
 
     def entry_get(self, entry) -> tuple[Decimal | str, int | None] | None:
         try:
@@ -253,7 +250,7 @@ class ConvertidorApplication(Adw.Application):
 
     def entry_copy(self, _, entry):
         self.clipboard.set(entry.get_text())
-        self.w.overlay.add_toast(Adw.Toast(title=gt('Value copied')))
+        self.w.overlay.add_toast(Adw.Toast(title=self.w.str_copy, timeout=2))
 
     def visibility(self):
         pattern = [None, None, None, None]  # cero, uno, dos, tres
@@ -293,10 +290,8 @@ class ConvertidorApplication(Adw.Application):
             application_name='Convertidor',
             application_icon='tech.digiroad.Convertidor',
             developer_name='Golodnikov Sergey',
-            version='1.2.2',
-            comments=(
-                'Convertidor is a handy application for '
-                'converting units of measurement.'),
+            version='1.2.3',
+            comments=self.w.str_comment,
             website='https://digiroad.tech',
             developers=['Golodnikov Sergey <nn19051990@gmail.com>'],
             artists=[
@@ -306,7 +301,7 @@ class ConvertidorApplication(Adw.Application):
             copyright='Copyright © 2025 Golodnikov Sergey',
             license_type=Gtk.License.GPL_3_0,
         )
-        about.add_link(('Source'), 'https://github.com/GS90/Convertidor')
+        about.add_link((self.w.str_src), 'https://github.com/GS90/Convertidor')
         about.present(self.props.active_window)
 
     def preferences_action(self, widget, _):

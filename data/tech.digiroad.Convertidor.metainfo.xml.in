@@ -15,7 +15,8 @@
     <p>Features:</p>
     <ul>
       <li>Conversion of 300+ units of measurement.</li>
-      <li>Instant and accurate (simultaneous) unit conversion.</li>
+      <li>Instant and accurate (synchronous) unit conversion.</li>
+      <li>Control of calculation accuracy.</li>
       <li>Intuitive and user-friendly interface.</li>
     </ul>
   </description>
@@ -45,6 +46,15 @@
   </screenshots>
 
   <releases>
+
+    <release version="1.2.3" date="2025-12-27">
+      <description translate="no">
+        <ul>
+          <li>Minor improvements.</li>
+          <li>Translation update (Russian).</li>
+        </ul>
+      </description>
+    </release>
 
     <release version="1.2.2" date="2025-12-16">
       <description translate="no">
