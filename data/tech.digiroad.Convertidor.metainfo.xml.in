@@ -25,9 +25,12 @@
   <url type="vcs-browser">https://github.com/GS90/Convertidor</url>
   <url type="bugtracker">https://github.com/GS90/Convertidor/issues</url>
 
+  <url type="help">https://digiroad.tech/en/projects/convertidor</url>
+  <url type="contact">https://digiroad.tech/en/main</url>
+
   <translation type="gettext">convertidor</translation>
   <launchable type="desktop-id">tech.digiroad.Convertidor.desktop</launchable>
-  <content_rating type="oars-1.1" />
+  <content_rating type="oars-1.1"/>
 
   <branding>
     <color type="primary" scheme_preference="light">#fafafb</color>
@@ -46,6 +49,12 @@
   </screenshots>
 
   <releases>
+
+    <release version="1.2.4" date="2026-01-02">
+      <description translate="no">
+        <p>Various fixes and improvements.</p>
+      </description>
+    </release>
 
     <release version="1.2.3" date="2025-12-27">
       <description translate="no">

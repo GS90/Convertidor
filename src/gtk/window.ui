@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<!-- Created with Cambalache 0.96.1 -->
+<!-- Created with Cambalache 0.96.3 -->
 <interface>
   <!-- interface-name window.ui -->
   <requires lib="gio" version="2.0"/>
@@ -58,23 +58,24 @@
                             <property name="margin-bottom">20</property>
                             <property name="margin-end">20</property>
                             <property name="margin-start">20</property>
+                            <property name="margin-top">10</property>
                             <property name="orientation">vertical</property>
                             <child>
                               <object class="GtkLabel" id="label-cero">
                                 <property name="css-classes">title-4</property>
                                 <property name="halign">start</property>
                                 <property name="label">Cero</property>
-                                <property name="margin-bottom">10</property>
-                                <property name="margin-top">10</property>
+                                <property name="margin-bottom">4</property>
                               </object>
                             </child>
                             <child>
                               <object class="GtkFlowBox" id="units-cero">
-                                <property name="column-spacing">40</property>
+                                <property name="column-spacing">16</property>
+                                <property name="margin-bottom">16</property>
                                 <property name="max-children-per-line">6</property>
                                 <property name="min-children-per-line">1</property>
                                 <property name="overflow">hidden</property>
-                                <property name="row-spacing">10</property>
+                                <property name="row-spacing">2</property>
                                 <property name="selection-mode">none</property>
                               </object>
                             </child>
@@ -83,17 +84,17 @@
                                 <property name="css-classes">title-4</property>
                                 <property name="halign">start</property>
                                 <property name="label">Uno</property>
-                                <property name="margin-bottom">10</property>
-                                <property name="margin-top">20</property>
+                                <property name="margin-bottom">4</property>
                               </object>
                             </child>
                             <child>
                               <object class="GtkFlowBox" id="units-uno">
-                                <property name="column-spacing">40</property>
+                                <property name="column-spacing">16</property>
+                                <property name="margin-bottom">16</property>
                                 <property name="max-children-per-line">6</property>
                                 <property name="min-children-per-line">1</property>
                                 <property name="overflow">hidden</property>
-                                <property name="row-spacing">10</property>
+                                <property name="row-spacing">2</property>
                                 <property name="selection-mode">none</property>
                               </object>
                             </child>
@@ -102,17 +103,17 @@
                                 <property name="css-classes">title-4</property>
                                 <property name="halign">start</property>
                                 <property name="label">Dos</property>
-                                <property name="margin-bottom">10</property>
-                                <property name="margin-top">20</property>
+                                <property name="margin-bottom">4</property>
                               </object>
                             </child>
                             <child>
                               <object class="GtkFlowBox" id="units-dos">
-                                <property name="column-spacing">40</property>
+                                <property name="column-spacing">16</property>
+                                <property name="margin-bottom">16</property>
                                 <property name="max-children-per-line">6</property>
                                 <property name="min-children-per-line">1</property>
                                 <property name="overflow">hidden</property>
-                                <property name="row-spacing">10</property>
+                                <property name="row-spacing">2</property>
                                 <property name="selection-mode">none</property>
                               </object>
                             </child>
@@ -121,17 +122,17 @@
                                 <property name="css-classes">title-4</property>
                                 <property name="halign">start</property>
                                 <property name="label">Tres</property>
-                                <property name="margin-bottom">10</property>
-                                <property name="margin-top">20</property>
+                                <property name="margin-bottom">4</property>
                               </object>
                             </child>
                             <child>
                               <object class="GtkFlowBox" id="units-tres">
-                                <property name="column-spacing">40</property>
+                                <property name="column-spacing">16</property>
+                                <property name="margin-bottom">16</property>
                                 <property name="max-children-per-line">6</property>
                                 <property name="min-children-per-line">1</property>
                                 <property name="overflow">hidden</property>
-                                <property name="row-spacing">10</property>
+                                <property name="row-spacing">2</property>
                                 <property name="selection-mode">none</property>
                               </object>
                             </child>
@@ -201,7 +202,6 @@
             <property name="margin-end">20</property>
             <property name="margin-start">20</property>
             <property name="margin-top">20</property>
-            <property name="title" translatable="yes">General</property>
             <child>
               <object class="AdwComboRow" id="pref-theme">
                 <property name="model">
@@ -223,7 +223,7 @@ Dark</property>
                     <property name="page-size">1.0</property>
                     <property name="step-increment">1.0</property>
                     <property name="upper">97.0</property>
-                    <property name="value">28.0</property>
+                    <property name="value">16.0</property>
                   </object>
                 </property>
                 <property name="numeric">True</property>

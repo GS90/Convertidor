@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-27 12:07+0300\n"
+"POT-Creation-Date: 2026-01-02 23:07+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: data/tech.digiroad.Convertidor.desktop.in:2
-#: data/tech.digiroad.Convertidor.metainfo.xml.in:5 src/gtk/window.ui:177
+#: data/tech.digiroad.Convertidor.metainfo.xml.in:5 src/gtk/window.ui:178
 msgid "Convertidor"
 msgstr ""
 
@@ -50,51 +50,59 @@ msgstr ""
 msgid "Window height"
 msgstr ""
 
-#: data/tech.digiroad.Convertidor.gschema.xml:21 src/gtk/window.ui:231
+#: data/tech.digiroad.Convertidor.gschema.xml:21
+msgid "Maximized"
+msgstr ""
+
+#: data/tech.digiroad.Convertidor.gschema.xml:22
+msgid "Maximized state of window"
+msgstr ""
+
+#: data/tech.digiroad.Convertidor.gschema.xml:26 src/gtk/window.ui:231
 msgid "Precision"
 msgstr ""
 
-#: data/tech.digiroad.Convertidor.gschema.xml:22 src/gtk/window.ui:230
+#: data/tech.digiroad.Convertidor.gschema.xml:27 src/gtk/window.ui:230
 msgid "Desired accuracy of calculations"
 msgstr ""
 
-#: data/tech.digiroad.Convertidor.gschema.xml:26 src/gtk/window.ui:247
+#: data/tech.digiroad.Convertidor.gschema.xml:31 src/gtk/window.ui:247
 msgid "Quantize"
 msgstr ""
 
-#: data/tech.digiroad.Convertidor.gschema.xml:27 src/gtk/window.ui:246
+#: data/tech.digiroad.Convertidor.gschema.xml:32 src/gtk/window.ui:246
 msgid "Rounding to a fixed value"
 msgstr ""
 
-#: data/tech.digiroad.Convertidor.gschema.xml:31 src/gtk/window.ui:263
+#: data/tech.digiroad.Convertidor.gschema.xml:36 src/gtk/window.ui:263
 msgid "Scientific notation"
 msgstr ""
 
-#: data/tech.digiroad.Convertidor.gschema.xml:32 src/gtk/window.ui:262
+#: data/tech.digiroad.Convertidor.gschema.xml:37 src/gtk/window.ui:262
 msgid "Character limit for switching"
 msgstr ""
 
-#: data/tech.digiroad.Convertidor.gschema.xml:36
+#: data/tech.digiroad.Convertidor.gschema.xml:41
 msgid "Quantity"
 msgstr ""
 
-#: data/tech.digiroad.Convertidor.gschema.xml:37
+#: data/tech.digiroad.Convertidor.gschema.xml:42
 msgid "Last choice of quantity"
 msgstr ""
 
-#: data/tech.digiroad.Convertidor.gschema.xml:41 src/gtk/window.ui:23
+#: data/tech.digiroad.Convertidor.gschema.xml:46 src/gtk/window.ui:23
 msgid "Imperial"
 msgstr ""
 
-#: data/tech.digiroad.Convertidor.gschema.xml:42
+#: data/tech.digiroad.Convertidor.gschema.xml:47
 msgid "Show imperial units"
 msgstr ""
 
-#: data/tech.digiroad.Convertidor.gschema.xml:46
+#: data/tech.digiroad.Convertidor.gschema.xml:51
 msgid "Legacy"
 msgstr ""
 
-#: data/tech.digiroad.Convertidor.gschema.xml:47
+#: data/tech.digiroad.Convertidor.gschema.xml:52
 msgid "Show legacy units"
 msgstr ""
 
@@ -106,7 +114,7 @@ msgstr ""
 msgid "Golodnikov Sergey"
 msgstr ""
 
-#: data/tech.digiroad.Convertidor.metainfo.xml.in:14 src/window.py:62
+#: data/tech.digiroad.Convertidor.metainfo.xml.in:14 src/window.py:64
 msgid ""
 "Convertidor is a handy and high precision application for converting units "
 "of measurement."
@@ -132,11 +140,11 @@ msgstr ""
 msgid "Intuitive and user-friendly interface."
 msgstr ""
 
-#: data/tech.digiroad.Convertidor.metainfo.xml.in:40
+#: data/tech.digiroad.Convertidor.metainfo.xml.in:43
 msgid "Convertidor in light mode"
 msgstr ""
 
-#: data/tech.digiroad.Convertidor.metainfo.xml.in:44
+#: data/tech.digiroad.Convertidor.metainfo.xml.in:47
 msgid "Convertidor in dark mode"
 msgstr ""
 
@@ -1453,20 +1461,16 @@ msgstr ""
 msgid "Reset all units of measurement"
 msgstr ""
 
-#: src/gtk/window.ui:183
+#: src/gtk/window.ui:184
 msgid "_Preferences"
 msgstr ""
 
-#: src/gtk/window.ui:187
+#: src/gtk/window.ui:188
 msgid "_Keyboard Shortcuts"
 msgstr ""
 
-#: src/gtk/window.ui:191
+#: src/gtk/window.ui:192
 msgid "_About Convertidor"
-msgstr ""
-
-#: src/gtk/window.ui:204
-msgid "General"
 msgstr ""
 
 #: src/gtk/window.ui:209
@@ -1475,14 +1479,14 @@ msgid ""
 "Dark"
 msgstr ""
 
-#: src/window.py:60
+#: src/window.py:61
+msgid "Source"
+msgstr ""
+
+#: src/window.py:62
 msgid "Values ​​have been reset"
 msgstr ""
 
-#: src/window.py:61
+#: src/window.py:63
 msgid "Value copied"
-msgstr ""
-
-#: src/window.py:64
-msgid "Source"
 msgstr ""

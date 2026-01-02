@@ -1,6 +1,6 @@
 # window.py
 #
-# Copyright 2025 Golodnikov Sergey
+# Copyright 2025-2026 Golodnikov Sergey
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -16,6 +16,7 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
+
 
 from gettext import gettext as _
 import gi
@@ -56,12 +57,12 @@ class ConvertidorWindow(Adw.ApplicationWindow):
     show_legacy = Gtk.Template.Child('show-legacy')
     button_reset = Gtk.Template.Child('button-reset')
 
-    # variables for translation
-    str_reset = _('Values ​​have been reset')
-    str_copy = _('Value copied')
-    str_comment = _('Convertidor is a handy and high precision application '
-                    'for converting units of measurement.')
-    str_src = _('Source')
+    # strings to translate
+    ts_src = _('Source')
+    ts_reset = _('Values ​​have been reset')
+    ts_copy = _('Value copied')
+    ts_comment = _('Convertidor is a handy and high precision application '
+                   'for converting units of measurement.')
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)

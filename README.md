@@ -38,4 +38,4 @@ Convertidor is a [free software](https://www.gnu.org/philosophy/free-sw.html) an
 
 ## Copyright
 
-2025, [Golodnikov Sergey](https://github.com/GS90)
+2025-2026, [Golodnikov Sergey](https://github.com/GS90)

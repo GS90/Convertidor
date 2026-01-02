@@ -16,8 +16,13 @@
 			<summary>Height</summary>
 			<description>Window height</description>
 		</key>
+		<key name="maximized" type="b">
+			<default>false</default>
+			<summary>Maximized</summary>
+			<description>Maximized state of window</description>
+		</key>
 		<key name="precision" type="i">
-			<default>28</default>
+			<default>16</default>
 			<summary>Precision</summary>
 			<description>Desired accuracy of calculations</description>
 		</key>

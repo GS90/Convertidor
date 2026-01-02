@@ -1,6 +1,6 @@
 # main.py
 #
-# Copyright 2025 Golodnikov Sergey
+# Copyright 2025-2026 Golodnikov Sergey
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -50,6 +50,9 @@ class ConvertidorApplication(Adw.Application):
         self.w.set_default_size(self.pref.get_int('width'),
                                 self.pref.get_int('height'))
         self.w.present()
+
+        if self.pref.get_boolean('maximized'):
+            self.w.maximize()
 
         self.update_theme()
 
@@ -109,6 +112,11 @@ class ConvertidorApplication(Adw.Application):
             cell = Gtk.Box(hexpand=True, orientation='vertical')
             cell.append(Gtk.Label(halign='start', label=unit[0]))
 
+            cell.set_margin_top(2)
+            cell.set_margin_bottom(2)
+            cell.set_margin_start(2)
+            cell.set_margin_end(2)
+
             wrapper = Gtk.Box(margin_top=4)
             wrapper.add_css_class('linked')
 
@@ -118,7 +126,7 @@ class ConvertidorApplication(Adw.Application):
                 name=str(index),
                 # text='0',
             )
-            entry.set_size_request(140, -1)
+            entry.set_size_request(190, -1)
 
             increment = Gtk.Button(icon_name='plus-symbolic')
             decrement = Gtk.Button(icon_name='minus-symbolic')
@@ -152,7 +160,7 @@ class ConvertidorApplication(Adw.Application):
 
     def entries_reset_wrapper(self, _):
         self.entries_reset()
-        self.w.overlay.add_toast(Adw.Toast(title=self.w.str_reset, timeout=2))
+        self.w.overlay.add_toast(Adw.Toast(title=self.w.ts_reset, timeout=2))
 
     def entry_get(self, entry) -> tuple[Decimal | str, int | None] | None:
         try:
@@ -250,7 +258,7 @@ class ConvertidorApplication(Adw.Application):
 
     def entry_copy(self, _, entry):
         self.clipboard.set(entry.get_text())
-        self.w.overlay.add_toast(Adw.Toast(title=self.w.str_copy, timeout=2))
+        self.w.overlay.add_toast(Adw.Toast(title=self.w.ts_copy, timeout=2))
 
     def visibility(self):
         pattern = [None, None, None, None]  # cero, uno, dos, tres
@@ -290,8 +298,8 @@ class ConvertidorApplication(Adw.Application):
             application_name='Convertidor',
             application_icon='tech.digiroad.Convertidor',
             developer_name='Golodnikov Sergey',
-            version='1.2.3',
-            comments=self.w.str_comment,
+            version='1.2.4',
+            comments=self.w.ts_comment,
             website='https://digiroad.tech',
             developers=['Golodnikov Sergey <nn19051990@gmail.com>'],
             artists=[
@@ -301,7 +309,7 @@ class ConvertidorApplication(Adw.Application):
             copyright='Copyright © 2025 Golodnikov Sergey',
             license_type=Gtk.License.GPL_3_0,
         )
-        about.add_link((self.w.str_src), 'https://github.com/GS90/Convertidor')
+        about.add_link((self.w.ts_src), 'https://github.com/GS90/Convertidor')
         about.present(self.props.active_window)
 
     def preferences_action(self, widget, _):
@@ -338,9 +346,13 @@ class ConvertidorApplication(Adw.Application):
             style_manager.set_color_scheme(Adw.ColorScheme.FORCE_DARK)
 
     def do_shutdown(self):
-        window_size = self.w.get_default_size()
-        self.pref.set_int('width', window_size[0])
-        self.pref.set_int('height', window_size[1])
+        if self.w.is_maximized():
+            self.pref.set_boolean('maximized', True)
+        else:
+            self.pref.set_boolean('maximized', False)
+            window_size = self.w.get_default_size()
+            self.pref.set_int('width', window_size[0])
+            self.pref.set_int('height', window_size[1])
         Gio.Application.do_shutdown(self)
 
 
