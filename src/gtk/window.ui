@@ -18,6 +18,13 @@
                     <child type="start">
                       <object class="GtkBox">
                         <property name="margin-start">10</property>
+                        <property name="spacing">10</property>
+                        <child>
+                          <object class="GtkCheckButton" id="show-derived">
+                            <property name="label" translatable="yes">Minor derived</property>
+                            <property name="tooltip-text" translatable="yes">Display minor derived units of measurement</property>
+                          </object>
+                        </child>
                         <child>
                           <object class="GtkCheckButton" id="show-imperial">
                             <property name="label" translatable="yes">Imperial</property>
@@ -76,7 +83,6 @@
                                 <property name="min-children-per-line">1</property>
                                 <property name="overflow">hidden</property>
                                 <property name="row-spacing">2</property>
-                                <property name="selection-mode">none</property>
                               </object>
                             </child>
                             <child>
@@ -95,7 +101,6 @@
                                 <property name="min-children-per-line">1</property>
                                 <property name="overflow">hidden</property>
                                 <property name="row-spacing">2</property>
-                                <property name="selection-mode">none</property>
                               </object>
                             </child>
                             <child>
@@ -114,7 +119,6 @@
                                 <property name="min-children-per-line">1</property>
                                 <property name="overflow">hidden</property>
                                 <property name="row-spacing">2</property>
-                                <property name="selection-mode">none</property>
                               </object>
                             </child>
                             <child>
@@ -133,7 +137,6 @@
                                 <property name="min-children-per-line">1</property>
                                 <property name="overflow">hidden</property>
                                 <property name="row-spacing">2</property>
-                                <property name="selection-mode">none</property>
                               </object>
                             </child>
                           </object>

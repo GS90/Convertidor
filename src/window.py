@@ -53,6 +53,7 @@ class ConvertidorWindow(Adw.ApplicationWindow):
 
     # other
     overlay = Gtk.Template.Child('overlay')
+    show_derived = Gtk.Template.Child('show-derived')
     show_imperial = Gtk.Template.Child('show-imperial')
     show_legacy = Gtk.Template.Child('show-legacy')
     button_reset = Gtk.Template.Child('button-reset')
@@ -66,7 +67,6 @@ class ConvertidorWindow(Adw.ApplicationWindow):
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
-
         # quantities
         for q in quantities:
             ar = Adw.ActionRow(name=q, title=quantities[q]['title'])

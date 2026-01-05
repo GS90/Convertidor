@@ -41,6 +41,11 @@
 			<summary>Quantity</summary>
 			<description>Last choice of quantity</description>
 		</key>
+		<key name="derived" type="b">
+			<default>true</default>
+			<summary>Derived</summary>
+			<description>Show insignificant derived units</description>
+		</key>
 		<key name="imperial" type="b">
 			<default>true</default>
 			<summary>Imperial</summary>

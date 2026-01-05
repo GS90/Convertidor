@@ -1,11 +1,11 @@
 <!-- markdownlint-disable -->
 <div align="center">
-  <img src="./data/icons/hicolor/scalable/apps/tech.digiroad.Convertidor.svg" alt="convertidor" width="128" height="128"/>
+  <img src="./data/icons/hicolor/scalable/apps/tech.digiroad.Convertidor.svg" alt="Convertidor" width="128" height="128"/>
 </div>
 <h1 align="center">Convertidor</h1>
 <p align="center">Convertidor is a handy and high precision application for converting units of measurement</p>
 <p align="center">
-  <img src="data/screenshots/preview.png" alt="preview"/>
+  <img src="data/screenshots/preview.png" alt="Preview"/>
 </p>
 <!-- markdownlint-enable -->
 

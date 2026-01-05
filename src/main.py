@@ -65,21 +65,24 @@ class ConvertidorApplication(Adw.Application):
             (self.w.label_tres, self.w.units_tres, []),
         )
 
-        self.entries = []
+        self.filling, self.entries, self.derived = [], [], []
 
         self.freeze = False
         self.recent_quantity = (-1, '', [])  # index, key, pattern
 
         self.w.button_reset.connect('clicked', self.entries_reset_wrapper)
 
-        # display of imperial units of measurement
-        self.imperial = self.pref.get_boolean('imperial')
-        self.w.show_imperial.set_active(self.imperial)
+        # displaying derived units of measurement
+        self.show_derived = self.pref.get_boolean('derived')
+        self.w.show_derived.set_active(self.show_derived)
+        self.w.show_derived.connect('toggled', self.state_derived)
+        # displaying imperial units of measurement
+        self.show_imperial = self.pref.get_boolean('imperial')
+        self.w.show_imperial.set_active(self.show_imperial)
         self.w.show_imperial.connect('toggled', self.state_imperial)
-
-        # display legacy units of measurement
-        self.legacy = self.pref.get_boolean('legacy')
-        self.w.show_legacy.set_active(self.legacy)
+        # displaying legacy units of measurement
+        self.show_legacy = self.pref.get_boolean('legacy')
+        self.w.show_legacy.set_active(self.show_legacy)
         self.w.show_legacy.connect('toggled', self.state_legacy)
 
         # initialization
@@ -97,14 +100,17 @@ class ConvertidorApplication(Adw.Application):
         self.recent_quantity = (index, key, quantities[key]['pattern'])
         self.pref.set_int('quantity', index)
 
-        # clear
+        # clear, todo: check
         for element in self.structure:
             for unit in element[2]:
                 unit[0].remove(unit[1])
                 element[1].remove(unit[0])
+            element[1].remove_all()
             element[2].clear()
 
+        self.filling.clear()
         self.entries.clear()
+        self.derived.clear()
 
         # fill
         for index, unit in enumerate(quantities[key]['units']):
@@ -144,11 +150,14 @@ class ConvertidorApplication(Adw.Application):
 
             cell.append(wrapper)
 
-            self.structure[unit[2]][1].insert(cell, -1)
-            self.structure[unit[2]][2].append((cell, wrapper))
+            derived = False
+            if len(unit) > 3:  # optional parameter
+                derived = unit[3]
 
+            self.filling.append((unit[2], cell, wrapper, derived))
             self.entries.append(entry)
 
+        self.fill()
         self.visibility()
 
     def entries_reset(self, skip_name: str = ''):
@@ -160,6 +169,8 @@ class ConvertidorApplication(Adw.Application):
 
     def entries_reset_wrapper(self, _):
         self.entries_reset()
+        for element in self.structure:
+            element[1].unselect_all()
         self.w.overlay.add_toast(Adw.Toast(title=self.w.ts_reset, timeout=2))
 
     def entry_get(self, entry) -> tuple[Decimal | str, int | None] | None:
@@ -260,13 +271,26 @@ class ConvertidorApplication(Adw.Application):
         self.clipboard.set(entry.get_text())
         self.w.overlay.add_toast(Adw.Toast(title=self.w.ts_copy, timeout=2))
 
+    def fill(self):
+        # clear
+        for element in self.structure:
+            element[1].remove_all()
+            element[2].clear()
+        # fill
+        for i in self.filling:
+            pattern, cell, wrapper, derived = i
+            if derived and not self.show_derived:
+                continue
+            self.structure[pattern][1].insert(cell, -1)
+            self.structure[pattern][2].append((cell, wrapper))
+
     def visibility(self):
         pattern = [None, None, None, None]  # cero, uno, dos, tres
 
         for i, j in enumerate(self.recent_quantity[2]):
-            if j[1] == 'imperial' and not self.imperial:
+            if j[1] == 'imperial' and not self.show_imperial:
                 pattern[i] = None
-            elif j[1] == 'legacy' and not self.legacy:
+            elif j[1] == 'legacy' and not self.show_legacy:
                 pattern[i] = None
             else:
                 pattern[i] = j[0]
@@ -281,15 +305,21 @@ class ConvertidorApplication(Adw.Application):
                 self.structure[i][0].set_visible(False)
                 self.structure[i][1].set_visible(False)
 
+    def state_derived(self, toggle_button):
+        state = toggle_button.get_active()
+        self.show_derived = state
+        self.pref.set_boolean('derived', state)
+        self.fill()
+
     def state_imperial(self, toggle_button):
         state = toggle_button.get_active()
-        self.imperial = state
+        self.show_imperial = state
         self.pref.set_boolean('imperial', state)
         self.visibility()
 
     def state_legacy(self, toggle_button):
         state = toggle_button.get_active()
-        self.legacy = state
+        self.show_legacy = state
         self.pref.set_boolean('legacy', state)
         self.visibility()
 
@@ -298,7 +328,7 @@ class ConvertidorApplication(Adw.Application):
             application_name='Convertidor',
             application_icon='tech.digiroad.Convertidor',
             developer_name='Golodnikov Sergey',
-            version='1.2.4',
+            version='1.3.0',
             comments=self.w.ts_comment,
             website='https://digiroad.tech',
             developers=['Golodnikov Sergey <nn19051990@gmail.com>'],
