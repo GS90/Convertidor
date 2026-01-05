@@ -1,11 +1,11 @@
 <!-- markdownlint-disable -->
 <div align="center">
-  <img src="./data/icons/hicolor/scalable/apps/tech.digiroad.Convertidor.svg" alt="Convertidor" width="128" height="128"/>
+  <img src="./data/icons/hicolor/scalable/apps/tech.digiroad.Convertidor.svg" alt="Icon" width="128" height="128"/>
 </div>
 <h1 align="center">Convertidor</h1>
-<p align="center">Convertidor is a handy and high precision application for converting units of measurement</p>
+<p align="center">Convertidor is a handy and high precision application for converting units of measurement.</p>
 <p align="center">
-  <img src="data/screenshots/preview.png" alt="Preview"/>
+  <img src="data/screenshots/preview.png" alt="Convertidor"/>
 </p>
 <!-- markdownlint-enable -->
 
@@ -20,6 +20,8 @@
 
 ## Installation
 
+The built packages are available on the [releases](https://github.com/GS90/Convertidor/releases) page.
+
 ### Flatpak
 
 The latest official release can be downloaded from Flathub.
@@ -29,6 +31,18 @@ The latest official release can be downloaded from Flathub.
 ### GNOME Builder
 
 GNOME Builder offers the easiest method to build and test Convertidor. Clone the repository and press the «Run Project» button to compile.
+
+### Build from source
+
+```
+git clone https://github.com/GS90/Convertidor
+cd Convertidor
+
+meson setup build
+ninja -C build install
+```
+
+By default, meson should install Convertidor to `/usr/local`.
 
 
 ## License
