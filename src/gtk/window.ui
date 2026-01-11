@@ -213,7 +213,7 @@
 Dark</property>
                   </object>
                 </property>
-                <property name="subtitle" translatable="yes">Theme variant</property>
+                <property name="subtitle" translatable="yes">Application color theme</property>
                 <property name="title" translatable="yes">Theme</property>
               </object>
             </child>
