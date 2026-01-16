@@ -54,7 +54,7 @@ class ConvertidorApplication(Adw.Application):
         if self.pref.get_boolean('maximized'):
             self.w.maximize()
 
-        self.update_theme()
+        self.update_theme(self.pref.get_int('theme'))
 
         self.clipboard = Gdk.Display().get_default().get_clipboard()
 
@@ -69,6 +69,8 @@ class ConvertidorApplication(Adw.Application):
 
         self.freeze = False
         self.recent_quantity = (-1, '', [])  # index, key, pattern
+
+        self.w.pref_theme.connect('notify::selected-item', self.theme_change)
 
         self.w.button_reset.connect('clicked', self.entries_reset_wrapper)
 
@@ -359,7 +361,6 @@ class ConvertidorApplication(Adw.Application):
                           int(self.w.pref_quantize.get_value()))
         self.pref.set_int('scientific',
                           int(self.w.pref_scientific.get_value()))
-        self.update_theme()
 
     def create_action(self, name, callback, shortcuts=None):
         action = Gio.SimpleAction.new(name, None)
@@ -368,9 +369,12 @@ class ConvertidorApplication(Adw.Application):
         if shortcuts:
             self.set_accels_for_action(f'app.{name}', shortcuts)
 
-    def update_theme(self):
+    def theme_change(self, widget, _):
+        self.update_theme(widget.get_selected())
+
+    def update_theme(self, value):
         style_manager = Adw.StyleManager.get_default()
-        if self.pref.get_int('theme') == 0:
+        if value == 0:
             style_manager.set_color_scheme(Adw.ColorScheme.FORCE_LIGHT)
         else:
             style_manager.set_color_scheme(Adw.ColorScheme.FORCE_DARK)

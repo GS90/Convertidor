@@ -52,7 +52,10 @@
 
     <release version="1.3.1" date="2026-01-16">
       <description translate="no">
-        <p>Energy unit calculation fixed and improved.</p>
+        <ul>
+          <li>Energy unit calculation fixed and improved.</li>
+          <li>Theme switching improvements.</li>
+        </ul>
       </description>
     </release>
 
