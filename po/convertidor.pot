@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-11 14:05+0300\n"
+"POT-Creation-Date: 2026-01-16 12:20+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -397,79 +397,79 @@ msgid "Other energy units"
 msgstr ""
 
 #: src/convertidor.py:144
-msgid "Electronvolt, eV"
-msgstr ""
-
-#: src/convertidor.py:145
-msgid "Erg"
-msgstr ""
-
-#: src/convertidor.py:146
-msgid "Calorie (th), cal"
-msgstr ""
-
-#: src/convertidor.py:147
-msgid "Calorie (it), cal"
-msgstr ""
-
-#: src/convertidor.py:148
-msgid "Kilocalorie (th), kcal"
-msgstr ""
-
-#: src/convertidor.py:149
-msgid "Kilocalorie (it), kcal"
-msgstr ""
-
-#: src/convertidor.py:151
 msgid "Attojoule, aJ"
 msgstr ""
 
-#: src/convertidor.py:152
+#: src/convertidor.py:145
 msgid "Nanojoule, nJ"
 msgstr ""
 
-#: src/convertidor.py:153
+#: src/convertidor.py:146
 msgid "Microjoule, μJ"
 msgstr ""
 
-#: src/convertidor.py:154
+#: src/convertidor.py:147
 msgid "Millijoule, mJ"
 msgstr ""
 
-#: src/convertidor.py:155
+#: src/convertidor.py:148
 msgid "Joule, J"
 msgstr ""
 
-#: src/convertidor.py:156
+#: src/convertidor.py:149
 msgid "Kilojoule, kJ"
 msgstr ""
 
-#: src/convertidor.py:157
+#: src/convertidor.py:150
 msgid "Megajoule, MJ"
 msgstr ""
 
-#: src/convertidor.py:158
+#: src/convertidor.py:151
 msgid "Gigajoule, GJ"
 msgstr ""
 
-#: src/convertidor.py:159
+#: src/convertidor.py:152
 msgid "Terajoule, TJ"
 msgstr ""
 
-#: src/convertidor.py:161
+#: src/convertidor.py:154
 msgid "Watt-hour, Wh"
 msgstr ""
 
-#: src/convertidor.py:162
+#: src/convertidor.py:155
 msgid "Kilowatt-hour, kWh"
 msgstr ""
 
-#: src/convertidor.py:163
+#: src/convertidor.py:156
 msgid "Megawatt-hour, MWh"
 msgstr ""
 
-#: src/convertidor.py:164
+#: src/convertidor.py:157
 msgid "Gigawatt-hour, GWh"
+msgstr ""
+
+#: src/convertidor.py:159
+msgid "Electronvolt, eV"
+msgstr ""
+
+#: src/convertidor.py:160
+msgid "Erg"
+msgstr ""
+
+#: src/convertidor.py:161
+msgid "Calorie (th), cal"
+msgstr ""
+
+#: src/convertidor.py:162
+msgid "Calorie (it), cal"
+msgstr ""
+
+#: src/convertidor.py:163
+msgid "Kilocalorie (th), kcal"
+msgstr ""
+
+#: src/convertidor.py:164
+msgid "Kilocalorie (it), kcal"
 msgstr ""
 
 #: src/convertidor.py:166
@@ -489,11 +489,11 @@ msgid "British thermal unit (it), Btu"
 msgstr ""
 
 #: src/convertidor.py:172
-msgid "Therm (EC), thm"
+msgid "Therm (US), thm"
 msgstr ""
 
 #: src/convertidor.py:173
-msgid "Therm (US), thm"
+msgid "Therm (EC), thm"
 msgstr ""
 
 #: src/convertidor.py:178

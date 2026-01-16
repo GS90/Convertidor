@@ -50,6 +50,12 @@
 
   <releases>
 
+    <release version="1.3.1" date="2026-01-16">
+      <description translate="no">
+        <p>Energy unit calculation fixed and improved.</p>
+      </description>
+    </release>
+
     <release version="1.3.0" date="2026-01-06">
       <description translate="no">
         <p>Added the ability to hide and display secondary derived units of measurement.</p>

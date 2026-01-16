@@ -328,7 +328,7 @@ class ConvertidorApplication(Adw.Application):
             application_name='Convertidor',
             application_icon='tech.digiroad.Convertidor',
             developer_name='Golodnikov Sergey',
-            version='1.3.0',
+            version='1.3.1',
             comments=self.w.ts_comment,
             website='https://digiroad.tech',
             developers=['Golodnikov Sergey <nn19051990@gmail.com>'],

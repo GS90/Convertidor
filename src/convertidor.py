@@ -140,37 +140,37 @@ quantities = {
             (_('Imperial and US customary systems'), 'imperial'),
         ),
         'units': (
-            # Other energy units
-            (_('Electronvolt, eV'), Decimal('1'), 2),
-            (_('Erg'), Decimal('624150647996.32'), 2),
-            (_('Calorie (th), cal'), Decimal('2.6114463112166E+19'), 2),
-            (_('Calorie (it), cal'), Decimal('2.613193933031E+19'), 2),
-            (_('Kilocalorie (th), kcal'), Decimal('2.6114463112166E+22'), 2),
-            (_('Kilocalorie (it), kcal'), Decimal('2.613193933031E+22'), 2),
             # Joule units
-            (_('Attojoule, aJ'), Decimal('6.2415064799632'), 0, True),
-            (_('Nanojoule, nJ'), Decimal('6241506479.9632'), 0, True),
-            (_('Microjoule, μJ'), Decimal('6241506479963.2'), 0, True),
-            (_('Millijoule, mJ'), Decimal('6241506479963200'), 0, True),
-            (_('Joule, J'), Decimal('6.2415064799632E+18'), 0),
-            (_('Kilojoule, kJ'), Decimal('6.2415064799632E+21'), 0),
-            (_('Megajoule, MJ'), Decimal('6.2415064799632E+24'), 0),
-            (_('Gigajoule, GJ'), Decimal('6.2415064799632E+27'), 0, True),
-            (_('Terajoule, TJ'), Decimal('6.2415064799632E+30'), 0, True),
+            (_('Attojoule, aJ'), Decimal('1'), 0, True),
+            (_('Nanojoule, nJ'), Decimal('1E+9'), 0, True),
+            (_('Microjoule, μJ'), Decimal('1E+12'), 0, True),
+            (_('Millijoule, mJ'), Decimal('1E+15'), 0, True),
+            (_('Joule, J'), Decimal('1E+18'), 0),
+            (_('Kilojoule, kJ'), Decimal('1E+21'), 0),
+            (_('Megajoule, MJ'), Decimal('1E+24'), 0),
+            (_('Gigajoule, GJ'), Decimal('1E+27'), 0, True),
+            (_('Terajoule, TJ'), Decimal('1E+30'), 0, True),
             # Electrical energy
-            (_('Watt-hour, Wh'), Decimal('2.2469423327868E+22'), 1),
-            (_('Kilowatt-hour, kWh'), Decimal('2.2469423327868E+25'), 1),
-            (_('Megawatt-hour, MWh'), Decimal('2.2469423327868E+28'), 1),
-            (_('Gigawatt-hour, GWh'), Decimal('2.2469423327868E+31'), 1, True),
+            (_('Watt-hour, Wh'), Decimal('3.6E+21'), 1),
+            (_('Kilowatt-hour, kWh'), Decimal('3.6E+24'), 1),
+            (_('Megawatt-hour, MWh'), Decimal('3.6E+27'), 1),
+            (_('Gigawatt-hour, GWh'), Decimal('3.6E+30'), 1, True),
+            # Other energy units
+            (_('Electronvolt, eV'), None, 2),  # !exception
+            (_('Erg'), Decimal('1E+11'), 2),
+            (_('Calorie (th), cal'), Decimal('4.184E+18'), 2),
+            (_('Calorie (it), cal'), Decimal('4.1868E+18'), 2),
+            (_('Kilocalorie (th), kcal'), Decimal('4.184E+21'), 2),
+            (_('Kilocalorie (it), kcal'), Decimal('4.1868E+21'), 2),
             # Imperial and US customary systems
-            (_('Foot-poundal, ft-pdl'), Decimal('2.6301776963136E+17'), 3),
-            (_('Foot-pound, ft⋅lbf'), Decimal('8.4623465101609E+18'), 3),
+            (_('Foot-poundal, ft-pdl'), Decimal('4.21401100938048E+16'), 3),
+            (_('Foot-pound, ft⋅lbf'), Decimal('1.3558179483314004E+18'), 3),
             (_('British thermal unit (th), Btu'),
-                Decimal('6.5807342296012E+21'), 3),
+                Decimal('1.05435026444E+21'), 3),
             (_('British thermal unit (it), Btu'),
-                Decimal('6.5851382365734E+21'), 3),
-            (_('Therm (EC), thm'), Decimal('6.5851382365734E+26'), 3),
-            (_('Therm (US), thm'), Decimal('6.5835660010911E+26'), 3),
+                Decimal('1.05505585262E+21'), 3),
+            (_('Therm (US), thm'), Decimal('1.054804E+26'), 3),
+            (_('Therm (EC), thm'), Decimal('1.055056E+26'), 3),
         )
     },
 
@@ -578,7 +578,17 @@ def conversion(quantity: str,
 
             # unit conversion
             for u in units:
-                v = base_value / u[1]
+
+                if u[1] is None:  # exception
+                    match u[0]:
+                        case 'Electronvolt, eV':
+                            ratio = '6.241509074460759961544348186364'
+                            v = base_value * Decimal(ratio)
+                        case _:
+                            return None  # todo: error
+                else:
+                    v = base_value / u[1]
+
                 try:
                     v = v.quantize(Decimal(_quantize))
                 except BaseException:
