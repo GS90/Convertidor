@@ -29,6 +29,9 @@ from .convertidor import quantities, conversion
 from .window import ConvertidorWindow
 
 
+APP_VERSION = '1.3.2'
+
+
 class ConvertidorApplication(Adw.Application):
 
     def __init__(self):
@@ -71,7 +74,6 @@ class ConvertidorApplication(Adw.Application):
         self.recent_quantity = (-1, '', [])  # index, key, pattern
 
         self.w.pref_theme.connect('notify::selected-item', self.theme_change)
-
         self.w.button_reset.connect('clicked', self.entries_reset_wrapper)
 
         # displaying derived units of measurement
@@ -330,7 +332,7 @@ class ConvertidorApplication(Adw.Application):
             application_name='Convertidor',
             application_icon='tech.digiroad.Convertidor',
             developer_name='Golodnikov Sergey',
-            version='1.3.1',
+            version=APP_VERSION,
             comments=self.w.ts_comment,
             website='https://digiroad.tech',
             developers=['Golodnikov Sergey <nn19051990@gmail.com>'],

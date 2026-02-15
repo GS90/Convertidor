@@ -1,5 +1,5 @@
 project('convertidor',
-          version: '1.3.1',
+          version: '1.3.2',
     meson_version: '>= 1.0.0',
   default_options: [ 'warning_level=2', 'werror=false', ],
 )
@@ -11,7 +11,7 @@ subdir('data')
 subdir('src')
 subdir('po')
 
-# run_command('./update_l10n.sh', check: true)
+run_command('./update_l10n.sh', check: true)
 
 gnome.post_install(
      glib_compile_schemas: true,

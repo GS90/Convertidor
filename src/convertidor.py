@@ -223,12 +223,12 @@ quantities = {
         ),
         'units': (
             # Metric system
-            (_('Meter per liter, m/L'), Decimal('1'), 0),
-            (_('Kilometer per liter, km/L'), Decimal('1E+3'), 0),
-            (_('Liters per 100 kilometers, L/100 km'), Decimal('1E+5'), 0),
+            (_('Meter per liter, m/L'), 'm/L', 0),
+            (_('Kilometer per liter, km/L'), 'km/L', 0),
+            (_('Liters per 100 kilometers, L/100 km'), 'L/100 km', 0),
             # Imperial and US customary systems
-            (_('Mile per gallon (US), mpg(us)'), Decimal('425.1437075'), 1),
-            (_('Mile per gallon (UK), mpg(uk)'), Decimal('354.00619'), 1),
+            (_('Mile per gallon (US), mpg(us)'), 'mpg(us)', 1),
+            (_('Mile per gallon (UK), mpg(uk)'), 'mpg(uk)', 1),
         )
     },
 
@@ -570,16 +570,16 @@ def conversion(quantity: str,
         case 'numbers':
             return convert_numbers(units[index][1], value)
 
+        case 'fuel':
+            return convert_fuel(units[index][1], value, _quantize, scientific)
+
         case _:
             if type(value) is str:
                 return None
-
             base_value = value * units[index][1]  # to the lowest value
-
             # unit conversion
             for u in units:
-
-                if u[1] is None:  # exception
+                if u[1] is None:  # exceptions
                     match u[0]:
                         case 'Electronvolt, eV':
                             ratio = '6.241509074460759961544348186364'
@@ -588,23 +588,12 @@ def conversion(quantity: str,
                             return None  # todo: error
                 else:
                     v = base_value / u[1]
-
-                try:
-                    v = v.quantize(Decimal(_quantize))
-                except BaseException:
-                    pass
-                v = v.normalize()
-
-                exponent = v.as_tuple().exponent
-                digits = len(v.as_tuple().digits)
-
-                if exponent > 0:
-                    if digits + exponent < scientific:  # todo: check it
-                        v = int(v)
-
-                result.append(str(v))
+                result.append(value_processing(v, _quantize, scientific))
 
     return result if len(result) > 0 else None
+
+
+# ------------------------------------------------------------------------------
 
 
 def find_temperature(identifier: str, value: Decimal):
@@ -662,6 +651,9 @@ def find_temperature(identifier: str, value: Decimal):
     return result
 
 
+# ------------------------------------------------------------------------------
+
+
 def convert_numbers(identifier: str, value: Decimal | str) -> list[str] | None:
 
     # important: all return values ​​must be strings
@@ -715,3 +707,75 @@ def convert_numbers(identifier: str, value: Decimal | str) -> list[str] | None:
             ]
 
     return result
+
+
+def convert_fuel(identifier: str,
+                 value: Decimal | str,
+                 quantize: str,
+                 scientific: int) -> list[str] | None:
+
+    try:
+        v = Decimal(str(value))
+    except BaseException as err:
+        print('Error, invalid value: ' + str(err))
+        return None
+
+    if v <= 0:
+        return ['0', '0', '0', '0', '0']
+
+    # coefficients
+    MPG_US_TO_L100KM = Decimal('235.21458335647424250')
+    MPG_UK_TO_L100KM = Decimal('282.48093626943037818')
+
+    # base value
+    try:
+        match identifier:
+            case 'L/100 km': base_value = v
+            case 'km/L': base_value = Decimal('100') / v
+            case 'm/L': base_value = Decimal('100000') / v
+            case 'mpg(us)': base_value = MPG_US_TO_L100KM / v
+            case 'mpg(uk)': base_value = MPG_UK_TO_L100KM / v
+            case _:
+                print('Error: unknown identifier')
+                return None
+    except BaseException as err:
+        print('Error getting base value: ' + str(err))
+        return None
+
+    # conversion in strict order
+    try:
+        conversions = [
+            ('m/L', Decimal('100000') / base_value),
+            ('km/L', Decimal('100') / base_value),
+            ('L/100 km', base_value),
+            ('mpg(us)', MPG_US_TO_L100KM / base_value),
+            ('mpg(uk)', MPG_UK_TO_L100KM / base_value),
+        ]
+        result = []
+        for i in conversions:
+            result.append(value_processing(i[1], quantize, scientific))
+        return result
+    except BaseException as err:
+        print('Error during conversion: ' + str(err))
+        return None
+
+
+# ------------------------------------------------------------------------------
+
+
+def value_processing(value: Decimal, quantize: str, scientific: int) -> str:
+    try:
+        value = value.quantize(Decimal(quantize))
+    except BaseException:
+        pass  # todo: error?
+    value = value.normalize()
+
+    exponent = value.as_tuple().exponent
+    digits = len(value.as_tuple().digits)
+
+    if isinstance(exponent, int) and exponent > 0:
+        if digits + exponent < scientific:
+            if value == value.to_integral_value():  # check
+                value = Decimal(int(value))
+
+    return str(value)
