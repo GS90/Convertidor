@@ -597,58 +597,68 @@ def conversion(quantity: str,
 
 
 def find_temperature(identifier: str, value: Decimal):
+
+    KELVIN_OFFSET = Decimal('273.15')
+    RANKINE_OFFSET = Decimal('459.67')
+    FRACTION_9_5 = Decimal('9') / Decimal('5')
+    FRACTION_5_9 = Decimal('5') / Decimal('9')
+    FRACTION_4_5 = Decimal('4') / Decimal('5')
+    FRACTION_5_4 = Decimal('5') / Decimal('4')
+
     match identifier:
         case 'celsius':
-            kelvin = value + Decimal('273.15')
-            result = [
-                value,                                   # celsius
-                value * Decimal(9 / 5) + Decimal('32'),  # fahrenheit
-                kelvin,                                  # kelvin
-                kelvin * Decimal(9 / 5),                 # rankine
-                value * Decimal(4 / 5),                  # reaumur
-            ]
-        case 'fahrenheit':
-            celsius = (value - Decimal('32')) * Decimal(5 / 9)
-            result = [
-                celsius,
-                value,
-                celsius + Decimal('273.15'),
-                value + Decimal('459.67'),
-                (value - Decimal('32')) * Decimal(4 / 9),
-            ]
+            celsius = value
+            kelvin = celsius + KELVIN_OFFSET
+            fahrenheit = celsius * FRACTION_9_5 + Decimal('32')
+            rankine = kelvin * FRACTION_9_5
+            reaumur = celsius * FRACTION_4_5
+
         case 'kelvin':
-            celsius = value - Decimal('273.15')
-            result = [
-                celsius,
-                celsius * Decimal(5 / 9) + Decimal('32'),
-                value,
-                value * Decimal(5 / 9),
-                celsius * Decimal(4 / 9),
-            ]
+            kelvin = value
+            celsius = kelvin - KELVIN_OFFSET
+            fahrenheit = kelvin * FRACTION_9_5 - RANKINE_OFFSET
+            rankine = kelvin * FRACTION_9_5
+            reaumur = celsius * FRACTION_4_5
+
+        case 'fahrenheit':
+            fahrenheit = value
+            celsius = (fahrenheit - Decimal('32')) * FRACTION_5_9
+            kelvin = celsius + KELVIN_OFFSET
+            rankine = fahrenheit + RANKINE_OFFSET
+            reaumur = celsius * FRACTION_4_5
+
         case 'rankine':
-            kelvin = value * Decimal(5 / 9)
-            result = [
-                kelvin - Decimal('273.15'),
-                value - Decimal('459.67'),
-                kelvin,
-                value,
-                (kelvin - Decimal('273.15')) * Decimal(4 / 5),
-            ]
+            rankine = value
+            kelvin = rankine * FRACTION_5_9
+            celsius = kelvin - KELVIN_OFFSET
+            fahrenheit = rankine - RANKINE_OFFSET
+            reaumur = celsius * FRACTION_4_5
+
         case 'reaumur':
-            celsius = value * Decimal(5 / 4)
-            fahrenheit = value * Decimal(9 / 4) + Decimal('32')
-            result = [
-                celsius,
-                fahrenheit,
-                celsius + Decimal('273.15'),
-                fahrenheit + Decimal('459.67'),
-                value,
-            ]
+            reaumur = value
+            celsius = reaumur * FRACTION_5_4
+            kelvin = celsius + KELVIN_OFFSET
+            fahrenheit = celsius * FRACTION_9_5 + Decimal('32')
+            rankine = fahrenheit + RANKINE_OFFSET
+
         case _:
             print(f'Error: "{identifier}" unknown identifier')
             return []
 
-    return result
+    # checking for physically impossible values
+    if kelvin < 0:
+        kelvin = 0
+    if rankine < 0:
+        rankine = 0
+
+    # order is important
+    return [
+        celsius,
+        kelvin,
+        fahrenheit,
+        rankine,
+        reaumur,
+    ]
 
 
 # ------------------------------------------------------------------------------
