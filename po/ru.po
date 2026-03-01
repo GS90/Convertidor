@@ -5,8 +5,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.2.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-16 12:20+0300\n"
-"PO-Revision-Date: 2026-01-11 14:24+0300\n"
+"POT-Creation-Date: 2026-03-01 22:56+0300\n"
+"PO-Revision-Date: 2026-03-01 23:12+0300\n"
 "Last-Translator: Golodnikov Sergey <nn19051990@gmail.com>\n"
 "Language-Team: Russian\n"
 "Language: ru\n"
@@ -39,82 +39,90 @@ msgid "Theme variant"
 msgstr "Выбор темы приложения"
 
 #: data/tech.digiroad.Convertidor.gschema.xml:11
+msgid "User theme"
+msgstr "Тема пользователя"
+
+#: data/tech.digiroad.Convertidor.gschema.xml:12
+msgid "Color theme set by the user"
+msgstr "Цветовая тема, заданная пользователем"
+
+#: data/tech.digiroad.Convertidor.gschema.xml:16
 msgid "Width"
 msgstr "Ширина"
 
-#: data/tech.digiroad.Convertidor.gschema.xml:12
+#: data/tech.digiroad.Convertidor.gschema.xml:17
 msgid "Window width"
 msgstr "Ширина окна"
 
-#: data/tech.digiroad.Convertidor.gschema.xml:16
+#: data/tech.digiroad.Convertidor.gschema.xml:21
 msgid "Height"
 msgstr "Высота"
 
-#: data/tech.digiroad.Convertidor.gschema.xml:17
+#: data/tech.digiroad.Convertidor.gschema.xml:22
 msgid "Window height"
 msgstr "Высота окна"
 
-#: data/tech.digiroad.Convertidor.gschema.xml:21
+#: data/tech.digiroad.Convertidor.gschema.xml:26
 msgid "Maximized"
 msgstr "Развёрнутое"
 
-#: data/tech.digiroad.Convertidor.gschema.xml:22
+#: data/tech.digiroad.Convertidor.gschema.xml:27
 msgid "Maximized state of window"
 msgstr "Развёрнутое окно"
 
-#: data/tech.digiroad.Convertidor.gschema.xml:26 src/gtk/window.ui:234
+#: data/tech.digiroad.Convertidor.gschema.xml:31 src/gtk/window.ui:234
 msgid "Precision"
 msgstr "Точность"
 
-#: data/tech.digiroad.Convertidor.gschema.xml:27 src/gtk/window.ui:233
+#: data/tech.digiroad.Convertidor.gschema.xml:32 src/gtk/window.ui:233
 msgid "Desired accuracy of calculations"
 msgstr "Требуемая точность вычислений"
 
-#: data/tech.digiroad.Convertidor.gschema.xml:31 src/gtk/window.ui:250
+#: data/tech.digiroad.Convertidor.gschema.xml:36 src/gtk/window.ui:250
 msgid "Quantize"
 msgstr "Квантизация"
 
-#: data/tech.digiroad.Convertidor.gschema.xml:32 src/gtk/window.ui:249
+#: data/tech.digiroad.Convertidor.gschema.xml:37 src/gtk/window.ui:249
 msgid "Rounding to a fixed value"
 msgstr "Округление до фиксированного значения"
 
-#: data/tech.digiroad.Convertidor.gschema.xml:36 src/gtk/window.ui:266
+#: data/tech.digiroad.Convertidor.gschema.xml:41 src/gtk/window.ui:266
 msgid "Scientific notation"
 msgstr "Научная нотация"
 
-#: data/tech.digiroad.Convertidor.gschema.xml:37 src/gtk/window.ui:265
+#: data/tech.digiroad.Convertidor.gschema.xml:42 src/gtk/window.ui:265
 msgid "Character limit for switching"
 msgstr "Ограничение на количество символов для переключения"
 
-#: data/tech.digiroad.Convertidor.gschema.xml:41
+#: data/tech.digiroad.Convertidor.gschema.xml:46
 msgid "Quantity"
 msgstr "Величина"
 
-#: data/tech.digiroad.Convertidor.gschema.xml:42
+#: data/tech.digiroad.Convertidor.gschema.xml:47
 msgid "Last choice of quantity"
 msgstr "Последняя выбранная величина"
 
-#: data/tech.digiroad.Convertidor.gschema.xml:46
+#: data/tech.digiroad.Convertidor.gschema.xml:51
 msgid "Derived"
 msgstr "Производные"
 
-#: data/tech.digiroad.Convertidor.gschema.xml:47
+#: data/tech.digiroad.Convertidor.gschema.xml:52
 msgid "Show insignificant derived units"
 msgstr "Показать малозначимые производные единицы"
 
-#: data/tech.digiroad.Convertidor.gschema.xml:51 src/gtk/window.ui:30
+#: data/tech.digiroad.Convertidor.gschema.xml:56 src/gtk/window.ui:30
 msgid "Imperial"
 msgstr "Имперские"
 
-#: data/tech.digiroad.Convertidor.gschema.xml:52
+#: data/tech.digiroad.Convertidor.gschema.xml:57
 msgid "Show imperial units"
 msgstr "Показать имперские единицы измерения"
 
-#: data/tech.digiroad.Convertidor.gschema.xml:56
+#: data/tech.digiroad.Convertidor.gschema.xml:61
 msgid "Legacy"
 msgstr "Устаревшие"
 
-#: data/tech.digiroad.Convertidor.gschema.xml:57
+#: data/tech.digiroad.Convertidor.gschema.xml:62
 msgid "Show legacy units"
 msgstr "Показать устаревшие единицы измерения"
 

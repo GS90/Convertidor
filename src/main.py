@@ -29,7 +29,7 @@ from .convertidor import quantities, conversion
 from .window import ConvertidorWindow
 
 
-APP_VERSION = '1.3.4'
+APP_VERSION = '1.3.5'
 
 
 class ConvertidorApplication(Adw.Application):
@@ -57,7 +57,13 @@ class ConvertidorApplication(Adw.Application):
         if self.pref.get_boolean('maximized'):
             self.w.maximize()
 
-        self.update_theme(self.pref.get_int('theme'))
+        user_theme = self.pref.get_boolean('theme-user')
+        if not user_theme:
+            theme = self.get_system_color_scheme()
+            self.pref.set_int('theme', theme)
+            self.update_theme(theme)
+        else:
+            self.update_theme(self.pref.get_int('theme'))
 
         self.clipboard = Gdk.Display().get_default().get_clipboard()
 
@@ -372,14 +378,35 @@ class ConvertidorApplication(Adw.Application):
             self.set_accels_for_action(f'app.{name}', shortcuts)
 
     def theme_change(self, widget, _):
+        self.pref.set_boolean('theme-user', True)
         self.update_theme(widget.get_selected())
 
-    def update_theme(self, value):
+    def update_theme(self, value: int):
         style_manager = Adw.StyleManager.get_default()
         if value == 0:
             style_manager.set_color_scheme(Adw.ColorScheme.FORCE_LIGHT)
         else:
             style_manager.set_color_scheme(Adw.ColorScheme.FORCE_DARK)
+
+    def get_system_color_scheme(self) -> int:
+        bus = Gio.bus_get_sync(Gio.BusType.SESSION, None)
+        proxy = Gio.DBusProxy.new_sync(
+            bus,
+            Gio.DBusProxyFlags.NONE,
+            None,
+            'org.freedesktop.portal.Desktop',
+            '/org/freedesktop/portal/desktop',
+            'org.freedesktop.portal.Settings',
+            None,
+        )
+        try:
+            scheme = proxy.Read('(ss)',
+                                'org.freedesktop.appearance',
+                                'color-scheme')
+        except Exception:
+            scheme = 2
+        # note, scheme: 1 = Dark, 2 = Light
+        return 1 if scheme == 1 else 0
 
     def do_shutdown(self):
         if self.w.is_maximized():

@@ -6,6 +6,11 @@
 			<summary>Theme</summary>
 			<description>Theme variant</description>
 		</key>
+		<key name="theme-user" type="b">
+			<default>false</default>
+			<summary>User theme</summary>
+			<description>Color theme set by the user</description>
+		</key>
 		<key name="width" type="i">
 			<default>1200</default>
 			<summary>Width</summary>

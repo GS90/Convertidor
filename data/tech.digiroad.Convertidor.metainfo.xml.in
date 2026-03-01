@@ -50,6 +50,18 @@
 
   <releases>
 
+    <release version="1.3.5" date="2026-03-02">
+      <description translate="no">
+        <p>Detect system color theme.</p>
+      </description>
+    </release>
+
+    <release version="1.3.4" date="2026-02-23">
+      <description translate="no">
+        <p>Temperature calculation: corrected and improved.</p>
+      </description>
+    </release>
+
     <release version="1.3.2" date="2026-02-15">
       <description translate="no">
         <p>Fuel consumption: fixed and improved.</p>

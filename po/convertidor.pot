@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-16 13:32+0300\n"
+"POT-Creation-Date: 2026-03-02 00:08+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -35,82 +35,90 @@ msgid "Theme variant"
 msgstr ""
 
 #: data/tech.digiroad.Convertidor.gschema.xml:11
-msgid "Width"
+msgid "User theme"
 msgstr ""
 
 #: data/tech.digiroad.Convertidor.gschema.xml:12
-msgid "Window width"
+msgid "Color theme set by the user"
 msgstr ""
 
 #: data/tech.digiroad.Convertidor.gschema.xml:16
-msgid "Height"
+msgid "Width"
 msgstr ""
 
 #: data/tech.digiroad.Convertidor.gschema.xml:17
-msgid "Window height"
+msgid "Window width"
 msgstr ""
 
 #: data/tech.digiroad.Convertidor.gschema.xml:21
-msgid "Maximized"
+msgid "Height"
 msgstr ""
 
 #: data/tech.digiroad.Convertidor.gschema.xml:22
+msgid "Window height"
+msgstr ""
+
+#: data/tech.digiroad.Convertidor.gschema.xml:26
+msgid "Maximized"
+msgstr ""
+
+#: data/tech.digiroad.Convertidor.gschema.xml:27
 msgid "Maximized state of window"
 msgstr ""
 
-#: data/tech.digiroad.Convertidor.gschema.xml:26 src/gtk/window.ui:234
+#: data/tech.digiroad.Convertidor.gschema.xml:31 src/gtk/window.ui:234
 msgid "Precision"
 msgstr ""
 
-#: data/tech.digiroad.Convertidor.gschema.xml:27 src/gtk/window.ui:233
+#: data/tech.digiroad.Convertidor.gschema.xml:32 src/gtk/window.ui:233
 msgid "Desired accuracy of calculations"
 msgstr ""
 
-#: data/tech.digiroad.Convertidor.gschema.xml:31 src/gtk/window.ui:250
+#: data/tech.digiroad.Convertidor.gschema.xml:36 src/gtk/window.ui:250
 msgid "Quantize"
 msgstr ""
 
-#: data/tech.digiroad.Convertidor.gschema.xml:32 src/gtk/window.ui:249
+#: data/tech.digiroad.Convertidor.gschema.xml:37 src/gtk/window.ui:249
 msgid "Rounding to a fixed value"
 msgstr ""
 
-#: data/tech.digiroad.Convertidor.gschema.xml:36 src/gtk/window.ui:266
+#: data/tech.digiroad.Convertidor.gschema.xml:41 src/gtk/window.ui:266
 msgid "Scientific notation"
 msgstr ""
 
-#: data/tech.digiroad.Convertidor.gschema.xml:37 src/gtk/window.ui:265
+#: data/tech.digiroad.Convertidor.gschema.xml:42 src/gtk/window.ui:265
 msgid "Character limit for switching"
 msgstr ""
 
-#: data/tech.digiroad.Convertidor.gschema.xml:41
+#: data/tech.digiroad.Convertidor.gschema.xml:46
 msgid "Quantity"
 msgstr ""
 
-#: data/tech.digiroad.Convertidor.gschema.xml:42
+#: data/tech.digiroad.Convertidor.gschema.xml:47
 msgid "Last choice of quantity"
 msgstr ""
 
-#: data/tech.digiroad.Convertidor.gschema.xml:46
+#: data/tech.digiroad.Convertidor.gschema.xml:51
 msgid "Derived"
 msgstr ""
 
-#: data/tech.digiroad.Convertidor.gschema.xml:47
+#: data/tech.digiroad.Convertidor.gschema.xml:52
 msgid "Show insignificant derived units"
 msgstr ""
 
-#: data/tech.digiroad.Convertidor.gschema.xml:51 src/gtk/window.ui:30
+#: data/tech.digiroad.Convertidor.gschema.xml:56 src/gtk/window.ui:30
 msgid "Imperial"
 msgstr ""
 
-#: data/tech.digiroad.Convertidor.gschema.xml:52
+#: data/tech.digiroad.Convertidor.gschema.xml:57
 msgid "Show imperial units"
 msgstr ""
 
-#: data/tech.digiroad.Convertidor.gschema.xml:56
+#: data/tech.digiroad.Convertidor.gschema.xml:61
 msgid "Legacy"
 msgstr ""
 
-#: data/tech.digiroad.Convertidor.gschema.xml:57
+#: data/tech.digiroad.Convertidor.gschema.xml:62
 msgid "Show legacy units"
 msgstr ""
 
