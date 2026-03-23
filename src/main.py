@@ -29,7 +29,7 @@ from .convertidor import quantities, conversion
 from .window import ConvertidorWindow
 
 
-APP_VERSION = '1.3.5'
+APP_VERSION = '1.4.0'
 
 
 class ConvertidorApplication(Adw.Application):

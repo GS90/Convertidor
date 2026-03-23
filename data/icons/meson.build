@@ -11,7 +11,6 @@ install_data(
   symbolic_dir / ('@0@-symbolic.svg').format(application_id),
 
   symbolic_dir / 'actions' / ('hint-symbolic.svg'),
-
   symbolic_dir / 'actions' / ('copy-symbolic.svg'),
   symbolic_dir / 'actions' / ('minus-symbolic.svg'),
   symbolic_dir / 'actions' / ('plus-symbolic.svg'),
