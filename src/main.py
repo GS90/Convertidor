@@ -67,6 +67,8 @@ class ConvertidorApplication(Adw.Application):
 
         self.clipboard = Gdk.Display().get_default().get_clipboard()
 
+        self.css_provider = Gtk.CssProvider()
+
         self.structure = (
             (self.w.label_cero, self.w.units_cero, []),
             (self.w.label_uno, self.w.units_uno, []),
@@ -81,6 +83,20 @@ class ConvertidorApplication(Adw.Application):
 
         self.w.pref_theme.connect('notify::selected-item', self.theme_change)
         self.w.button_reset.connect('clicked', self.entries_reset_wrapper)
+
+        if self.pref.get_int('theme') == 0:
+            err_color = 'color: #660000;}'
+        else:
+            err_color = 'color: #ff8080;}'
+        css = (
+            '.hint-constant {'
+            'opacity: 0.4; transition: opacity 0.4s;} '
+            '.hint-constant:hover {'
+            'opacity: 1.0;} '
+            '.css-error {'
+            f'{err_color}'
+        )
+        self.set_css(css)
 
         # displaying derived units of measurement
         self.show_derived = self.pref.get_boolean('derived')
@@ -101,6 +117,14 @@ class ConvertidorApplication(Adw.Application):
         self.quantities_choice(None, recent_ar)
         self.w.quantities_list.select_row(recent_ar)
         self.w.quantities_list.connect('row-selected', self.quantities_choice)
+
+    def set_css(self, css: str):
+        self.css_provider.load_from_data(css.encode('utf-8'), len(css))
+        Gtk.StyleContext.add_provider_for_display(
+            Gdk.Display.get_default(),
+            self.css_provider,
+            Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION,
+        )
 
     def quantities_choice(self, _, ar):
         index = ar.get_index()
@@ -125,8 +149,18 @@ class ConvertidorApplication(Adw.Application):
         # fill
         for index, unit in enumerate(quantities[key]['units']):
 
-            cell = Gtk.Box(hexpand=True, orientation='vertical')
-            cell.append(Gtk.Label(halign='start', label=unit[0]))
+            header = Gtk.Box(orientation='horizontal', hexpand=True)
+            label = Gtk.Label(halign='start', hexpand=True, label=unit[0])
+            header.append(label)
+
+            if len(unit) > 4:  # hint, constant
+                hint = Gtk.Image.new_from_icon_name('hint-symbolic')
+                hint.set_tooltip_markup(unit[4])
+                hint.add_css_class('hint-constant')
+                header.append(hint)
+
+            cell = Gtk.Box(orientation='vertical', hexpand=True)
+            cell.append(header)
 
             cell.set_margin_top(2)
             cell.set_margin_bottom(2)
@@ -161,7 +195,7 @@ class ConvertidorApplication(Adw.Application):
             cell.append(wrapper)
 
             derived = False
-            if len(unit) > 3:  # optional parameter
+            if len(unit) > 3:  # optional parameter, derived
                 derived = unit[3]
 
             self.filling.append((unit[2], cell, wrapper, derived))
@@ -222,18 +256,6 @@ class ConvertidorApplication(Adw.Application):
         if result is None:
             if not sc.has_class('css-error'):
                 entry.add_css_class('css-error')
-                if self.pref.get_int('theme') == 0:
-                    css = '.css-error {color: #660000;}'
-                else:
-                    css = '.css-error {color: #ff8080;}'
-                provider = Gtk.CssProvider()
-                provider.load_from_data(css.encode())
-                display = Gdk.Display.get_default()
-                Gtk.StyleContext.add_provider_for_display(
-                    display,
-                    provider,
-                    Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
-                )
             return
 
         if sc.has_class('css-error'):
