@@ -83,6 +83,7 @@
                                 <property name="min-children-per-line">1</property>
                                 <property name="overflow">hidden</property>
                                 <property name="row-spacing">2</property>
+                                <property name="homogeneous">true</property>
                               </object>
                             </child>
                             <child>
@@ -101,6 +102,7 @@
                                 <property name="min-children-per-line">1</property>
                                 <property name="overflow">hidden</property>
                                 <property name="row-spacing">2</property>
+                                <property name="homogeneous">true</property>
                               </object>
                             </child>
                             <child>
@@ -119,6 +121,7 @@
                                 <property name="min-children-per-line">1</property>
                                 <property name="overflow">hidden</property>
                                 <property name="row-spacing">2</property>
+                                <property name="homogeneous">true</property>
                               </object>
                             </child>
                             <child>
@@ -137,6 +140,7 @@
                                 <property name="min-children-per-line">1</property>
                                 <property name="overflow">hidden</property>
                                 <property name="row-spacing">2</property>
+                                <property name="homogeneous">true</property>
                               </object>
                             </child>
                           </object>
