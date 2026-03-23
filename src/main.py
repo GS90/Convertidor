@@ -252,30 +252,25 @@ class ConvertidorApplication(Adw.Application):
                     print('Error:', str(exception))
         self.freeze = False
 
-    def entry_increment(self, _, entry):
+    def adjust_entry(self, entry, delta):
         value = self.entry_get(entry)
         if value is not None:
             decimal, exponent = value
-            if type(decimal) is Decimal and exponent is not None:
+            if isinstance(decimal, Decimal) and exponent is not None:
                 if exponent < 1:
                     self.freeze = True
-                    entry.set_text(str(decimal + Decimal('1')))
+                    d = decimal + Decimal(str(delta))
+                    if delta < 0:
+                        d = Decimal.max(d, Decimal('0'))
+                    entry.set_text(str(d))
                     self.freeze = False
                     self.entry_changed(entry, self.recent_quantity[1])
-                    # todo: else?
+
+    def entry_increment(self, _, entry):
+        self.adjust_entry(entry, 1)
 
     def entry_decrement(self, _, entry):
-        value = self.entry_get(entry)
-        if value is not None:
-            decimal, exponent = value
-            if type(decimal) is Decimal and exponent is not None:
-                if exponent < 1:
-                    self.freeze = True
-                    decimal = Decimal.max(decimal - Decimal('1'), Decimal('0'))
-                    entry.set_text(str(decimal))
-                    self.freeze = False
-                    self.entry_changed(entry, self.recent_quantity[1])
-                    # todo: else?
+        self.adjust_entry(entry, -1)
 
     def entry_copy(self, _, entry):
         self.clipboard.set(entry.get_text())
