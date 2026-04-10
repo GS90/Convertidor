@@ -16,6 +16,7 @@
 - Instant and accurate (synchronous) unit conversion.
 - Control of calculation accuracy.
 - Intuitive and user-friendly interface.
+- Tips for units and constants.
 
 
 ## Installation

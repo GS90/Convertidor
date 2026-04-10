@@ -5,8 +5,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.2.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-23 18:33+0300\n"
-"PO-Revision-Date: 2026-03-23 18:34+0300\n"
+"POT-Creation-Date: 2026-04-10 15:23+0300\n"
+"PO-Revision-Date: 2026-04-10 15:27+0300\n"
 "Last-Translator: Golodnikov Sergey <nn19051990@gmail.com>\n"
 "Language-Team: Russian\n"
 "Language: ru\n"
@@ -162,1278 +162,1590 @@ msgstr "Контроль точности вычислений."
 msgid "Intuitive and user-friendly interface."
 msgstr "Интуитивно понятный и удобный интерфейс."
 
-#: data/tech.digiroad.Convertidor.metainfo.xml.in:43
+#: data/tech.digiroad.Convertidor.metainfo.xml.in:21
+msgid "Tips for units and constants."
+msgstr "Подсказки для единиц измерения и констант."
+
+#: data/tech.digiroad.Convertidor.metainfo.xml.in:44
 msgid "Convertidor in light mode"
 msgstr "Convertidor, светлая тема"
 
-#: data/tech.digiroad.Convertidor.metainfo.xml.in:47
+#: data/tech.digiroad.Convertidor.metainfo.xml.in:48
 msgid "Convertidor in dark mode"
 msgstr "Convertidor, тёмная тема"
 
-#: src/convertidor.py:101
+#: src/convertidor.py:31
+msgid ""
+"<b>Watt-hour (SI)</b>\n"
+"1 Wh = 3600 J (exact)"
+msgstr ""
+"<b>Ватт-час (СИ)</b>\n"
+"1 Wh = 3600 J (точно)"
+
+#: src/convertidor.py:35
+msgid ""
+"<b>2022 CODATA Value (SI 2019)</b>\n"
+"1 eV = 1.602176634x10−19 J"
+msgstr ""
+"<b>2022 CODATA Value (СИ 2019)</b>\n"
+"1 eV = 1.602176634x10−19 J"
+
+#: src/convertidor.py:39
+msgid ""
+"<b>Erg</b>\n"
+"1 erg = 1E-7 J (exact, CGS unit)"
+msgstr ""
+"<b>Эрг</b>\n"
+"1 erg = 1E-7 J (точно, единица СГС)"
+
+#: src/convertidor.py:43
+msgid ""
+"<b>Thermochemical calorie</b>\n"
+"1 cal (th) = 4.184 J (exact)"
+msgstr ""
+"<b>Термохимическая калория</b>\n"
+"1 cal (th) = 4.184 J (точно)"
+
+#: src/convertidor.py:47
+msgid ""
+"<b>International Table calorie (IT)</b>\n"
+"1 cal (it) = 4.1868 J (exact)"
+msgstr ""
+"<b>Международная табличная калория (IT)</b>\n"
+"1 cal (it) = 4.1868 J (точно)"
+
+#: src/convertidor.py:51
+msgid ""
+"<b>Foot-poundal</b>\n"
+"1 ft-pdl = 0.0421401100938048 J (exact)"
+msgstr ""
+"<b>Фут-паундаль</b>\n"
+"1 ft-pdl = 0.0421401100938048 J (точно)"
+
+#: src/convertidor.py:55
+msgid ""
+"<b>Foot-pound force (ft⋅lbf)</b>\n"
+"1 ft⋅lbf = 1.3558179483314004 J (exact)"
+msgstr ""
+"<b>Футо-фунт-сила (ft⋅lbf)</b>\n"
+"1 ft⋅lbf = 1.3558179483314004 J (точно)"
+
+#: src/convertidor.py:59
+msgid ""
+"<b>British thermal unit (thermochemical)</b>\n"
+"1 Btu (th) = 1054.3502644383 J"
+msgstr ""
+"<b>Британская тепловая единица (термохимическая)</b>\n"
+"1 Btu (th) = 1054.3502644383 J"
+
+#: src/convertidor.py:63
+msgid ""
+"<b>British thermal unit (International Table, IT)</b>\n"
+"1 Btu (it) = 1055.05585262 J"
+msgstr ""
+"<b>Британская тепловая единица (международная табличная)</b>\n"
+"1 Btu (it) = 1055.05585262 J"
+
+#: src/convertidor.py:67
+msgid ""
+"<b>Therm (United States)</b>\n"
+"1 thm (US) = 100 000 Btu (it) = 105 480 400 J"
+msgstr ""
+"<b>Терм (США)</b>\n"
+"1 thm (US) = 100 000 Btu (it) = 105 480 400 J"
+
+#: src/convertidor.py:71
+msgid ""
+"<b>Therm (European Community)</b>\n"
+"1 thm (US) = 100 000 Btu (th) ≈ 105 505 585.257 J"
+msgstr ""
+"<b>Терм (Европейское сообщество)</b>\n"
+"1 thm (US) = 100 000 Btu (th) ≈ 105 505 585.257 J"
+
+#: src/convertidor.py:76
+msgid ""
+"<b>The distance light travels in 1 second</b>\n"
+"1 light-second (ls) = 299 792 458 m"
+msgstr ""
+"<b>Расстояние, которое свет проходит за 1 секунду</b>\n"
+"1 световая секунда (ls) = 299 792 458 m"
+
+#: src/convertidor.py:80
+msgid "Based on 1/12 of a Julian year (365.25 days)"
+msgstr "На основе 1/12 юлианского года (365.25 дня)"
+
+#: src/convertidor.py:83
+msgid "Julian year, 365.25 days"
+msgstr "Юлианский год, 365.25 суток"
+
+#: src/convertidor.py:87
+msgid ""
+"<b>1 RPM = 1/60 Hz</b>\n"
+"Used to measure the rotational speed of mechanical parts,\n"
+"such as an engine crankshaft, a disk, or a fan."
+msgstr ""
+"<b>1 RPM = 1/60 Hz</b>\n"
+"Используется для измерения частоты вращения механических деталей,\n"
+"таких как коленчатый вал двигателя, диск или вентилятор."
+
+#: src/convertidor.py:92
+msgid ""
+"<b>1 BPM = 1/60 Hz</b>\n"
+"Used to determine the tempo in music or the heart\n"
+"rate (pulse) in medicine."
+msgstr ""
+"<b>1 BPM = 1/60 Hz</b>\n"
+"Используется для определения темпа в музыке или частоты\n"
+"сердечных сокращений (пульса) в медицине."
+
+#: src/convertidor.py:126
 msgid "Angle"
 msgstr "Угол"
 
-#: src/convertidor.py:103
+#: src/convertidor.py:128
 msgid "Units of measurement"
 msgstr "Единицы измерения"
 
-#: src/convertidor.py:106
+#: src/convertidor.py:131
 msgid "Second, \""
 msgstr "Секунда, \""
 
-#: src/convertidor.py:107
+#: src/convertidor.py:132
 msgid "Minute, '"
 msgstr "Минута, '"
 
-#: src/convertidor.py:108
+#: src/convertidor.py:133
 msgid "Grad, ^g"
 msgstr "Град, ^g"
 
-#: src/convertidor.py:109
+#: src/convertidor.py:134
 msgid "Degree, °"
 msgstr "Градус, °"
 
-#: src/convertidor.py:110
+#: src/convertidor.py:135
 msgid "Radian, rad"
 msgstr "Радиан, rad"
 
-#: src/convertidor.py:111
+#: src/convertidor.py:136
 msgid "Milliradian, mrad"
 msgstr "Тысячная, mrad"
 
-#: src/convertidor.py:117
+#: src/convertidor.py:143
 msgid "Area"
 msgstr "Площадь"
 
-#: src/convertidor.py:119 src/convertidor.py:279 src/convertidor.py:296
-#: src/convertidor.py:331 src/convertidor.py:472 src/convertidor.py:560
+#: src/convertidor.py:145 src/convertidor.py:305 src/convertidor.py:322
+#: src/convertidor.py:368 src/convertidor.py:509 src/convertidor.py:597
 msgid "Metric system"
 msgstr "Метрическая система"
 
-#: src/convertidor.py:120 src/convertidor.py:190 src/convertidor.py:240
-#: src/convertidor.py:280 src/convertidor.py:297 src/convertidor.py:332
-#: src/convertidor.py:384 src/convertidor.py:431 src/convertidor.py:473
-#: src/convertidor.py:516 src/convertidor.py:561
+#: src/convertidor.py:146 src/convertidor.py:216 src/convertidor.py:266
+#: src/convertidor.py:306 src/convertidor.py:323 src/convertidor.py:369
+#: src/convertidor.py:421 src/convertidor.py:468 src/convertidor.py:510
+#: src/convertidor.py:553 src/convertidor.py:598
 msgid "Imperial and US customary systems"
 msgstr "Имперская и американская системы"
 
-#: src/convertidor.py:124
+#: src/convertidor.py:150
 msgid "Square nanometer, nm^2"
 msgstr "Квадратный нанометр, nm^2"
 
-#: src/convertidor.py:125
+#: src/convertidor.py:151
 msgid "Square micrometer μm^2"
 msgstr "Квадратный микрометр, μm^2"
 
-#: src/convertidor.py:126
+#: src/convertidor.py:152
 msgid "Square millimeter, mm^2"
 msgstr "Квадратный миллиметр, mm^2"
 
-#: src/convertidor.py:127
+#: src/convertidor.py:153
 msgid "Square centimeter, cm^2"
 msgstr "Квадратный сантиметр, cm^2"
 
-#: src/convertidor.py:128
+#: src/convertidor.py:154
 msgid "Square decimeter, dm^2"
 msgstr "Квадратный дециметр, dm^2"
 
-#: src/convertidor.py:129
+#: src/convertidor.py:155
 msgid "Square meter, m^2"
 msgstr "Квадратный метр, m^2"
 
-#: src/convertidor.py:130
+#: src/convertidor.py:156
 msgid "Square dekameter, dam^2"
 msgstr "Квадратный декаметр, dam^2"
 
-#: src/convertidor.py:131
+#: src/convertidor.py:157
 msgid "Are, a"
 msgstr "Ар (сотка), a"
 
-#: src/convertidor.py:132
+#: src/convertidor.py:158
 msgid "Square hectometer, hm^2"
 msgstr "Квадратный гектометр, hm^2"
 
-#: src/convertidor.py:133
+#: src/convertidor.py:159
 msgid "Hectare, ha"
 msgstr "Гектар, ha"
 
-#: src/convertidor.py:134
+#: src/convertidor.py:160
 msgid "Square kilometer, km^2"
 msgstr "Квадратный километр, km^2"
 
-#: src/convertidor.py:135
+#: src/convertidor.py:161
 msgid "Square astronomical unit, au^2"
 msgstr "Квадратная астрономическая единица, au^2"
 
-#: src/convertidor.py:138
+#: src/convertidor.py:164
 msgid "Square inch, in^2"
 msgstr "Квадратный дюйм, in^2"
 
-#: src/convertidor.py:139
+#: src/convertidor.py:165
 msgid "Square foot, ft^2"
 msgstr "Квадратный фут, ft^2"
 
-#: src/convertidor.py:140
+#: src/convertidor.py:166
 msgid "Square foot (US), ft^2"
 msgstr "Квадратный фут (США), ft^2"
 
-#: src/convertidor.py:141
+#: src/convertidor.py:167
 msgid "Square yard, yd^2"
 msgstr "Квадратный ярд, yd^2"
 
-#: src/convertidor.py:142
+#: src/convertidor.py:168
 msgid "Acre, ac"
 msgstr "Акр, ac"
 
-#: src/convertidor.py:143
+#: src/convertidor.py:169
 msgid "Acre (US), ac"
 msgstr "Акр (США), ac"
 
-#: src/convertidor.py:144
+#: src/convertidor.py:170
 msgid "Square mile, mi^2"
 msgstr "Квадратная миля, mi^2"
 
-#: src/convertidor.py:145
+#: src/convertidor.py:171
 msgid "Square mile (US), mi^2"
 msgstr "Квадратная миля (США), mi^2"
 
-#: src/convertidor.py:150
+#: src/convertidor.py:176
 msgid "Digital data"
 msgstr "Цифровые данные"
 
-#: src/convertidor.py:152
+#: src/convertidor.py:178
 msgid "Data transfer rates"
 msgstr "Скорости передачи данных"
 
-#: src/convertidor.py:153
+#: src/convertidor.py:179
 msgid "Size of files and data"
 msgstr "Размеры файлов и данных"
 
-#: src/convertidor.py:154
+#: src/convertidor.py:180
 msgid "Binary contexts"
 msgstr "Двоичные данные"
 
-#: src/convertidor.py:158
+#: src/convertidor.py:184
 msgid "Bit, b"
 msgstr "Бит, b"
 
-#: src/convertidor.py:159
+#: src/convertidor.py:185
 msgid "Kilobit, Kb"
 msgstr "Килобит, Kb"
 
-#: src/convertidor.py:160
+#: src/convertidor.py:186
 msgid "Megabit, Mb"
 msgstr "Мегабит, Mb"
 
-#: src/convertidor.py:161
+#: src/convertidor.py:187
 msgid "Gigabit, Gb"
 msgstr "Гигабит, Gb"
 
-#: src/convertidor.py:162
+#: src/convertidor.py:188
 msgid "Terabit, Tb"
 msgstr "Терабит, Tb"
 
-#: src/convertidor.py:163
+#: src/convertidor.py:189
 msgid "Petabit, Pb"
 msgstr "Петабит, Pb"
 
-#: src/convertidor.py:164
+#: src/convertidor.py:190
 msgid "Exabit, Eb"
 msgstr "Экзабит, Eb"
 
-#: src/convertidor.py:166
+#: src/convertidor.py:192
 msgid "Byte, B"
 msgstr "Байт, B"
 
-#: src/convertidor.py:167
+#: src/convertidor.py:193
 msgid "Kilobyte, KB"
 msgstr "Килобайт, KB"
 
-#: src/convertidor.py:168
+#: src/convertidor.py:194
 msgid "Megabyte, MB"
 msgstr "Мегабайт, MB"
 
-#: src/convertidor.py:169
+#: src/convertidor.py:195
 msgid "Gigabyte, GB"
 msgstr "Гигабайт, GB"
 
-#: src/convertidor.py:170
+#: src/convertidor.py:196
 msgid "Terabyte, TB"
 msgstr "Терабайт, TB"
 
-#: src/convertidor.py:171
+#: src/convertidor.py:197
 msgid "Petabyte, PB"
 msgstr "Петабайт, PB"
 
-#: src/convertidor.py:172
+#: src/convertidor.py:198
 msgid "Exabyte, EB"
 msgstr "Экзабайт, EB"
 
-#: src/convertidor.py:174
+#: src/convertidor.py:200
 msgid "Kibibyte, KiB"
 msgstr "Кибибайт, KiB"
 
-#: src/convertidor.py:175
+#: src/convertidor.py:201
 msgid "Mebibyte, MiB"
 msgstr "Мебибайт, MiB"
 
-#: src/convertidor.py:176
+#: src/convertidor.py:202
 msgid "Gibibyte, GiB"
 msgstr "Гибибайт, GiB"
 
-#: src/convertidor.py:177
+#: src/convertidor.py:203
 msgid "Tebibyte, TiB"
 msgstr "Тебибайт, TiB"
 
-#: src/convertidor.py:178
+#: src/convertidor.py:204
 msgid "Pebibyte, PiB"
 msgstr "Пебибайт, PiB"
 
-#: src/convertidor.py:179
+#: src/convertidor.py:205
 msgid "Exbibyte, EiB"
 msgstr "Экзибайт, EiB"
 
-#: src/convertidor.py:185
+#: src/convertidor.py:211
 msgid "Energy"
 msgstr "Энергия"
 
-#: src/convertidor.py:187
+#: src/convertidor.py:213
 msgid "Joule units"
 msgstr "Единицы измерения в джоулях"
 
-#: src/convertidor.py:188
+#: src/convertidor.py:214
 msgid "Electrical energy"
 msgstr "Электрическая энергия"
 
-#: src/convertidor.py:189
+#: src/convertidor.py:215
 msgid "Other energy units"
 msgstr "Другие единицы энергии"
 
-#: src/convertidor.py:194
+#: src/convertidor.py:220
 msgid "Attojoule, aJ"
 msgstr "Аттоджоуль, aJ"
 
-#: src/convertidor.py:195
+#: src/convertidor.py:221
 msgid "Nanojoule, nJ"
 msgstr "Наноджоуль, nJ"
 
-#: src/convertidor.py:196
+#: src/convertidor.py:222
 msgid "Microjoule, μJ"
 msgstr "Микроджоуль, μJ"
 
-#: src/convertidor.py:197
+#: src/convertidor.py:223
 msgid "Millijoule, mJ"
 msgstr "Миладжоуль, mJ"
 
-#: src/convertidor.py:198
+#: src/convertidor.py:224
 msgid "Joule, J"
 msgstr "Джоуль, J"
 
-#: src/convertidor.py:199
+#: src/convertidor.py:225
 msgid "Kilojoule, kJ"
 msgstr "Килоджоуль, kJ"
 
-#: src/convertidor.py:200
+#: src/convertidor.py:226
 msgid "Megajoule, MJ"
 msgstr "Мегаджоуль, MJ"
 
-#: src/convertidor.py:201
+#: src/convertidor.py:227
 msgid "Gigajoule, GJ"
 msgstr "Гигаджоуль, GJ"
 
-#: src/convertidor.py:202
+#: src/convertidor.py:228
 msgid "Terajoule, TJ"
 msgstr "Тераджоуль, TJ"
 
-#: src/convertidor.py:204
+#: src/convertidor.py:230
 msgid "Watt-hour, Wh"
 msgstr "Ватт-час, Wh"
 
-#: src/convertidor.py:206
+#: src/convertidor.py:232
 msgid "Kilowatt-hour, kWh"
 msgstr "Киловатт-час, kWh"
 
-#: src/convertidor.py:207
+#: src/convertidor.py:233
 msgid "Megawatt-hour, MWh"
 msgstr "Мегаватт-час, MWh"
 
-#: src/convertidor.py:208
+#: src/convertidor.py:234
 msgid "Gigawatt-hour, GWh"
 msgstr "Гигаватт-час, GWh"
 
-#: src/convertidor.py:210
+#: src/convertidor.py:236
 msgid "Electronvolt, eV"
 msgstr "Электронвольт, eV"
 
-#: src/convertidor.py:212
+#: src/convertidor.py:238
 msgid "Erg, erg"
 msgstr "Эрг, erg"
 
-#: src/convertidor.py:213
+#: src/convertidor.py:239
 msgid "Calorie (th), cal"
 msgstr "Калория (th), cal"
 
-#: src/convertidor.py:215
+#: src/convertidor.py:241
 msgid "Calorie (it), cal"
 msgstr "Калория (it), cal"
 
-#: src/convertidor.py:217
+#: src/convertidor.py:243
 msgid "Kilocalorie (th), kcal"
 msgstr "Килокалория (th), kcal"
 
-#: src/convertidor.py:218
+#: src/convertidor.py:244
 msgid "Kilocalorie (it), kcal"
 msgstr "Килокалория (it), kcal"
 
-#: src/convertidor.py:220
+#: src/convertidor.py:246
 msgid "Foot-poundal, ft-pdl"
 msgstr "Фут-паундаль, ft-pdl"
 
-#: src/convertidor.py:222
+#: src/convertidor.py:248
 msgid "Foot-pound, ft⋅lbf"
 msgstr "Фут-фунт, ft⋅lbf"
 
-#: src/convertidor.py:224
+#: src/convertidor.py:250
 msgid "British thermal unit (th), Btu"
 msgstr "Британская тепловая единица (th), Btu"
 
-#: src/convertidor.py:226
+#: src/convertidor.py:252
 msgid "British thermal unit (it), Btu"
 msgstr "Британская тепловая единица (it), Btu"
 
-#: src/convertidor.py:228
+#: src/convertidor.py:254
 msgid "Therm (US), thm"
 msgstr "Терм (США), thm"
 
-#: src/convertidor.py:230
+#: src/convertidor.py:256
 msgid "Therm (EC), thm"
 msgstr "Терм (ЕС), thm"
 
-#: src/convertidor.py:236
+#: src/convertidor.py:262
 msgid "Force"
 msgstr "Сила"
 
-#: src/convertidor.py:238
+#: src/convertidor.py:264
 msgid "Newton units"
 msgstr "Единицы измерения в ньютонах"
 
-#: src/convertidor.py:239
+#: src/convertidor.py:265
 msgid "Other force units"
 msgstr "Другие единицы силы"
 
-#: src/convertidor.py:241 src/convertidor.py:334 src/convertidor.py:385
-#: src/convertidor.py:517
+#: src/convertidor.py:267 src/convertidor.py:371 src/convertidor.py:422
+#: src/convertidor.py:554
 msgid "Legacy units"
 msgstr "Устаревшие единицы"
 
-#: src/convertidor.py:245
+#: src/convertidor.py:271
 msgid "Attonewton, aN"
 msgstr "Аттоньютон, aN"
 
-#: src/convertidor.py:246
+#: src/convertidor.py:272
 msgid "Femtonewton, fN"
 msgstr "Фемтоньютон, fN"
 
-#: src/convertidor.py:247
+#: src/convertidor.py:273
 msgid "Piconewton, pN"
 msgstr "Пиконьютон, pN"
 
-#: src/convertidor.py:248
+#: src/convertidor.py:274
 msgid "Nanonewton, nN"
 msgstr "Наноньютон, nN"
 
-#: src/convertidor.py:249
+#: src/convertidor.py:275
 msgid "Micronewton, μN"
 msgstr "Микроньютон, μN"
 
-#: src/convertidor.py:250
+#: src/convertidor.py:276
 msgid "Millinewton, mN"
 msgstr "Миллиньютон, mN"
 
-#: src/convertidor.py:251
+#: src/convertidor.py:277
 msgid "Centinewton, cN"
 msgstr "Сантиньютон, cN"
 
-#: src/convertidor.py:252
+#: src/convertidor.py:278
 msgid "Decinewton, dN"
 msgstr "Дециньютон, dN"
 
-#: src/convertidor.py:253
+#: src/convertidor.py:279
 msgid "Newton, N"
 msgstr "Ньютон, N"
 
-#: src/convertidor.py:254
+#: src/convertidor.py:280
 msgid "Dekanewton, daN"
 msgstr "Деканьютон, daN"
 
-#: src/convertidor.py:255
+#: src/convertidor.py:281
 msgid "Hectonewton, hN"
 msgstr "Гектоньютон, hN"
 
-#: src/convertidor.py:256
+#: src/convertidor.py:282
 msgid "Kilonewton, kN"
 msgstr "Килоньютон, kN"
 
-#: src/convertidor.py:257
+#: src/convertidor.py:283
 msgid "Meganewton, MN"
 msgstr "Меганьютон, MN"
 
-#: src/convertidor.py:258
+#: src/convertidor.py:284
 msgid "Giganewton, GN"
 msgstr "Гиганьютон, GN"
 
-#: src/convertidor.py:259
+#: src/convertidor.py:285
 msgid "Teranewton, TN"
 msgstr "Тераньютон, TN"
 
-#: src/convertidor.py:260
+#: src/convertidor.py:286
 msgid "Petanewton, PN"
 msgstr "Петаньютон, PN"
 
-#: src/convertidor.py:261
+#: src/convertidor.py:287
 msgid "Exanewton, EN"
 msgstr "Эксаньютон, EN"
 
-#: src/convertidor.py:263
+#: src/convertidor.py:289
 msgid "Dyne, dyn"
 msgstr "Дина, dyn"
 
-#: src/convertidor.py:264
+#: src/convertidor.py:290
 msgid "Kilogram-force, kgf"
 msgstr "Килограмм-сила, kgf"
 
-#: src/convertidor.py:265
+#: src/convertidor.py:291
 msgid "Ton-force (metric), tf"
 msgstr "Тонна-сила (метрическая), tf"
 
-#: src/convertidor.py:267
+#: src/convertidor.py:293
 msgid "Poundal, pdl"
 msgstr "Паундаль, pdl"
 
-#: src/convertidor.py:268
+#: src/convertidor.py:294
 msgid "Kip, kip"
 msgstr "Кип, kip"
 
-#: src/convertidor.py:269
+#: src/convertidor.py:295
 msgid "Ton-force (short)"
 msgstr "Тонна-сила (США, короткая)"
 
-#: src/convertidor.py:270
+#: src/convertidor.py:296
 msgid "Ton-force (long)"
 msgstr "Тонна-сила (длинная)"
 
-#: src/convertidor.py:272
+#: src/convertidor.py:298
 msgid "Pond-force, lbf"
 msgstr "Фунт-сила, lbf"
 
-#: src/convertidor.py:277
+#: src/convertidor.py:303
 msgid "Fuel consumption"
 msgstr "Расход топлива"
 
-#: src/convertidor.py:284
+#: src/convertidor.py:310
 msgid "Meter per liter, m/L"
 msgstr "Метр на литр, m/L"
 
-#: src/convertidor.py:285
+#: src/convertidor.py:311
 msgid "Kilometer per liter, km/L"
 msgstr "Километр на литр, km/L"
 
-#: src/convertidor.py:286
+#: src/convertidor.py:312
 msgid "Liters per 100 kilometers, L/100 km"
 msgstr "Литры на 100 километров, L/100 km"
 
-#: src/convertidor.py:288
+#: src/convertidor.py:314
 msgid "Mile per gallon (US), mpg(us)"
 msgstr "Миля на галлон (США), mpg(us)"
 
-#: src/convertidor.py:289
+#: src/convertidor.py:315
 msgid "Mile per gallon (UK), mpg(uk)"
 msgstr "Миля на галлон (ВБ), mpg(uk)"
 
-#: src/convertidor.py:294
+#: src/convertidor.py:320
 msgid "Length"
 msgstr "Длина"
 
-#: src/convertidor.py:298
+#: src/convertidor.py:324
 msgid "Nautical units of length"
 msgstr "Морские единицы длины"
 
-#: src/convertidor.py:299
+#: src/convertidor.py:325
 msgid "Astronomical distance units"
 msgstr "Астрономические единицы расстояния"
 
-#: src/convertidor.py:303
+#: src/convertidor.py:329
 msgid "Picometer, pm"
 msgstr "Пикометр, pm"
 
-#: src/convertidor.py:304
+#: src/convertidor.py:330
 msgid "Nanometer, nm"
 msgstr "Нанометр, nm"
 
-#: src/convertidor.py:305
+#: src/convertidor.py:331
 msgid "Micrometer, μm"
 msgstr "Микрометр, μm"
 
-#: src/convertidor.py:306
+#: src/convertidor.py:332
 msgid "Millimeter, mm"
 msgstr "Миллиметр, mm"
 
-#: src/convertidor.py:307
+#: src/convertidor.py:333
 msgid "Centimeter, cm"
 msgstr "Сантиметр, cm"
 
-#: src/convertidor.py:308
+#: src/convertidor.py:334
 msgid "Decimeter, dm"
 msgstr "Дециметр, dm"
 
-#: src/convertidor.py:309
+#: src/convertidor.py:335
 msgid "Meter, m"
 msgstr "Метр, m"
 
-#: src/convertidor.py:310
+#: src/convertidor.py:336
 msgid "Kilometer, km"
 msgstr "Километр, km"
 
-#: src/convertidor.py:312
+#: src/convertidor.py:338
 msgid "Inch, in"
 msgstr "Дюйм, in"
 
-#: src/convertidor.py:313
+#: src/convertidor.py:339
 msgid "Inch (US), in"
 msgstr "Дюйм (США), in"
 
-#: src/convertidor.py:314
+#: src/convertidor.py:340
 msgid "Foot, ft"
 msgstr "Фут, ft"
 
-#: src/convertidor.py:315
+#: src/convertidor.py:341
 msgid "Foot (US), ft"
 msgstr "Фут (США), ft"
 
-#: src/convertidor.py:316
+#: src/convertidor.py:342
 msgid "Yard, yd"
 msgstr "Ярд, yd"
 
-#: src/convertidor.py:317
+#: src/convertidor.py:343
+msgid "Chain, ch"
+msgstr "Чейн, ch"
+
+#: src/convertidor.py:344
+msgid "Furlong, fur"
+msgstr "Фурлонг, fur"
+
+#: src/convertidor.py:345
 msgid "Mile, mi"
 msgstr "Миля, mi"
 
-#: src/convertidor.py:318
+#: src/convertidor.py:346
 msgid "Statute mile (US), mi"
 msgstr "Статутная миля (США), mi"
 
-#: src/convertidor.py:320
+#: src/convertidor.py:348
 msgid "Nautical mile, nmi"
 msgstr "Морская миля, nmi"
 
-#: src/convertidor.py:322
+#: src/convertidor.py:350
 msgid "Astronomical unit, au"
 msgstr "Астрономическая единица, au"
 
-#: src/convertidor.py:323
+#: src/convertidor.py:351
+msgid "Light-second, ls"
+msgstr "Световая секунда, ls"
+
+#: src/convertidor.py:353
+msgid "Light-minute, lm"
+msgstr "Световая минута, lm"
+
+#: src/convertidor.py:354
+msgid "Light-hour, lh"
+msgstr "Световой час, lh"
+
+#: src/convertidor.py:355
+msgid "Light-day, ld"
+msgstr "Световые сутки, ld"
+
+#: src/convertidor.py:356
+msgid "Light-week, lw"
+msgstr "Световая неделя, lw"
+
+#: src/convertidor.py:357
+msgid "Light-month, lmn"
+msgstr "Световой месяц, lmn"
+
+#: src/convertidor.py:359
 msgid "Light-year, ly"
 msgstr "Световой год, ly"
 
-#: src/convertidor.py:324
+#: src/convertidor.py:361
 msgid "Parsec, pc"
 msgstr "Парсек, pc"
 
-#: src/convertidor.py:329
+#: src/convertidor.py:366
 msgid "Weight and Mass"
 msgstr "Вес и масса"
 
-#: src/convertidor.py:333
+#: src/convertidor.py:370
 msgid "Masses of celestial bodies"
 msgstr "Массы небесных тел"
 
-#: src/convertidor.py:338
+#: src/convertidor.py:375
 msgid "Microgram, μg"
 msgstr "Микрограмм, μg"
 
-#: src/convertidor.py:339
+#: src/convertidor.py:376
 msgid "Milligram, mg"
 msgstr "Миллиграмм, mg"
 
-#: src/convertidor.py:340
+#: src/convertidor.py:377
 msgid "Gram, g"
 msgstr "Грамм, g"
 
-#: src/convertidor.py:341
+#: src/convertidor.py:378
 msgid "Kilogram, kg"
 msgstr "Килограмм, kg"
 
-#: src/convertidor.py:342
+#: src/convertidor.py:379
 msgid "Tonne, t"
 msgstr "Тонна, t"
 
-#: src/convertidor.py:343
+#: src/convertidor.py:380
 msgid "Kiloton, kt"
 msgstr "Килотонна, kt"
 
-#: src/convertidor.py:345
+#: src/convertidor.py:382
 msgid "Grain, gr"
 msgstr "Гран, gr"
 
-#: src/convertidor.py:346
+#: src/convertidor.py:383
 msgid "Pennyweight, pwt"
 msgstr "Пеннивейт, pwt"
 
-#: src/convertidor.py:347
+#: src/convertidor.py:384
 msgid "Carat, ct"
 msgstr "Карат, ct"
 
-#: src/convertidor.py:348 src/convertidor.py:580
+#: src/convertidor.py:385 src/convertidor.py:617
 msgid "Ounce, oz"
 msgstr "Унция, oz"
 
-#: src/convertidor.py:349
+#: src/convertidor.py:386
 msgid "Pound, lbs"
 msgstr "Фунт, lbs"
 
-#: src/convertidor.py:350
+#: src/convertidor.py:387
 msgid "Hundredweight (US, short), cwt"
 msgstr "Хандредвейт (США, короткий), cwt"
 
-#: src/convertidor.py:351
+#: src/convertidor.py:388
 msgid "Hundredweight (UK, long), cwt"
 msgstr "Хандредвейт (ВБ, длинный), cwt"
 
-#: src/convertidor.py:352
+#: src/convertidor.py:389
 msgid "Quarter (US), qr"
 msgstr "Кварта (США), qr"
 
-#: src/convertidor.py:353
+#: src/convertidor.py:390
 msgid "Quarter (UK), qr"
 msgstr "Кварта (ВБ), qr"
 
-#: src/convertidor.py:354
+#: src/convertidor.py:391
 msgid "Stone, st"
 msgstr "Стоун, st"
 
-#: src/convertidor.py:355
+#: src/convertidor.py:392
 msgid "Ton (short), ton"
 msgstr "Тонна (короткая), ton"
 
-#: src/convertidor.py:356
+#: src/convertidor.py:393
 msgid "Ton (long), ton"
 msgstr "Тонна (длинная), ton"
 
-#: src/convertidor.py:358
+#: src/convertidor.py:395
 msgid "Moon mass"
 msgstr "Масса Луны"
 
-#: src/convertidor.py:359
+#: src/convertidor.py:396
 msgid "Earth mass"
 msgstr "Масса Земли"
 
-#: src/convertidor.py:360
+#: src/convertidor.py:397
 msgid "Solar mass"
 msgstr "Солнечная масса"
 
-#: src/convertidor.py:362
+#: src/convertidor.py:399
 msgid "Quintal, q"
 msgstr "Квинтал, q"
 
-#: src/convertidor.py:367
+#: src/convertidor.py:404
 msgid "Numbers"
 msgstr "Числа"
 
-#: src/convertidor.py:369
+#: src/convertidor.py:406
 msgid "Numeral systems"
 msgstr "Системы счисления"
 
-#: src/convertidor.py:372
+#: src/convertidor.py:409
 msgid "Decimal"
 msgstr "Десятичная"
 
-#: src/convertidor.py:373
+#: src/convertidor.py:410
 msgid "Hexadecimal"
 msgstr "Шестнадцатеричная"
 
-#: src/convertidor.py:374
+#: src/convertidor.py:411
 msgid "Octal"
 msgstr "Восьмеричная"
 
-#: src/convertidor.py:375
+#: src/convertidor.py:412
 msgid "Binary"
 msgstr "Двоичная"
 
-#: src/convertidor.py:380
+#: src/convertidor.py:417
 msgid "Power"
 msgstr "Мощность"
 
-#: src/convertidor.py:382
+#: src/convertidor.py:419
 msgid "Watt-based units"
 msgstr "Единицы измерения в ваттах"
 
-#: src/convertidor.py:383
+#: src/convertidor.py:420
 msgid "Other power units"
 msgstr "Другие единицы мощности"
 
-#: src/convertidor.py:389
+#: src/convertidor.py:426
 msgid "Attowatt, aW"
 msgstr "Аттоватт, aW"
 
-#: src/convertidor.py:390
+#: src/convertidor.py:427
 msgid "Femtowatt, fW"
 msgstr "Фемтоватт, fW"
 
-#: src/convertidor.py:391
+#: src/convertidor.py:428
 msgid "Picowatt, pW"
 msgstr "Пиковатт, pW"
 
-#: src/convertidor.py:392
+#: src/convertidor.py:429
 msgid "Nanowatt, nW"
 msgstr "Нановатт, nW"
 
-#: src/convertidor.py:393
+#: src/convertidor.py:430
 msgid "Microwatt, µW"
 msgstr "Микроватт, µW"
 
-#: src/convertidor.py:394
+#: src/convertidor.py:431
 msgid "Milliwatt, mW"
 msgstr "Милливатт, mW"
 
-#: src/convertidor.py:395
+#: src/convertidor.py:432
 msgid "Centiwatt, nW"
 msgstr "Сантиватт, nW"
 
-#: src/convertidor.py:396
+#: src/convertidor.py:433
 msgid "Deciwatt, dW"
 msgstr "Дециватт, dW"
 
-#: src/convertidor.py:397
+#: src/convertidor.py:434
 msgid "Watt, W"
 msgstr "Ватт, W"
 
-#: src/convertidor.py:398
+#: src/convertidor.py:435
 msgid "Dekawatt, daW"
 msgstr "Декаватт, daW"
 
-#: src/convertidor.py:399
+#: src/convertidor.py:436
 msgid "Hectowatt, hW"
 msgstr "Гектоватт, hW"
 
-#: src/convertidor.py:400
+#: src/convertidor.py:437
 msgid "Kilowatt, kW"
 msgstr "Киловатт, kW"
 
-#: src/convertidor.py:401
+#: src/convertidor.py:438
 msgid "Megawatt, MW"
 msgstr "Мегаватт, MW"
 
-#: src/convertidor.py:402
+#: src/convertidor.py:439
 msgid "Gigawatt, GW"
 msgstr "Гигаватт, GW"
 
-#: src/convertidor.py:403
+#: src/convertidor.py:440
 msgid "Terawatt, TW"
 msgstr "Тераватт, TW"
 
-#: src/convertidor.py:404
+#: src/convertidor.py:441
 msgid "Petawatt, PW"
 msgstr "Петаватт, PW"
 
-#: src/convertidor.py:405
+#: src/convertidor.py:442
 msgid "Exawatt, EW"
 msgstr "Эксаватт, EW"
 
-#: src/convertidor.py:407
+#: src/convertidor.py:444
 msgid "Erg per second, erg/s"
 msgstr "Эрг в секунду, erg/s"
 
-#: src/convertidor.py:408
+#: src/convertidor.py:445
 msgid "Calorie (it) per hour, cal/h"
 msgstr "Калория (it) в час, cal/h"
 
-#: src/convertidor.py:410
+#: src/convertidor.py:447
 msgid "Calorie (it) per second, cal/s"
 msgstr "Калория (it) в секунду, cal/s"
 
-#: src/convertidor.py:412
+#: src/convertidor.py:449
 msgid "Ton of refrigeration, TR"
 msgstr "Тонна охлаждения, TR"
 
-#: src/convertidor.py:414
+#: src/convertidor.py:451
 msgid "BTU (th) per hour, Btu/h"
 msgstr "БТЕ в час, Btu/h"
 
-#: src/convertidor.py:415
+#: src/convertidor.py:452
 msgid "Foot pound-force per hour"
 msgstr "Фунт-сила на фут в час"
 
-#: src/convertidor.py:416
+#: src/convertidor.py:453
 msgid "Foot pound-force per second"
 msgstr "Фунт-сила на фут в секунду"
 
-#: src/convertidor.py:419
+#: src/convertidor.py:456
 msgid "Horsepower (imperial), hp"
 msgstr "Лошадиная сила (имперская), hp"
 
-#: src/convertidor.py:420
+#: src/convertidor.py:457
 msgid "Horsepower (metric), hp"
 msgstr "Лошадиная сила (метрическая), hp"
 
-#: src/convertidor.py:421
+#: src/convertidor.py:458
 msgid "Horsepower (electric), hp"
 msgstr "Лошадиная сила (электрическая), hp"
 
-#: src/convertidor.py:422
+#: src/convertidor.py:459
 msgid "Horsepower (boiler), hp"
 msgstr "Лошадиная сила (мощность котла), hp"
 
-#: src/convertidor.py:427
+#: src/convertidor.py:464
 msgid "Pressure"
 msgstr "Давление"
 
-#: src/convertidor.py:429
+#: src/convertidor.py:466
 msgid "Pascal units"
 msgstr "Паскаль и его производные"
 
-#: src/convertidor.py:430
+#: src/convertidor.py:467
 msgid "Other pressure units"
 msgstr "Другие единицы давления"
 
-#: src/convertidor.py:435
+#: src/convertidor.py:472
 msgid "Attopascal, aPa"
 msgstr "Аттопаскаль, aPa"
 
-#: src/convertidor.py:436
+#: src/convertidor.py:473
 msgid "Femtopascal, fPa"
 msgstr "Фемтопаскаль, fPa"
 
-#: src/convertidor.py:437
+#: src/convertidor.py:474
 msgid "Picopascal, pPa"
 msgstr "Пикопаскаль, pPa"
 
-#: src/convertidor.py:438
+#: src/convertidor.py:475
 msgid "Nanopascal, nPa"
 msgstr "Нанопаскаль, nPa"
 
-#: src/convertidor.py:439
+#: src/convertidor.py:476
 msgid "Micropascal, µPa"
 msgstr "Микропаскаль, µPa"
 
-#: src/convertidor.py:440
+#: src/convertidor.py:477
 msgid "Millipascal, mPa"
 msgstr "Миллипаскаль, mPa"
 
-#: src/convertidor.py:441
+#: src/convertidor.py:478
 msgid "Centipascal, cPa"
 msgstr "Сантипаскаль, cPa"
 
-#: src/convertidor.py:442
+#: src/convertidor.py:479
 msgid "Decipascal, dPa"
 msgstr "Деципаскаль, dPa"
 
-#: src/convertidor.py:443
+#: src/convertidor.py:480
 msgid "Pascal, Pa"
 msgstr "Паскаль, Pa"
 
-#: src/convertidor.py:444
+#: src/convertidor.py:481
 msgid "Dekapascal, daPa"
 msgstr "Декапаскаль, dPa"
 
-#: src/convertidor.py:445
+#: src/convertidor.py:482
 msgid "Hectopascal, hPa"
 msgstr "Гектопаскаль, hPa"
 
-#: src/convertidor.py:446
+#: src/convertidor.py:483
 msgid "Kilopascal, kPa"
 msgstr "Килопаскаль, kPa"
 
-#: src/convertidor.py:447
+#: src/convertidor.py:484
 msgid "Megapascal, MPa"
 msgstr "Мегапаскаль, MPa"
 
-#: src/convertidor.py:448
+#: src/convertidor.py:485
 msgid "Gigapascal, GPa"
 msgstr "Гигапаскаль, GPa"
 
-#: src/convertidor.py:449
+#: src/convertidor.py:486
 msgid "Terapascal, TPa"
 msgstr "Терапаскаль, TPa"
 
-#: src/convertidor.py:450
+#: src/convertidor.py:487
 msgid "Petapascal, PPa"
 msgstr "Петапаскаль, PPa"
 
-#: src/convertidor.py:451
+#: src/convertidor.py:488
 msgid "Exapascal, PPa"
 msgstr "Эксапаскаль, PPa"
 
-#: src/convertidor.py:453
+#: src/convertidor.py:490
 msgid "Millibar, mbar"
 msgstr "Миллибар, mbar"
 
-#: src/convertidor.py:454
+#: src/convertidor.py:491
 msgid "Millimetre of mercury, mmHg"
 msgstr "Миллиметр ртутного столба, mmHg"
 
-#: src/convertidor.py:455
+#: src/convertidor.py:492
 msgid "Torr"
 msgstr "Торр"
 
-#: src/convertidor.py:456
+#: src/convertidor.py:493
 msgid "Atmosphere (technical), at"
 msgstr "Атмосфера (техническая), at"
 
-#: src/convertidor.py:457
+#: src/convertidor.py:494
 msgid "Bar, bar"
 msgstr "Бар, bar"
 
-#: src/convertidor.py:458
+#: src/convertidor.py:495
 msgid "Atmosphere (standard), atm"
 msgstr "Атмосфера (стандартная), at"
 
-#: src/convertidor.py:460
+#: src/convertidor.py:497
 msgid "Inch of mercury (60°F), inHg"
 msgstr "Дюйм ртутного столба (60°F), inHg"
 
-#: src/convertidor.py:461
+#: src/convertidor.py:498
 msgid "Inch of mercury (32°F), inHg"
 msgstr "Дюйм ртутного столба (32°F), inHg"
 
-#: src/convertidor.py:462
+#: src/convertidor.py:499
 msgid "Pound per square inch, psi"
 msgstr "Фунт на квадратный дюйм, psi"
 
-#: src/convertidor.py:464
+#: src/convertidor.py:501
 msgid "Kilopound per square inch, ksi"
 msgstr "Килофунт на квадратный дюйм, ksi"
 
-#: src/convertidor.py:470
+#: src/convertidor.py:507
 msgid "Speed"
 msgstr "Скорость"
 
-#: src/convertidor.py:474
+#: src/convertidor.py:511
 msgid "Other speed units"
 msgstr "Другие единицы скорости"
 
-#: src/convertidor.py:478
+#: src/convertidor.py:515
 msgid "Millimeter per Hour, mm/h"
 msgstr "Миллиметр в час, mm/h"
 
-#: src/convertidor.py:479
+#: src/convertidor.py:516
 msgid "Millimeter per Minute, mm/min"
 msgstr "Миллиметр в минуту, mm/min"
 
-#: src/convertidor.py:480
+#: src/convertidor.py:517
 msgid "Millimeter per Second, mm/s"
 msgstr "Миллиметр в секунду, mm/s"
 
-#: src/convertidor.py:481
+#: src/convertidor.py:518
 msgid "Centimeter per Hour, cm/h"
 msgstr "Сантиметр в час, cm/h"
 
-#: src/convertidor.py:482
+#: src/convertidor.py:519
 msgid "Centimeter per Minute, cm/min"
 msgstr "Сантиметр в минуту, cm/min"
 
-#: src/convertidor.py:483
+#: src/convertidor.py:520
 msgid "Centimeter per Second, cm/s"
 msgstr "Сантиметр в секунду, cm/s"
 
-#: src/convertidor.py:484
+#: src/convertidor.py:521
 msgid "Meter per Hour, m/h"
 msgstr "Метр в час, m/h"
 
-#: src/convertidor.py:485
+#: src/convertidor.py:522
 msgid "Meter per Minute, m/min"
 msgstr "Метр в минуту, m/min"
 
-#: src/convertidor.py:486
+#: src/convertidor.py:523
 msgid "Meter per Second, m/s"
 msgstr "Метр в секунду, m/s"
 
-#: src/convertidor.py:487
+#: src/convertidor.py:524
 msgid "Kilometer per Hour, km/h"
 msgstr "Километр в час, km/h"
 
-#: src/convertidor.py:488
+#: src/convertidor.py:525
 msgid "Kilometer per Minute, km/min"
 msgstr "Километр в минуту, km/min"
 
-#: src/convertidor.py:489
+#: src/convertidor.py:526
 msgid "Kilometer per Second, km/s"
 msgstr "Километр в секунду, km/s"
 
-#: src/convertidor.py:491
+#: src/convertidor.py:528
 msgid "Feet per Hour, ft/h"
 msgstr "Фут в час, ft/h"
 
-#: src/convertidor.py:492
+#: src/convertidor.py:529
 msgid "Feet per Minute, ft/min"
 msgstr "Фут в минуту, ft/min"
 
-#: src/convertidor.py:493
+#: src/convertidor.py:530
 msgid "Feet per Second, ft/s"
 msgstr "Фут в секунду, ft/s"
 
-#: src/convertidor.py:494
+#: src/convertidor.py:531
 msgid "Yard per Hour, yd/h"
 msgstr "Ярд в час, yd/h"
 
-#: src/convertidor.py:495
+#: src/convertidor.py:532
 msgid "Yard per Minute, yd/min"
 msgstr "Ярд в минуту, yd/min"
 
-#: src/convertidor.py:496
+#: src/convertidor.py:533
 msgid "Yard per Second, yd/s"
 msgstr "Ярд в секунду, yd/s"
 
-#: src/convertidor.py:497
+#: src/convertidor.py:534
 msgid "Mile per Hour, mi/h"
 msgstr "Миля в час, mi/h"
 
-#: src/convertidor.py:498
+#: src/convertidor.py:535
 msgid "Mile per Minute, mi/min"
 msgstr "Миля в минуту, mi/min"
 
-#: src/convertidor.py:499
+#: src/convertidor.py:536
 msgid "Mile per Second, mi/s"
 msgstr "Миля в секунду, mi/s"
 
-#: src/convertidor.py:501
+#: src/convertidor.py:538
 msgid "Knot, kn"
 msgstr "Узел, kn"
 
-#: src/convertidor.py:502
+#: src/convertidor.py:539
 msgid "Mach (SI)"
 msgstr "Мах (СИ)"
 
-#: src/convertidor.py:503
+#: src/convertidor.py:540
 msgid "Mach (20°C, 1 atm)"
 msgstr "Мах (20°C, 1 atm)"
 
-#: src/convertidor.py:504
+#: src/convertidor.py:541
 msgid "Cosmic velocity - first"
 msgstr "Первая космическая скорость"
 
-#: src/convertidor.py:505
+#: src/convertidor.py:542
 msgid "Cosmic velocity - second"
 msgstr "Вторая космическая скорость"
 
-#: src/convertidor.py:506
+#: src/convertidor.py:543
 msgid "Cosmic velocity - third"
 msgstr "Третья космическая скорость"
 
-#: src/convertidor.py:507
+#: src/convertidor.py:544
 msgid "Earth's velocity"
 msgstr "Скорость Земли"
 
-#: src/convertidor.py:508
+#: src/convertidor.py:545
 msgid "Speed of light (vacuum)"
 msgstr "Скорость света (в вакууме)"
 
-#: src/convertidor.py:513
+#: src/convertidor.py:550
 msgid "Temperature"
 msgstr "Температура"
 
-#: src/convertidor.py:515
+#: src/convertidor.py:552
 msgid "SI system"
 msgstr "Система СИ"
 
-#: src/convertidor.py:522
+#: src/convertidor.py:559
 msgid "Celsius, °C"
 msgstr "Цельсий, °C"
 
-#: src/convertidor.py:523
+#: src/convertidor.py:560
 msgid "Kelvin, K"
 msgstr "Кельвин, K"
 
-#: src/convertidor.py:525
+#: src/convertidor.py:562
 msgid "Fahrenheit, °F"
 msgstr "Фаренгейт, °F"
 
-#: src/convertidor.py:526
+#: src/convertidor.py:563
 msgid "Rankine, °R"
 msgstr "Ранкин, °R"
 
-#: src/convertidor.py:528
+#: src/convertidor.py:565
 msgid "Reaumur, °r"
 msgstr "Реомюр, °r"
 
-#: src/convertidor.py:533
+#: src/convertidor.py:570
 msgid "Time"
 msgstr "Время"
 
-#: src/convertidor.py:535
+#: src/convertidor.py:572
 msgid "Units of time"
 msgstr "Единицы времени"
 
-#: src/convertidor.py:538
+#: src/convertidor.py:575
 msgid "Attosecond, as"
 msgstr "Аттосекунда, as"
 
-#: src/convertidor.py:539
+#: src/convertidor.py:576
 msgid "Femtosecond, fs"
 msgstr "Фемтосекунда, fs"
 
-#: src/convertidor.py:540
+#: src/convertidor.py:577
 msgid "Picosecond, fs"
 msgstr "Пикосекунда, fs"
 
-#: src/convertidor.py:541
+#: src/convertidor.py:578
 msgid "Nanosecond, ns"
 msgstr "Наносекунда, ns"
 
-#: src/convertidor.py:542
+#: src/convertidor.py:579
 msgid "Microsecond, μs"
 msgstr "Микросекунда, μs"
 
-#: src/convertidor.py:543
+#: src/convertidor.py:580
 msgid "Millisecond, ms"
 msgstr "Миллисекунда, ms"
 
-#: src/convertidor.py:544
+#: src/convertidor.py:581
 msgid "Second, s"
 msgstr "Секунда, s"
 
-#: src/convertidor.py:545
+#: src/convertidor.py:582
 msgid "Minute, min"
 msgstr "Минута, min"
 
-#: src/convertidor.py:546
+#: src/convertidor.py:583
 msgid "Hour, h"
 msgstr "Час, h"
 
-#: src/convertidor.py:547
+#: src/convertidor.py:584
 msgid "Day, d"
 msgstr "День, d"
 
-#: src/convertidor.py:548
+#: src/convertidor.py:585
 msgid "Week"
 msgstr "Неделя"
 
-#: src/convertidor.py:549
+#: src/convertidor.py:586
 msgid "Month"
 msgstr "Месяц"
 
-#: src/convertidor.py:550
+#: src/convertidor.py:587
 msgid "Year (365 days), y"
 msgstr "Год (365 дней), y"
 
-#: src/convertidor.py:551
+#: src/convertidor.py:588
 msgid "Decade"
 msgstr "Десятилетие"
 
-#: src/convertidor.py:552
+#: src/convertidor.py:589
 msgid "Century"
 msgstr "Век"
 
-#: src/convertidor.py:553
+#: src/convertidor.py:590
 msgid "Millennium"
 msgstr "Тысячелетие"
 
-#: src/convertidor.py:558
+#: src/convertidor.py:595
 msgid "Volume"
 msgstr "Объем"
 
-#: src/convertidor.py:565
+#: src/convertidor.py:602
 msgid "Cubic millimeter, mm^3"
 msgstr "Кубический миллиметр, mm^3"
 
-#: src/convertidor.py:566
+#: src/convertidor.py:603
 msgid "Cubic centimeter, cm^3"
 msgstr "Кубический сантиметр, cm^3"
 
-#: src/convertidor.py:567
+#: src/convertidor.py:604
 msgid "Cubic decimeter, dm^3"
 msgstr "Кубический дециметр, dm^3"
 
-#: src/convertidor.py:568
+#: src/convertidor.py:605
 msgid "Cubic meter, m^3"
 msgstr "Кубический метр, m^3"
 
-#: src/convertidor.py:569
+#: src/convertidor.py:606
 msgid "Cubic kilometer, km^3"
 msgstr "Кубический километр, km^3"
 
-#: src/convertidor.py:570
+#: src/convertidor.py:607
 msgid "Milliliter, mL"
 msgstr "Миллилитр, mL"
 
-#: src/convertidor.py:571
+#: src/convertidor.py:608
 msgid "Liter, L"
 msgstr "Литр, L"
 
-#: src/convertidor.py:573
+#: src/convertidor.py:610
 msgid "Cubic inch, in^3"
 msgstr "Кубический дюйм, in^3"
 
-#: src/convertidor.py:574
+#: src/convertidor.py:611
 msgid "Cubic foot, ft^3"
 msgstr "Кубический фут, ft^3"
 
-#: src/convertidor.py:575
+#: src/convertidor.py:612
 msgid "Cubic yard, yd^3"
 msgstr "Кубический ярд, yd^3"
 
-#: src/convertidor.py:576
+#: src/convertidor.py:613
 msgid "Cubic mile, mi^3"
 msgstr "Кубическая миля, mi^3"
 
-#: src/convertidor.py:577
+#: src/convertidor.py:614
 msgid "Acre - inch, ac⋅in"
 msgstr "Акр - дюйм, ac⋅in"
 
-#: src/convertidor.py:578
+#: src/convertidor.py:615
 msgid "Acre - foot, ac⋅ft"
 msgstr "Акр - фут, ac⋅ft"
 
-#: src/convertidor.py:579
+#: src/convertidor.py:616
 msgid "Acre - foot (US), ac⋅ft"
 msgstr "Акр - фут (США), ac⋅ft"
 
-#: src/convertidor.py:581
+#: src/convertidor.py:618
 msgid "Ounce (US), oz"
 msgstr "Унция (США), oz"
 
-#: src/convertidor.py:582
+#: src/convertidor.py:619
 msgid "Gill, gi"
 msgstr "Джилл, gi"
 
-#: src/convertidor.py:583
+#: src/convertidor.py:620
 msgid "Gill (US), gi"
 msgstr "Джилл (США), gi"
 
-#: src/convertidor.py:584
+#: src/convertidor.py:621
 msgid "Pint, pt"
 msgstr "Пинта, pt"
 
-#: src/convertidor.py:585
+#: src/convertidor.py:622
 msgid "Pint (US), pt"
 msgstr "Пинта (США), pt"
 
-#: src/convertidor.py:586
+#: src/convertidor.py:623
 msgid "Quart, qt"
 msgstr "Кварт, qt"
 
-#: src/convertidor.py:587
+#: src/convertidor.py:624
 msgid "Quart (US), qt"
 msgstr "Кварт (США), qt"
 
-#: src/convertidor.py:588
+#: src/convertidor.py:625
 msgid "Gallon, gal"
 msgstr "Галлон, gal"
 
-#: src/convertidor.py:589
+#: src/convertidor.py:626
 msgid "Gallon (US), gal"
 msgstr "Галлон (США), gal"
 
-#: src/convertidor.py:590
+#: src/convertidor.py:627
 msgid "Barrel, bbl"
 msgstr "Баррель, bbl"
 
-#: src/convertidor.py:591
+#: src/convertidor.py:628
 msgid "Barrel (US), bbl"
 msgstr "Баррель (США), bbl"
 
-#: src/convertidor.py:592
+#: src/convertidor.py:629
 msgid "Barrel (oil), bbl"
 msgstr "Баррель (нефть), bbl"
+
+#: src/convertidor.py:634
+msgid ""
+"Frequency\n"
+"Wavelength"
+msgstr ""
+"Частота\n"
+"Длина волны"
+
+#: src/convertidor.py:636
+msgid "Frequency, metric system"
+msgstr "Частота, метрическая система"
+
+#: src/convertidor.py:637
+msgid "Frequency, other units"
+msgstr "Частота, другие единицы"
+
+#: src/convertidor.py:638
+msgid "Wavelength, metric system"
+msgstr "Длина волны, метрическая система"
+
+#: src/convertidor.py:639
+msgid "Wavelength, imperial and US customary systems"
+msgstr "Длина волны, имперская и американская системы"
+
+#: src/convertidor.py:643
+msgid "Attohertz, aHz"
+msgstr "Аттогерц, aHz"
+
+#: src/convertidor.py:644
+msgid "Femtohertz, fHz"
+msgstr "Фемтогерц, fHz"
+
+#: src/convertidor.py:645
+msgid "Picohertz, pHz"
+msgstr "Пикогерц, pHz"
+
+#: src/convertidor.py:646
+msgid "Nanohertz, nHz"
+msgstr "Наногерц, nHz"
+
+#: src/convertidor.py:647
+msgid "Microhertz, µHz"
+msgstr "Микрогерц, µHz"
+
+#: src/convertidor.py:648
+msgid "Millihertz, mHz"
+msgstr "Миллигерц, mHz"
+
+#: src/convertidor.py:649
+msgid "Hertz, Hz"
+msgstr "Герц, Hz"
+
+#: src/convertidor.py:650
+msgid "Kilohertz, kHz"
+msgstr "Килогерц, kHz"
+
+#: src/convertidor.py:651
+msgid "Megahertz, MHz"
+msgstr "Мегагерц, MHz"
+
+#: src/convertidor.py:652
+msgid "Gigahertz, GHz"
+msgstr "Гигагерц, GHz"
+
+#: src/convertidor.py:653
+msgid "Terahertz, THz"
+msgstr "Терагерц, THz"
+
+#: src/convertidor.py:654
+msgid "Petahertz, PHz"
+msgstr "Петагерц, PHz"
+
+#: src/convertidor.py:655
+msgid "Exahertz, EHz"
+msgstr "Эксагерц, EHz"
+
+#: src/convertidor.py:657
+msgid "Degree per second, deg/s"
+msgstr "Градус в секунду, deg/s"
+
+#: src/convertidor.py:659
+msgid "Radian per second, rad/s"
+msgstr "Радиан в секунду, rad/s"
+
+#: src/convertidor.py:661
+msgid "Revolutions per minute, RPM"
+msgstr "Обороты в минуту, RPM"
+
+#: src/convertidor.py:663
+msgid "Beats per minute, BPM"
+msgstr "Удары в минуту, BPM"
+
+#: src/convertidor.py:666
+msgid "Angstrom, Å"
+msgstr "Ангстрем, Å"
+
+#: src/convertidor.py:667
+msgid "Wavelength, picometer"
+msgstr "Длина волны, пикометр"
+
+#: src/convertidor.py:668
+msgid "Wavelength, nanometer"
+msgstr "Длина волны, нанометр"
+
+#: src/convertidor.py:669
+msgid "Wavelength, micrometer"
+msgstr "Длина волны, микрометр"
+
+#: src/convertidor.py:670
+msgid "Wavelength, millimeter"
+msgstr "Длина волны, миллиметр"
+
+#: src/convertidor.py:671
+msgid "Wavelength, centimeter"
+msgstr "Длина волны, сантиметр"
+
+#: src/convertidor.py:672
+msgid "Wavelength, decimeter"
+msgstr "Длина волны, дециметр"
+
+#: src/convertidor.py:673
+msgid "Wavelength, meter"
+msgstr "Длина волны, метр"
+
+#: src/convertidor.py:674
+msgid "Wavelength, kilometer"
+msgstr "Длина волны, километр"
+
+#: src/convertidor.py:676
+msgid "Wavelength, inch"
+msgstr "Длина волны, дюйм"
+
+#: src/convertidor.py:677
+msgid "Wavelength, inch (US)"
+msgstr "Длина волны, дюйм (США)"
+
+#: src/convertidor.py:678
+msgid "Wavelength, foot"
+msgstr "Длина волны, фут"
+
+#: src/convertidor.py:679
+msgid "Wavelength, foot (US)"
+msgstr "Длина волны, фут (США)"
+
+#: src/convertidor.py:681
+msgid "Wavelength, yard"
+msgstr "Длина волны, ярд"
+
+#: src/convertidor.py:682
+msgid "Wavelength, mile"
+msgstr "Длина волны, миля"
 
 #: src/gtk/help-overlay.ui:11
 msgctxt "shortcut window"
@@ -1522,6 +1834,22 @@ msgstr "Значения сброшены"
 #: src/window.py:64
 msgid "Value copied"
 msgstr "Значение скопировано"
+
+#, fuzzy
+#~ msgid "Cycles per second, CPS"
+#~ msgstr "Миля в секунду, mi/s"
+
+#, fuzzy
+#~ msgid "Kilocycles, KC"
+#~ msgstr "Килобайт, KB"
+
+#, fuzzy
+#~ msgid "Megacycles, MC"
+#~ msgstr "Мегабайт, MB"
+
+#, fuzzy
+#~ msgid "Gigacycles, GC"
+#~ msgstr "Гигабайт, GB"
 
 #~ msgid "Erg"
 #~ msgstr "Эрг"

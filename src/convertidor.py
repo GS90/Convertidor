@@ -16,58 +16,82 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
+#
+# <stuartdonald214@gmail.com> added chain & furlong to length converter,
+# helped begin implementing frequency/wavelength conversion
 
 
 from decimal import Decimal, getcontext
 from gettext import gettext as _
-import math
 
 
 constants = {
     # energy
-    'Wh': (
-        '<b>Watt‑hour (SI)</b>\n'
+    'Wh': _(
+        '<b>Watt-hour (SI)</b>\n'
         '1 Wh = 3600 J (exact)'
     ),
-    'eV': (
+    'eV': _(
         '<b>2022 CODATA Value (SI 2019)</b>\n'
         '1 eV = 1.602176634x10−19 J'
     ),
-    'erg': (
+    'erg': _(
         '<b>Erg</b>\n'
         '1 erg = 1E-7 J (exact, CGS unit)'
     ),
-    'cal (th)': (
+    'cal (th)': _(
         '<b>Thermochemical calorie</b>\n'
         '1 cal (th) = 4.184 J (exact)'
     ),
-    'cal (it)': (
+    'cal (it)': _(
         '<b>International Table calorie (IT)</b>\n'
         '1 cal (it) = 4.1868 J (exact)'
     ),
-    'ft-pdl': (
-        '<b>Foot‑poundal</b>\n'
+    'ft-pdl': _(
+        '<b>Foot-poundal</b>\n'
         '1 ft-pdl = 0.0421401100938048 J (exact)'
     ),
-    'ft⋅lbf': (
-        '<b>Foot‑pound force (ft⋅lbf)</b>\n'
+    'ft⋅lbf': _(
+        '<b>Foot-pound force (ft⋅lbf)</b>\n'
         '1 ft⋅lbf = 1.3558179483314004 J (exact)'
     ),
-    'Btu (th)': (
+    'Btu (th)': _(
         '<b>British thermal unit (thermochemical)</b>\n'
         '1 Btu (th) = 1054.3502644383 J'
     ),
-    'Btu (it)': (
+    'Btu (it)': _(
         '<b>British thermal unit (International Table, IT)</b>\n'
         '1 Btu (it) = 1055.05585262 J'
     ),
-    'thm (US)': (
+    'thm (US)': _(
         '<b>Therm (United States)</b>\n'
         '1 thm (US) = 100 000 Btu (it) = 105 480 400 J'
     ),
-    'thm (EC)': (
+    'thm (EC)': _(
         '<b>Therm (European Community)</b>\n'
         '1 thm (US) = 100 000 Btu (th) ≈ 105 505 585.257 J'
+    ),
+    # length
+    'ls': _(
+        '<b>The distance light travels in 1 second</b>\n'
+        '1 light-second (ls) = 299 792 458 m'
+    ),
+    'lmn': _(
+        'Based on 1/12 of a Julian year (365.25 days)'
+    ),
+    'ly': _(
+        'Julian year, 365.25 days'
+    ),
+    # wave
+    'RPM': _(
+        '<b>1 RPM = 1/60 Hz</b>\n'
+        'Used to measure the rotational speed of mechanical parts,\n'
+        'such as an engine crankshaft, a disk, or a fan.'
+    ),
+    'BPM': _(
+        '<b>1 BPM = 1/60 Hz</b>\n'
+        'Used to determine the tempo in music or the heart\n'
+        'rate (pulse) in medicine.'
     ),
 }
 
@@ -85,17 +109,18 @@ constants = {
 # pressure
 # speed
 # temperature
-# force
 # time
 # volume
-
+# wave
 
 # units: (title, decimal, pattern, ![minor]derived, ![minor]constant)
 
 
-quantities = {
+PI = Decimal('3.1415926535897932384626433832795028841971693993751')
+SL = Decimal('299792458')  # speed of light in vacuum
 
-    # concept: smallest unit first (exception: energy)
+
+quantities = {
 
     'angle': {
         'title': _('Angle'),
@@ -107,9 +132,10 @@ quantities = {
             (_("Minute, '"), Decimal('60'), 0),
             (_('Grad, ^g'), Decimal('3240'), 0),
             (_('Degree, °'), Decimal('3600'), 0),
-            (_('Radian, rad'), Decimal((648000) / math.pi), 0),
-            (_('Milliradian, mrad'), Decimal((648000) / 1000 / math.pi), 0),
-            # 648000 = 3600 * 180
+            (_('Radian, rad'), Decimal('648000') / PI, 0),
+            (_('Milliradian, mrad'), Decimal('648') / PI, 0),
+            #   3600 * 180  = 648000
+            # 648000 / 1000 = 648
         ),
     },
 
@@ -314,13 +340,24 @@ quantities = {
             (_('Foot, ft'), Decimal('3.048E+11'), 1),
             (_('Foot (US), ft'), Decimal('304800609601.21906'), 1),
             (_('Yard, yd'), Decimal('9.144E+11'), 1),
+            (_('Chain, ch'), Decimal('2.01168E+13'), 1),
+            (_('Furlong, fur'), Decimal('2.01168E+14'), 1),
             (_('Mile, mi'), Decimal('1.609344E+15'), 1),
             (_('Statute mile (US), mi'), Decimal('1609347218694436'), 1),
             # Nautical units of length
             (_('Nautical mile, nmi'), Decimal('1.852E+15'), 2),
             # Astronomical distance units
             (_('Astronomical unit, au'), Decimal('1.4959787069100001E+23'), 3),
-            (_('Light-year, ly'), Decimal('9.4607304725808E+27'), 3),
+            (_('Light-second, ls'),
+                Decimal('2.99792458E+20'), 3, True, constants['ls']),
+            (_('Light-minute, lm'), Decimal('1.798754748E+22'), 3, True),
+            (_('Light-hour, lh'), Decimal('1.0792528488E+24'), 3, True),
+            (_('Light-day, ld'), Decimal('2.59020683712E+25'), 3, True),
+            (_('Light-week, lw'), Decimal('1.813144785984E+26'), 3, True),
+            (_('Light-month, lmn'),
+                Decimal('7.883942055625E+26'), 3, True, constants['lmn']),
+            (_('Light-year, ly'),
+                Decimal('9.4607304725808E+27'), 3, False, constants['ly']),
             (_('Parsec, pc'), Decimal('3.085677581E+28'), 3),
         ),
     },
@@ -593,6 +630,59 @@ quantities = {
         )
     },
 
+    'wave': {
+        'title': _('Frequency\nWavelength'),
+        'pattern': (
+            (_('Frequency, metric system'), ''),
+            (_('Frequency, other units'), ''),
+            (_('Wavelength, metric system'), ''),
+            (_('Wavelength, imperial and US customary systems'), 'imperial'),
+        ),
+        'units': (
+            # Frequency, metric system
+            (_('Attohertz, aHz'), Decimal('1E-18'), 0, True),
+            (_('Femtohertz, fHz'), Decimal('1E-15'), 0, True),
+            (_('Picohertz, pHz'), Decimal('1E-12'), 0, True),
+            (_('Nanohertz, nHz'), Decimal('1E-9'), 0, True),
+            (_('Microhertz, µHz'), Decimal('1E-6'), 0, True),
+            (_('Millihertz, mHz'), Decimal('1E-3'), 0, True),
+            (_('Hertz, Hz'), Decimal('1'), 0),
+            (_('Kilohertz, kHz'), Decimal('1E+3'), 0),
+            (_('Megahertz, MHz'), Decimal('1E+6'), 0),
+            (_('Gigahertz, GHz'), Decimal('1E+9'), 0),
+            (_('Terahertz, THz'), Decimal('1E+12'), 0, True),
+            (_('Petahertz, PHz'), Decimal('1E+15'), 0, True),
+            (_('Exahertz, EHz'), Decimal('1E+18'), 0, True),
+            # Frequency, other units
+            (_('Degree per second, deg/s'),
+                Decimal('1') / Decimal('360'), 1),
+            (_('Radian per second, rad/s'),
+                Decimal('1') / (Decimal('2') * PI), 1),
+            (_('Revolutions per minute, RPM'),
+                Decimal('1') / Decimal('60'), 1, False, constants['RPM']),
+            (_('Beats per minute, BPM'),
+                Decimal('1') / Decimal('60'), 1, False, constants['BPM']),
+            # Wavelength, metric system
+            (_('Angstrom, Å'), Decimal('1E-10'), 2),
+            (_('Wavelength, picometer'), Decimal('1E-12'), 2, True),
+            (_('Wavelength, nanometer'), Decimal('1E-9'), 2),
+            (_('Wavelength, micrometer'), Decimal('1E-6'), 2),
+            (_('Wavelength, millimeter'), Decimal('1E-3'), 2, True),
+            (_('Wavelength, centimeter'), Decimal('1E-2'), 2),
+            (_('Wavelength, decimeter'), Decimal('0.1'), 2, True),
+            (_('Wavelength, meter'), Decimal('1'), 2),
+            (_('Wavelength, kilometer'), Decimal('1E+3'), 2, True),
+            # Wavelength, imperial and US customary systems
+            (_('Wavelength, inch'), Decimal('0.0254'), 3),
+            (_('Wavelength, inch (US)'), Decimal('0.0254000508'), 3),
+            (_('Wavelength, foot'), Decimal('0.3048'), 3),
+            (_('Wavelength, foot (US)'),
+                Decimal('1200') / Decimal('3937'), 3),
+            (_('Wavelength, yard'), Decimal('0.9144'), 3),
+            (_('Wavelength, mile'), Decimal('1609.344'), 3),
+        ),
+    },
+
 }
 
 
@@ -630,6 +720,9 @@ def conversion(quantity: str,
 
         case 'fuel':
             return convert_fuel(units[index][1], value, _quantize, scientific)
+
+        case 'wave':
+            return convert_wave(index, value, _quantize, scientific)
 
         case _:
             if type(value) is str:
@@ -693,7 +786,7 @@ def find_temperature(identifier: str, value: Decimal):
 
         case _:
             print(f'Error: "{identifier}" unknown identifier')
-            return []
+            return ['0'] * len(quantities['temperature']['units'])
 
     # checking for physically impossible values
     if kelvin < 0:
@@ -781,7 +874,7 @@ def convert_fuel(identifier: str,
         return None
 
     if v <= 0:
-        return ['0', '0', '0', '0', '0']
+        return ['0'] * len(quantities['fuel']['units'])
 
     # coefficients
     MPG_US_TO_L100KM = Decimal('235.21458335647424250')
@@ -818,6 +911,49 @@ def convert_fuel(identifier: str,
     except BaseException as err:
         print('Error during conversion: ' + str(err))
         return None
+
+
+def convert_wave(index: int,
+                 value: Decimal | str,
+                 quantize: str,
+                 scientific: int) -> list[str] | None:
+
+    try:
+        v = Decimal(str(value))
+    except BaseException as err:
+        print('Error, invalid value: ' + str(err))
+        return None
+
+    units = quantities['wave']['units']
+
+    if v <= 0:
+        return ['0'] * len(units)
+
+    unit = units[index]
+
+    ratio, pattern = unit[1], unit[2]
+
+    # base value
+    if pattern in (0, 1):
+        # frequency
+        hertz = v * ratio
+    else:
+        # wavelength
+        meters = v * ratio
+        hertz = SL / meters
+
+    result = []
+    for unit in units:
+        ratio, pattern = unit[1], unit[2]
+        if pattern in (0, 1):
+            # frequency
+            r = hertz / ratio
+        else:
+            # wavelength
+            r = (SL / hertz) / ratio
+        result.append(value_processing(r, quantize, scientific))
+
+    return result
 
 
 # ------------------------------------------------------------------------------

@@ -30,6 +30,7 @@ install_data(
   symbolic_dir / 'quantities' / ('q-temperature-symbolic.svg'),
   symbolic_dir / 'quantities' / ('q-time-symbolic.svg'),
   symbolic_dir / 'quantities' / ('q-volume-symbolic.svg'),
+  symbolic_dir / 'quantities' / ('q-wave-symbolic.svg'),
 
   install_dir: get_option('datadir') / 'icons' / symbolic_dir
 )

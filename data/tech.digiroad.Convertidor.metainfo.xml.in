@@ -18,6 +18,7 @@
       <li>Instant and accurate (synchronous) unit conversion.</li>
       <li>Control of calculation accuracy.</li>
       <li>Intuitive and user-friendly interface.</li>
+      <li>Tips for units and constants.</li>
     </ul>
   </description>
 
@@ -49,6 +50,15 @@
   </screenshots>
 
   <releases>
+
+    <release version="1.4.2" date="2026-04-10">
+      <description translate="no">
+        <ul>
+          <li>Added unit conversion for Frequency and Wavelength.</li>
+          <li>Other improvements and additions.</li>
+        </ul>
+      </description>
+    </release>
 
     <release version="1.4.0" date="2026-03-23">
       <description translate="no">
